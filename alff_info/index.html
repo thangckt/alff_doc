@@ -625,6 +625,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" param">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.arginfo.param--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -633,6 +648,21 @@
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;not_use_param_seveen
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label=" not_use_param_seveen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.arginfo.not_use_param_seveen--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1117,6 +1147,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" param">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.arginfo.param--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1125,6 +1170,21 @@
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;not_use_param_seveen
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label=" not_use_param_seveen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.arginfo.not_use_param_seveen--parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1198,6 +1258,22 @@
     <div class="doc doc-contents ">
 
         <p>ALFF parameters.</p>
+<h5 id="alff.lib.arginfo.param--parameters">Parameters<a class="headerlink" href="#alff.lib.arginfo.param--parameters" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="nl">mlp_engine</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span>
+<span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">engine</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">training</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">MLP</span><span class="w"> </span><span class="n">model</span><span class="p">.</span><span class="w"> </span><span class="nl">Choices</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;sevenn&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;mace&#39;</span>
+<span class="nl">numb_models</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span>
+<span class="w">    </span><span class="n">Number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">models</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">train</span><span class="p">.</span>
+<span class="nl">init_data_paths</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="o">[</span><span class="n">str</span><span class="o">]</span>
+<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="k">data</span><span class="p">.</span>
+<span class="k">distributed</span><span class="err">:</span><span class="w"> </span><span class="n">bool</span>
+<span class="w">    </span><span class="n">Whether</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="k">distributed</span><span class="w"> </span><span class="n">training</span><span class="p">.</span>
+<span class="nl">distributed_backend</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span>
+<span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">Pytorch</span><span class="w"> </span><span class="n">backend</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">distributed</span><span class="w"> </span><span class="n">training</span><span class="p">.</span><span class="w"> </span><span class="nl">Choices</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;nccl&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;mpi&#39;</span>
+<span class="nl">sevenn_args</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span>
+<span class="w">    </span><span class="n">SevenNet</span><span class="s1">&#39;s parameters.</span>
+<span class="s1">mace_args: dict</span>
+<span class="s1">    Mace&#39;</span><span class="n">s</span><span class="w"> </span><span class="k">parameters</span><span class="p">.</span>
+</code></pre></div>
 
     </div>
 
@@ -1216,6 +1292,12 @@
 
         <p>SevenNet parameters that are not applicable.</p>
 <p>These parameters are either generated by the ALFF or are not required for running the ALFF.</p>
+<h5 id="alff.lib.arginfo.not_use_param_seveen--parameters">Parameters<a class="headerlink" href="#alff.lib.arginfo.not_use_param_seveen--parameters" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span><code><span class="n">train</span><span class="p">.</span><span class="nl">random_seed</span><span class="p">:</span><span class="w"> </span><span class="nc">int</span>
+<span class="w">    </span><span class="n">Random</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">reproducibility</span><span class="p">.</span>
+<span class="k">data</span><span class="p">.</span><span class="nl">load_dataset_path</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="o">[</span><span class="n">str</span><span class="o">]</span>
+<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dataset</span><span class="p">.</span>
+</code></pre></div>
 
     </div>
 
