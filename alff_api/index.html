@@ -1794,9 +1794,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.gendata.lib_gendata.build_unitcell" class="md-nav__link">
+  <a href="#alff.gendata.lib_gendata.build_conf" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_unitcell
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.gendata.lib_gendata.build_bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_bulk
     </span>
   </a>
   
@@ -4340,9 +4349,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.gendata.lib_gendata.build_unitcell" class="md-nav__link">
+  <a href="#alff.gendata.lib_gendata.build_conf" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_unitcell
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.gendata.lib_gendata.build_bulk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_bulk
     </span>
   </a>
   
@@ -7412,10 +7430,10 @@ pdict : dict
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.gendata.lib_gendata.build_unitcell" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_unitcell</span><span class="p">(</span><span class="n">structure_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ase_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+<h5 id="alff.gendata.lib_gendata.build_conf" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_conf</span><span class="p">(</span><span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
 
-<a href="#alff.gendata.lib_gendata.build_unitcell" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.gendata.lib_gendata.build_conf" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -7450,6 +7468,48 @@ pdict : dict
           –
           <div class="doc-md-description">
             <p>extxyz file: Unitcell of Atomic configuration saved in extxyz format.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.gendata.lib_gendata.build_bulk" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_bulk</span><span class="p">(</span><span class="n">ase_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+
+<a href="#alff.gendata.lib_gendata.build_bulk" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Build atomic bulk configuration, using <code>ase.build.bulk</code> library. See <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#ase.build.bulk">https://wiki.fysik.dtu.dk/ase/ase/build/build.html#ase.build.bulk</a></p>
+<p><code>crystalstructure</code> must be one of sc, fcc, bcc, tetragonal, bct, hcp, rhombohedral, orthorhombic, mcl, diamond, zincblende, rocksalt, cesiumchloride, fluorite or wurtzite.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>ase_kwargs</code></b>
+              (<code>dict</code>)
+          –
+          <div class="doc-md-description">
+            <p>Arguments to pass to <code>ase.build</code> function. These arguments depend on <code>structure_type</code></p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>ase.Atoms: Atomic configuration of bulk system</p>
           </div>
         </li>
     </ul>
