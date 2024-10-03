@@ -1803,15 +1803,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.gendata.lib_gendata.unitcell_bulk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;unitcell_bulk
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.gendata.lib_gendata.build_conf_from_poscar" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_conf_from_poscar
@@ -4301,15 +4292,6 @@
   <a href="#alff.gendata.lib_gendata.build_conf" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;build_conf
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.gendata.lib_gendata.unitcell_bulk" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;unitcell_bulk
     </span>
   </a>
   
@@ -7329,7 +7311,7 @@ pdict : dict
 
 
 <h5 id="alff.gendata.lib_gendata.build_conf" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_conf</span><span class="p">(</span><span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;conf.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_conf</span><span class="p">(</span><span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;conf_raw.extxyz&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.gendata.lib_gendata.build_conf" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -7337,6 +7319,10 @@ pdict : dict
     <div class="doc doc-contents ">
 
         <p>Build atomic configuration, using <code>ase.build</code> library. See <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#">https://wiki.fysik.dtu.dk/ase/ase/build/build.html#</a></p>
+<p>Supported structure types:
+- bulk: sc, fcc, bcc, tetragonal, bct, hcp, rhombohedral, orthorhombic, mcl, diamond, zincblende, rocksalt, cesiumchloride, fluorite or wurtzite.
+- molecule: molecule
+- mx2: MX2</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -7358,48 +7344,6 @@ pdict : dict
 <b><code>outfile</code></b>          –
           <div class="doc-md-description">
             <p>Save atomic configuration with format specified by ext of <code>outfile</code>. All ASE supported formats are allowed.</p>
-          </div>
-        </li>
-    </ul>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.gendata.lib_gendata.unitcell_bulk" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">unitcell_bulk</span><span class="p">(</span><span class="n">ase_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
-
-<a href="#alff.gendata.lib_gendata.unitcell_bulk" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Build unitcell of bulk configuration, using <code>ase.build.bulk</code> library. See <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#ase.build.bulk">https://wiki.fysik.dtu.dk/ase/ase/build/build.html#ase.build.bulk</a></p>
-<p><code>crystalstructure</code> must be one of sc, fcc, bcc, tetragonal, bct, hcp, rhombohedral, orthorhombic, mcl, diamond, zincblende, rocksalt, cesiumchloride, fluorite or wurtzite.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-          <b><code>ase_kwargs</code></b>
-              (<code>dict</code>)
-          –
-          <div class="doc-md-description">
-            <p>Arguments to pass to <code>ase.build</code> function. These arguments depend on <code>structure_type</code></p>
-          </div>
-        </li>
-    </ul>
-
-
-<p><span class="doc-section-title">Returns:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-          –
-          <div class="doc-md-description">
-            <p>ase.Atoms: Atomic configuration of bulk system</p>
           </div>
         </li>
     </ul>
