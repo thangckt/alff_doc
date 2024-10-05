@@ -8081,7 +8081,7 @@ pdict : dict
 
 
 <h6 id="alff.gendata.gpaw.cli_gpaw_optimize.params" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="n">PW</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;gpaw_calc_singlepoint.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="n">FermiDirac</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="s1">&#39;parallel&#39;</span><span class="p">:</span> <span class="p">{}}</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="n">PW</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_optimize.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="n">FermiDirac</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="s1">&#39;parallel&#39;</span><span class="p">:</span> <span class="p">{}}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -8119,7 +8119,7 @@ pdict : dict
 
 
 <h6 id="alff.gendata.gpaw.cli_gpaw_optimize.relax_dim" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">relax_dim</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;relax&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;relax_dim&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">relax_dim</span> <span class="o">=</span> <span class="n">relax_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;relax_dim&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -8290,7 +8290,7 @@ pdict : dict
 
 
 <h6 id="alff.gendata.gpaw.cli_gpaw_optimize.output_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_calc.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_out.extxyz&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -8460,7 +8460,7 @@ pdict : dict
 
 
 <h6 id="alff.gendata.gpaw.cli_gpaw_singlepoint.params" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="n">PW</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;gpaw_calc_singlepoint.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="n">FermiDirac</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="s1">&#39;parallel&#39;</span><span class="p">:</span> <span class="p">{}}</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="n">PW</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_singlepoint.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="n">FermiDirac</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="s1">&#39;parallel&#39;</span><span class="p">:</span> <span class="p">{}}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -8555,7 +8555,7 @@ pdict : dict
 
 
 <h6 id="alff.gendata.gpaw.cli_gpaw_singlepoint.output_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_calc.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_out.extxyz&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
