@@ -6762,7 +6762,7 @@
 
 
 <h6 id="alff.al.gpaw.cli_gpaw_optimize.ecut" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ecut</span> <span class="o">=</span> <span class="n">gpaw_args</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;ecut&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ecut</span> <span class="o">=</span> <span class="n">gpaw_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ecut&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -6857,7 +6857,7 @@
 
 
 <h6 id="alff.al.gpaw.cli_gpaw_optimize.pbc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pbc</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_pbc</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pbc</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_pbc</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -6895,7 +6895,7 @@
 
 
 <h6 id="alff.al.gpaw.cli_gpaw_optimize.opt" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">opt</span> <span class="o">=</span> <span class="n">BFGS</span><span class="p">(</span><span class="n">atoms_filter</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">opt</span> <span class="o">=</span> <span class="n">BFGS</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -7198,7 +7198,7 @@
 
 
 <h6 id="alff.al.gpaw.cli_gpaw_singlepoint.ecut" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ecut</span> <span class="o">=</span> <span class="n">gpaw_args</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;ecut&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ecut</span> <span class="o">=</span> <span class="n">gpaw_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ecut&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -9984,7 +9984,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.tool_confs.read_extxyz" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">read_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">read_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
 
 <a href="#alff.lib.tool_confs.read_extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10018,6 +10018,13 @@ relative_v : float, default: None
         </li>
     </ul>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li><code>ase.io.read</code> returns a single Atoms object or a list of Atoms object, depending on the <code>index</code> argument. <code>index=":"</code> will always return a list.</li>
+</ul>
+</details>
     </div>
 
 </div>
