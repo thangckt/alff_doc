@@ -2673,6 +2673,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_paths
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5322,6 +5331,15 @@
   <a href="#alff.gendata.gpaw.lib_gpaw_gendata.info_queue_job" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;info_queue_job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_paths
     </span>
   </a>
   
@@ -8363,7 +8381,7 @@ pdict : dict
             <b><code><a class="autorefs autorefs-internal" title="alff.gendata.gen.build_structure" href="#alff.gendata.gen.build_structure">build_structure</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Build structures</p>
+              <p>Build structures based on input parameters</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -8470,7 +8488,7 @@ pdict : dict
 
     <div class="doc doc-contents ">
 
-        <p>Build structures</p>
+        <p>Build structures based on input parameters</p>
 
     </div>
 
@@ -10531,14 +10549,21 @@ jdata : dict
             <b><code><a class="autorefs autorefs-internal" title="alff.gendata.gpaw.lib_gpaw_gendata.remote_info" href="#alff.gendata.gpaw.lib_gpaw_gendata.remote_info">remote_info</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Print the remote machine information.</p>
+              <p>Return the remote machine information.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.gendata.gpaw.lib_gpaw_gendata.info_queue_job" href="#alff.gendata.gpaw.lib_gpaw_gendata.info_queue_job">info_queue_job</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Return the information of the current chunk of tasks.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths" href="#alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths">sort_task_paths</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Sort the structure paths by its supercell size.</p>
             </div>
           </li>
     </ul>
@@ -10753,7 +10778,7 @@ jdata : dict
 
     <div class="doc doc-contents ">
 
-        <p>Print the remote machine information.</p>
+        <p>Return the remote machine information.</p>
 
     </div>
 
@@ -10763,12 +10788,32 @@ jdata : dict
 
 
 <h6 id="alff.gendata.gpaw.lib_gpaw_gendata.info_queue_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">info_queue_job</span><span class="p">(</span><span class="n">task_paths</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">,</span> <span class="n">chunk_count</span><span class="p">,</span> <span class="n">paths_in_chunk</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">info_queue_job</span><span class="p">(</span><span class="n">task_paths</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">,</span> <span class="n">chunk_count</span><span class="p">,</span> <span class="n">paths_in_chunk</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
 <a href="#alff.gendata.gpaw.lib_gpaw_gendata.info_queue_job" class="headerlink" title="Permanent link">&para;</a></h6>
 
 
     <div class="doc doc-contents ">
+
+        <p>Return the information of the current chunk of tasks.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_task_paths</span><span class="p">(</span><span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
+
+<a href="#alff.gendata.gpaw.lib_gpaw_gendata.sort_task_paths" class="headerlink" title="Permanent link">&para;</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Sort the structure paths by its supercell size.
+This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
 
     </div>
 
@@ -12082,7 +12127,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.util.print_pkg_info" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_pkg_info</span><span class="p">(</span><span class="n">dep_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sevenn&#39;</span><span class="p">,</span> <span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="s1">&#39;scipy&#39;</span><span class="p">,</span> <span class="s1">&#39;dpdispatcher&#39;</span><span class="p">,</span> <span class="s1">&#39;thutil&#39;</span><span class="p">])</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_pkg_info</span><span class="p">(</span><span class="n">dep_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="s1">&#39;scipy&#39;</span><span class="p">,</span> <span class="s1">&#39;polars&#39;</span><span class="p">,</span> <span class="s1">&#39;dpdispatcher&#39;</span><span class="p">,</span> <span class="s1">&#39;thutil&#39;</span><span class="p">,</span> <span class="s1">&#39;sevenn&#39;</span><span class="p">])</span></code>
 
 <a href="#alff.lib.util.print_pkg_info" class="headerlink" title="Permanent link">&para;</a></h5>
 
