@@ -3111,15 +3111,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.dpdispatcher.fmt" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.lib.dpdispatcher.make_submission" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_submission
@@ -5786,15 +5777,6 @@
   <a href="#alff.lib.dpdispatcher.fh" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fh
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.lib.dpdispatcher.fmt" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmt
     </span>
   </a>
   
@@ -11979,13 +11961,6 @@ relative_v : float, default: None
             
           </div>
         </li>
-        <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.lib.dpdispatcher.fmt" href="#alff.lib.dpdispatcher.fmt">fmt</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
     </ul>
 
 
@@ -12022,7 +11997,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.dpdispatcher.log_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">log_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_LOG</span><span class="si">}</span><span class="s1">/dpdispatcher_</span><span class="si">{</span><span class="n">time_str</span><span class="si">}</span><span class="s1">.log&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">log_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_LOG</span><span class="si">}</span><span class="s1">/dispatcher_</span><span class="si">{</span><span class="n">time_str</span><span class="si">}</span><span class="s1">.log&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -12041,32 +12016,13 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.dpdispatcher.fh" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">log_file</span><span class="o">.</span><span class="n">resolve</span><span class="p">(),</span> <span class="n">delay</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">log_file</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
 <a href="#alff.lib.dpdispatcher.fh" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h5 id="alff.lib.dpdispatcher.fmt" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmt</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1"> - </span><span class="si">%(levelname)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y-%b-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.lib.dpdispatcher.fmt" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
