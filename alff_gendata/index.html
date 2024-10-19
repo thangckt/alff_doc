@@ -1214,60 +1214,61 @@
 <li><code>MACHINE.yaml</code>: The settings of the machines running the generator's subprocesses.</li>
 </ul>
 <p>An example run using <code>alff</code> to generate labeled data:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>--------------------------------<span class="w"> </span>ALFF<span class="w"> </span>--------------------------------
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>Version:<span class="w">  </span><span class="m">0</span>.1.dev409+g177de1d
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">       </span>Path:<span class="w">  </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\a</span>lff
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>----------------------------<span class="w"> </span>Dependencies<span class="w"> </span>----------------------------
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">         </span>ase<span class="w">  </span><span class="m">3</span>.23.0<span class="w">       </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\a</span>se
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">       </span>numpy<span class="w">  </span><span class="m">2</span>.1.2<span class="w">        </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\n</span>umpy
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">       </span>scipy<span class="w">  </span><span class="m">1</span>.14.1<span class="w">       </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\s</span>cipy
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span>polars<span class="w">  </span><span class="m">1</span>.9.0<span class="w">        </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\p</span>olars
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>dpdispatcher<span class="w">  </span><span class="m">0</span>.6.6.dev82<span class="w">  </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\d</span>pdispatcher
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span>thutil<span class="w">  </span><span class="m">0</span>.1.dev101<span class="w">   </span>C:<span class="se">\c</span>onda<span class="se">\e</span>nvs<span class="se">\p</span>y13<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\t</span>hutil
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span>sevenn<span class="w">  </span>unknown
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>-----------------------<span class="w"> </span>Author:<span class="w"> </span>C.Thang<span class="w"> </span>Nguyen<span class="w"> </span>-----------------------
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>---------------<span class="w"> </span>Contact:<span class="w"> </span>https://thang.eu.org/contact<span class="w"> </span>----------------
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>-------------------------------- ALFF --------------------------------
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Version:  0.1.dev409+g177de1d
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>       Path:  C:\conda\envs\py13\Lib\site-packages\alff
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>---------------------------- Dependencies ----------------------------
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>         ase  3.23.0       C:\conda\envs\py13\Lib\site-packages\ase
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>       numpy  2.1.2        C:\conda\envs\py13\Lib\site-packages\numpy
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>       scipy  1.14.1       C:\conda\envs\py13\Lib\site-packages\scipy
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      polars  1.9.0        C:\conda\envs\py13\Lib\site-packages\polars
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>dpdispatcher  0.6.6.dev82  C:\conda\envs\py13\Lib\site-packages\dpdispatcher
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      thutil  0.1.dev101   C:\conda\envs\py13\Lib\site-packages\thutil
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      sevenn  unknown
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>----------------------- Author: C.Thang Nguyen -----------------------
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>--------------- Contact: https://thang.eu.org/contact ----------------
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>alff-INFO:
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                             </span>___<span class="w">    </span>__<span class="w">    </span>____________
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                            </span>/<span class="w">   </span><span class="p">|</span><span class="w">  </span>/<span class="w"> </span>/<span class="w">   </span>/<span class="w"> </span>____/<span class="w"> </span>____/
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                           </span>/<span class="w"> </span>/<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>/<span class="w"> </span>/<span class="w">   </span>/<span class="w"> </span>/_<span class="w">  </span>/<span class="w"> </span>/_
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                          </span>/<span class="w"> </span>___<span class="w"> </span><span class="p">|</span>/<span class="w"> </span>/___/<span class="w"> </span>__/<span class="w"> </span>/<span class="w"> </span>__/
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                         </span>/_/<span class="w">  </span><span class="p">|</span>_/_____/_/<span class="w">   </span>/_/
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                             ___    __    ____________
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>                            /   |  / /   / ____/ ____/
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                           / /| | / /   / /_  / /_
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                          / ___ |/ /___/ __/ / __/
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>                         /_/  |_/_____/_/   /_/
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>alff-INFO:<span class="w"> </span>START<span class="w"> </span>GENERATING<span class="w"> </span>DATA
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>alff-INFO: START GENERATING DATA
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>alff-INFO:
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>alff-INFO:<span class="w"> </span>--------------------<span class="w"> </span>stage_00:<span class="w"> </span>build_structure<span class="w"> </span>-------------
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>Directory<span class="w"> </span><span class="sb">`</span>Mo_bulk_bcc_02x02x02<span class="sb">`</span><span class="w"> </span>already<span class="w"> </span>existed.<span class="w"> </span>Choose<span class="w"> </span>what<span class="w"> </span>to<span class="w"> </span><span class="k">do</span>:<span class="w"> </span><span class="o">[</span>yes/backup/no<span class="o">]</span>?
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w"> </span>Yes:<span class="w"> </span>overwrite<span class="w"> </span>the<span class="w"> </span>existing<span class="w"> </span>directory<span class="w"> </span>and<span class="w"> </span><span class="k">continue</span>.
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w"> </span>Backup:<span class="w"> </span>backup<span class="w"> </span>the<span class="w"> </span>existing<span class="w"> </span>directory<span class="w"> </span>and<span class="w"> </span><span class="k">continue</span>.
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w"> </span>No:<span class="w"> </span>skip<span class="w"> </span>the<span class="w"> </span>building<span class="w"> </span>process<span class="w"> </span>and<span class="w"> </span>exit.
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">         </span>Your<span class="w"> </span>answer<span class="w"> </span><span class="o">(</span>y/b/n<span class="o">)</span>:<span class="w"> </span>y
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>alff-INFO:<span class="w"> </span>Overwrite<span class="w"> </span>the<span class="w"> </span>existing<span class="w"> </span>directory
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>alff-INFO:<span class="w"> </span>Working<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>path:<span class="w"> </span>Mo_bulk_bcc_02x01x01/00_build_structure
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>alff-INFO:<span class="w"> </span>Build<span class="w"> </span>structures<span class="w"> </span>from<span class="w"> </span>scratch
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>alff-INFO: -------------------- stage_00: build_structure -------------
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>Directory `Mo_bulk_bcc_02x02x02` already existed. Choose what to do: [yes/backup/no]?
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a> Yes: overwrite the existing directory and continue.
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a> Backup: backup the existing directory and continue.
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a> No: skip the building process and exit.
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>         Your answer (y/b/n): y
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>alff-INFO: Overwrite the existing directory
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>alff-INFO: Working on the path: Mo_bulk_bcc_02x01x01/00_build_structure
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>alff-INFO: Build structures from scratch
 <a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>alff-INFO:
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>alff-INFO:<span class="w"> </span>--------------------<span class="w"> </span>stage_01:<span class="w"> </span>optimize<span class="w"> </span>--------------------
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>alff-INFO:<span class="w"> </span>Optimize<span class="w"> </span>the<span class="w"> </span>structures
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>alff-INFO:<span class="w"> </span>No<span class="w"> </span>DFT<span class="w"> </span>task<span class="w"> </span>is<span class="w"> </span>found.<span class="w"> </span>Skip<span class="w"> </span>the<span class="w"> </span>DFT<span class="w"> </span>calculation.
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>alff-INFO: -------------------- stage_01: optimize --------------------
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>alff-INFO: Optimize the structures
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>alff-INFO: No DFT task is found. Skip the DFT calculation.
 <a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>alff-INFO:
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>alff-INFO:<span class="w"> </span>--------------------<span class="w"> </span>stage_02:<span class="w"> </span>scale_perturb<span class="w"> </span>---------------
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>alff-INFO:<span class="w"> </span>Scaling<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>path:<span class="w"> </span>Mo_bulk_bcc_02x01x01/01_scale_perturb
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>alff-INFO: -------------------- stage_02: scale_perturb ---------------
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>alff-INFO: Scaling on the path: Mo_bulk_bcc_02x01x01/01_scale_perturb
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>alff-INFO:
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>alff-INFO:<span class="w"> </span>--------------------<span class="w"> </span>stage_03:<span class="w"> </span>run_dft<span class="w"> </span>---------------------
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>alff-INFO:<span class="w"> </span>Run<span class="w"> </span>AIMD<span class="w"> </span>calculations
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>alff-INFO:<span class="w"> </span>Submitting<span class="w"> </span>DFT<span class="w"> </span>jobs...<span class="w"> </span>be<span class="w"> </span>patient
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">               </span>Remote<span class="w"> </span>host:<span class="w"> </span><span class="m">100</span>.1.70.201
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">               </span>Remote<span class="w"> </span>path:<span class="w"> </span>/uwork/user01/work/w24_dpjob
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>alff-INFO:<span class="w"> </span>Running<span class="w"> </span>chunk<span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">9</span><span class="w"> </span>chunks<span class="w"> </span><span class="o">(</span><span class="m">20</span><span class="w"> </span>of<span class="w"> </span><span class="m">431</span><span class="w"> </span>tasks<span class="o">)</span>.
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>alff-INFO:<span class="w"> </span>Running<span class="w"> </span>chunk<span class="w"> </span><span class="m">2</span><span class="w"> </span>of<span class="w"> </span><span class="m">9</span><span class="w"> </span>chunks<span class="w"> </span><span class="o">(</span><span class="m">20</span><span class="w"> </span>of<span class="w"> </span><span class="m">411</span><span class="w"> </span>tasks<span class="o">)</span>.<span class="w"> </span>Estimated<span class="w"> </span>time:<span class="w"> </span><span class="m">4</span>:39
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>alff-INFO:<span class="w"> </span>Running<span class="w"> </span>chunk<span class="w"> </span><span class="m">3</span><span class="w"> </span>of<span class="w"> </span><span class="m">9</span><span class="w"> </span>chunks<span class="w"> </span><span class="o">(</span><span class="m">20</span><span class="w"> </span>of<span class="w"> </span><span class="m">391</span><span class="w"> </span>tasks<span class="o">)</span>.<span class="w"> </span>Estimated<span class="w"> </span>time:<span class="w"> </span><span class="m">4</span>:31
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>alff-INFO: -------------------- stage_03: run_dft ---------------------
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>alff-INFO: Run AIMD calculations
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>alff-INFO: Submitting DFT jobs... be patient
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>               Remote host: some_IP_address
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>               Remote path: /uwork/user01/work/w24_dpjob
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>alff-INFO: Running chunk 1 of 9 chunks (20 of 431 tasks).
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>alff-INFO: Running chunk 2 of 9 chunks (20 of 411 tasks). Estimated time: 4:39
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>alff-INFO: Running chunk 3 of 9 chunks (20 of 391 tasks). Estimated time: 4:31
 <a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>...
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>alff-INFO:<span class="w"> </span>--------------------<span class="w"> </span>stage_04:<span class="w"> </span>collect_data<span class="w"> </span>----------------
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>alff-INFO:<span class="w"> </span>Collect<span class="w"> </span>data<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>path:<span class="w"> </span>o_bulk_bcc_02x01x01/02_gendata
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>alff-INFO:<span class="w"> </span>FINISHED<span class="w"> </span>!
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>alff-INFO: -------------------- stage_04: collect_data ----------------
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>alff-INFO: Collect data on the path: o_bulk_bcc_02x01x01/02_gendata
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>alff-INFO: FINISHED !
 </code></pre></div>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <p>The parameters of the generator are stored in a YAML/JSON/JSONC file. Here is an example of the parameters:</p>
