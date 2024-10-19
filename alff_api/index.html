@@ -1529,6 +1529,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.constant.time_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;time_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.constant.LOGGER" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;LOGGER
@@ -3073,6 +3082,15 @@
   
     <nav class="md-nav" aria-label=" dpdispatcher">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.dpdispatcher.time_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;time_str
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#alff.lib.dpdispatcher.log_file" class="md-nav__link">
@@ -4192,6 +4210,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.constant.time_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;time_str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.constant.LOGGER" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;LOGGER
@@ -5736,6 +5763,15 @@
   
     <nav class="md-nav" aria-label=" dpdispatcher">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.dpdispatcher.time_str" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;time_str
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#alff.lib.dpdispatcher.log_file" class="md-nav__link">
@@ -7469,6 +7505,13 @@ pdict : dict
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.constant.time_str" href="#alff.constant.time_str">time_str</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.constant.LOGGER" href="#alff.constant.LOGGER">LOGGER</a></code></b>
           –
           <div class="doc-md-description">
@@ -7699,8 +7742,27 @@ pdict : dict
 
 
 
+<h4 id="alff.constant.time_str" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">time_str</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%b</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.constant.time_str" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h4 id="alff.constant.LOGGER" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">LOGGER</span> <span class="o">=</span> <span class="n">create_logger</span><span class="p">(</span><span class="s1">&#39;alff&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_LOG</span><span class="si">}</span><span class="s1">/alff.log&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">LOGGER</span> <span class="o">=</span> <span class="n">create_logger</span><span class="p">(</span><span class="s1">&#39;alff&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">log_file</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_LOG</span><span class="si">}</span><span class="s1">/alff_</span><span class="si">{</span><span class="n">time_str</span><span class="si">}</span><span class="s1">.log&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -11897,6 +11959,13 @@ relative_v : float, default: None
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.lib.dpdispatcher.time_str" href="#alff.lib.dpdispatcher.time_str">time_str</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.lib.dpdispatcher.log_file" href="#alff.lib.dpdispatcher.log_file">log_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -11933,8 +12002,27 @@ relative_v : float, default: None
 
 
 
+<h5 id="alff.lib.dpdispatcher.time_str" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">time_str</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%b</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.lib.dpdispatcher.time_str" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h5 id="alff.lib.dpdispatcher.log_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">log_file</span> <span class="o">=</span> <span class="n">DIR_LOG</span> <span class="o">/</span> <span class="s1">&#39;dpdispatcher.log&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">log_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_LOG</span><span class="si">}</span><span class="s1">/dpdispatcher_</span><span class="si">{</span><span class="n">time_str</span><span class="si">}</span><span class="s1">.log&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
