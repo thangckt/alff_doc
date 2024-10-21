@@ -1236,7 +1236,15 @@
     options:
         members: false -->
 
-<p>Generate labeled data for training ML forcefields.</p>
+<p>To generate labeled data for training ML forcefields, <code>alff_gen</code> is a command-line tool designed to perform the following tasks automatically without user intervention:
+- Build atomic structures
+- Generate DFT codes to optimize atomic structures
+- Submit DFT optimization jobs to the clusters, monitor the job status, and get back the DFT calcualation results
+- Generate atomic structures by scaling and perturbing the optimized structures
+- Generate DFT codes to run AIMD simulations
+- Submit AIMD jobs to the clusters, monitor the job status, and get back the DFT calculation results
+- Collect the data from the DFT calculations
+- Convert the data to the format that can ready to used for training ML forcefields.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>alff_gen<span class="w"> </span>PARAM.yaml<span class="w"> </span>MACHINE.yaml
 </code></pre></div>
 <ul>
