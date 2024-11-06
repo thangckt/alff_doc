@@ -2615,9 +2615,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw.cli_gpaw_optimize.nsteps" class="md-nav__link">
+  <a href="#alff.lib.gpaw.cli_gpaw_optimize.max_steps" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;nsteps
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_steps
     </span>
   </a>
   
@@ -3426,9 +3426,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.phonon.relax_structure" class="md-nav__link">
+  <a href="#alff.phonon.relax_initial_structure" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;relax_structure
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;relax_initial_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.scale_and_relax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;scale_and_relax
     </span>
   </a>
   
@@ -3438,6 +3447,15 @@
   <a href="#alff.phonon.compute_force" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_force
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.compute_force_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_force_single_structure
     </span>
   </a>
   
@@ -5422,9 +5440,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw.cli_gpaw_optimize.nsteps" class="md-nav__link">
+  <a href="#alff.lib.gpaw.cli_gpaw_optimize.max_steps" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;nsteps
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;max_steps
     </span>
   </a>
   
@@ -6233,9 +6251,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.phonon.relax_structure" class="md-nav__link">
+  <a href="#alff.phonon.relax_initial_structure" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;relax_structure
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;relax_initial_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.scale_and_relax" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;scale_and_relax
     </span>
   </a>
   
@@ -6245,6 +6272,15 @@
   <a href="#alff.phonon.compute_force" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_force
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.compute_force_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_force_single_structure
     </span>
   </a>
   
@@ -10418,7 +10454,7 @@ relative_v : float, default: None
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw.cli_gpaw_optimize.nsteps" href="#alff.lib.gpaw.cli_gpaw_optimize.nsteps">nsteps</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw.cli_gpaw_optimize.max_steps" href="#alff.lib.gpaw.cli_gpaw_optimize.max_steps">max_steps</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -10736,14 +10772,14 @@ relative_v : float, default: None
 
 
 
-<h6 id="alff.lib.gpaw.cli_gpaw_optimize.nsteps" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">nsteps</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nsteps&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span></code>
+<h6 id="alff.lib.gpaw.cli_gpaw_optimize.max_steps" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">max_steps</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_steps&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.lib.gpaw.cli_gpaw_optimize.nsteps" class="headerlink" title="Permanent link">&para;</a></h6>
+<a href="#alff.lib.gpaw.cli_gpaw_optimize.max_steps" class="headerlink" title="Permanent link">&para;</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -13089,10 +13125,17 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.relax_structure" href="#alff.phonon.relax_structure">relax_structure</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.relax_initial_structure" href="#alff.phonon.relax_initial_structure">relax_initial_structure</a></code></b>
             –
             <div class="doc-md-description">
               <p>Relax the structure by DFT/MD</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.scale_and_relax" href="#alff.phonon.scale_and_relax">scale_and_relax</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Scale and relax the structures while fixing box size. Use when want to compute phonon at different volumes.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -13100,6 +13143,13 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
             –
             <div class="doc-md-description">
               <p>This function to do the following:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.compute_force_single_structure" href="#alff.phonon.compute_force_single_structure">compute_force_single_structure</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Run DFT/MD single-point calculation to compute forces for a list of supercells of a <em>single structure</em>.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -13135,15 +13185,32 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
 <div class="doc doc-object doc-function">
 
 
-<h4 id="alff.phonon.relax_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">relax_structure</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<h4 id="alff.phonon.relax_initial_structure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">relax_initial_structure</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
-<a href="#alff.phonon.relax_structure" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#alff.phonon.relax_initial_structure" class="headerlink" title="Permanent link">&para;</a></h4>
 
 
     <div class="doc doc-contents ">
 
         <p>Relax the structure by DFT/MD</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="alff.phonon.scale_and_relax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">scale_and_relax</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.phonon.scale_and_relax" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Scale and relax the structures while fixing box size. Use when want to compute phonon at different volumes.</p>
 
     </div>
 
@@ -13164,6 +13231,23 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
 1. Initialize the <code>phonopy</code> object
 2. Generate supercells with displacements
 2. Compute forces by DFT/MD single-point calculation</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="alff.phonon.compute_force_single_structure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_force_single_structure</span><span class="p">(</span><span class="n">dir_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+
+<a href="#alff.phonon.compute_force_single_structure" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Run DFT/MD single-point calculation to compute forces for a list of supercells of a <em>single structure</em>.</p>
 
     </div>
 
