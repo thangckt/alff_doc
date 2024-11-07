@@ -3111,6 +3111,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.lib.lib_dispatcher.submit_junk_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_junk_job
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3373,15 +3382,6 @@
   <a href="#alff.phonon.lib_gpaw_phonon.LIB_GPAW_PATH" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;LIB_GPAW_PATH
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_gpaw_optimize
     </span>
   </a>
   
@@ -6014,6 +6014,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.lib.lib_dispatcher.submit_junk_job" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_junk_job
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6276,15 +6285,6 @@
   <a href="#alff.phonon.lib_gpaw_phonon.LIB_GPAW_PATH" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;LIB_GPAW_PATH
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_gpaw_optimize
     </span>
   </a>
   
@@ -9071,7 +9071,7 @@ jdata : dict
           <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata" href="#alff.data.lib_gpaw_gendata">lib_gpaw_gendata</a></code></b>
           –
           <div class="doc-md-description">
-            <p>NOTE: do not use <code>return</code> in the functions that run <code>dpdispatcher.submission()</code>.</p>
+            <p>NOTE:</p>
           </div>
         </li>
     </ul>
@@ -9577,7 +9577,10 @@ jdata : dict
 
     <div class="doc doc-contents ">
 
-        <p>NOTE: do not use <code>return</code> in the functions that run <code>dpdispatcher.submission()</code>.</p>
+        <p>NOTE:
+- do not use <code>return</code> in the functions that run <code>dpdispatcher.submission()</code>.
+- work_path is a folder relative to the run_path
+- task_paths is folders relative to the work_path</p>
 
 
 
@@ -9593,63 +9596,63 @@ jdata : dict
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.pregen_gpaw_optimize" href="#alff.data.lib_gpaw_gendata.pregen_gpaw_optimize">pregen_gpaw_optimize</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>This function does:</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.rungen_gpaw_optimize" href="#alff.data.lib_gpaw_gendata.rungen_gpaw_optimize">rungen_gpaw_optimize</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>This function does:</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.postgen_gpaw_optimize" href="#alff.data.lib_gpaw_gendata.postgen_gpaw_optimize">postgen_gpaw_optimize</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>This function does:</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.pregen_gpaw_singlepoint" href="#alff.data.lib_gpaw_gendata.pregen_gpaw_singlepoint">pregen_gpaw_singlepoint</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Refer to the <code>pregen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.rungen_gpaw_singlepoint" href="#alff.data.lib_gpaw_gendata.rungen_gpaw_singlepoint">rungen_gpaw_singlepoint</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Refer to the <code>rungen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.postgen_gpaw_singlepoint" href="#alff.data.lib_gpaw_gendata.postgen_gpaw_singlepoint">postgen_gpaw_singlepoint</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Refer to the <code>postgen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.pregen_gpaw_aimd" href="#alff.data.lib_gpaw_gendata.pregen_gpaw_aimd">pregen_gpaw_aimd</a></code></b>
             –
             <div class="doc-md-description">
-              <p>NOTE: do not run AIMD with configuration that already run geometric optimization to avoid error: broken symmetry.</p>
+              <p>Refer to the <code>pregen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.rungen_gpaw_aimd" href="#alff.data.lib_gpaw_gendata.rungen_gpaw_aimd">rungen_gpaw_aimd</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Refer to the <code>rungen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gpaw_gendata.postgen_gpaw_aimd" href="#alff.data.lib_gpaw_gendata.postgen_gpaw_aimd">postgen_gpaw_aimd</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Refer to the <code>postgen_gpaw_optimize()</code> function.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -9717,12 +9720,16 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.pregen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_optimize</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.pregen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>This function does:
+- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare gpaw_arg and gpaw_run_file</p>
 
     </div>
 
@@ -9732,12 +9739,19 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.rungen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_optimize</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.rungen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>This function does:
+- Prepare command_list
+- Read task_paths from .yaml file
+- Prepare fordward &amp; backward files
+- Submit jobs to the cluster
+- Download the results when finished</p>
 
     </div>
 
@@ -9747,12 +9761,15 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.postgen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_optimize</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.postgen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>This function does:
+- Remove unlabeled .extxyz files, just keep the labeled ones.</p>
 
     </div>
 
@@ -9762,12 +9779,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.pregen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_singlepoint</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.pregen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Refer to the <code>pregen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -9777,12 +9796,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.rungen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_singlepoint</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.rungen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Refer to the <code>rungen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -9792,12 +9813,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.postgen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_singlepoint</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.postgen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Refer to the <code>postgen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -9807,14 +9830,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.pregen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_aimd</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.pregen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>NOTE: do not run AIMD with configuration that already run geometric optimization to avoid error: broken symmetry.</p>
+        <p>Refer to the <code>pregen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -9824,12 +9847,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.rungen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_aimd</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.rungen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Refer to the <code>rungen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -9839,12 +9864,14 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gpaw_gendata.postgen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_aimd</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gpaw_gendata.postgen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Refer to the <code>postgen_gpaw_optimize()</code> function.</p>
 
     </div>
 
@@ -12124,7 +12151,14 @@ relative_v : float, default: None
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.lib_dispatcher.submit_job" href="#alff.lib.lib_dispatcher.submit_job">submit_job</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Function to submit a job to the cluster:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.lib_dispatcher.submit_junk_job" href="#alff.lib.lib_dispatcher.submit_junk_job">submit_junk_job</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Improved version of <code>submit_job</code> to split the task_paths into chunks and submit them.</p>
             </div>
           </li>
     </ul>
@@ -12204,12 +12238,34 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.lib_dispatcher.submit_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">,</span> <span class="n">command_list</span><span class="p">,</span> <span class="n">work_path</span><span class="p">,</span> <span class="n">task_paths</span><span class="p">,</span> <span class="n">forward_files</span><span class="p">,</span> <span class="n">backward_files</span><span class="p">,</span> <span class="n">forward_common_files</span><span class="p">,</span> <span class="n">outlog</span><span class="p">,</span> <span class="n">errlog</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
 <a href="#alff.lib.lib_dispatcher.submit_job" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>Function to submit a job to the cluster:
+- Prepare the task list
+- Make the submission and wait for the job to finish
+- Download the results</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.lib_dispatcher.submit_junk_job" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_junk_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+<a href="#alff.lib.lib_dispatcher.submit_junk_job" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Improved version of <code>submit_job</code> to split the task_paths into chunks and submit them.</p>
 
     </div>
 
@@ -13099,13 +13155,6 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize" href="#alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize">prepho_gpaw_optimize</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>This function does:</p>
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_gpaw_phonon.prepho_gpaw_singlepoint_suppercell_force" href="#alff.phonon.lib_gpaw_phonon.prepho_gpaw_singlepoint_suppercell_force">prepho_gpaw_singlepoint_suppercell_force</a></code></b>
             –
             <div class="doc-md-description">
@@ -13137,7 +13186,7 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
           <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_gpaw_phonon.LIB_GPAW_PATH" href="#alff.phonon.lib_gpaw_phonon.LIB_GPAW_PATH">LIB_GPAW_PATH</a></code></b>
           –
           <div class="doc-md-description">
-            
+            <p>Reuse functions from <code>lib_gpaw_gendata.py</code></p>
           </div>
         </li>
     </ul>
@@ -13167,30 +13216,17 @@ Eg: in_list = [1, 2, "3-5:2", "6-10"]</p>
 
 
     <div class="doc doc-contents ">
+
+        <p>Reuse functions from <code>lib_gpaw_gendata.py</code>
+- pregen_gpaw_optimize
+- rungen_gpaw_optimize
+- postgen_gpaw_optimize</p>
+<p>NOTE: must ensure "gpaw_arg" is defined in pdict["dft"] as: pdict["dft"]["gpaw_arg"]</p>
     </div>
 
 </div>
 
 
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_gpaw_optimize</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
-
-<a href="#alff.phonon.lib_gpaw_phonon.prepho_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>This function does:
-- Prepare task paths: select only unlabelled structures
-- Prepare gpaw_arg and gpaw_run_file</p>
-
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-function">
 
