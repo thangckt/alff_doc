@@ -3161,6 +3161,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.lib.input_lammps.lib_lammps._pbc_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_pbc_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_ms" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;generate_input_lammps_ms
@@ -6187,6 +6196,15 @@
   <a href="#alff.lib.input_lammps.lib_lammps._revise_lammps_plumed" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_revise_lammps_plumed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.input_lammps.lib_lammps._pbc_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_pbc_string
     </span>
   </a>
   
@@ -12571,7 +12589,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.input_lammps.lib_lammps.generate_input_lammps_md" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_input_lammps_md</span><span class="p">(</span><span class="n">file_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">atom_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;e3gnn/parallel&#39;</span><span class="p">,</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;* * numb_layers /path/to/potential&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">tau_t</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">tau_p</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">sampling_ensemble</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;npt&#39;</span><span class="p">,</span> <span class="n">relax_ensemble</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">relax_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">collect_frames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">traj_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">file_plumed</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;p p p&#39;</span><span class="p">,</span> <span class="n">dir_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;md_results&#39;</span><span class="p">,</span> <span class="n">file_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;lammps_input.in&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_input_lammps_md</span><span class="p">(</span><span class="n">file_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">atom_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;e3gnn/parallel&#39;</span><span class="p">,</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;* * numb_layers /path/to/potential&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">tau_t</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">tau_p</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">sampling_ensemble</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;npt&#39;</span><span class="p">,</span> <span class="n">relax_ensemble</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">relax_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">collect_frames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">traj_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">file_plumed</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dir_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;output_md&#39;</span><span class="p">,</span> <span class="n">file_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;lammps_input.in&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_md" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -12687,8 +12705,25 @@ relative_v : float, default: None
 <div class="doc doc-object doc-function">
 
 
+<h6 id="alff.lib.input_lammps.lib_lammps._pbc_string" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_pbc_string</span><span class="p">(</span><span class="n">pbc</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+<a href="#alff.lib.input_lammps.lib_lammps._pbc_string" class="headerlink" title="Permanent link">&para;</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert pbc list to string. [1, 1, 0] -&gt; "p p f"</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h6 id="alff.lib.input_lammps.lib_lammps.generate_input_lammps_ms" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_input_lammps_ms</span><span class="p">(</span><span class="n">file_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">atom_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;e3gnn/parallel&#39;</span><span class="p">,</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;* * numb_layers /path/to/potential&#39;</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;p p p&#39;</span><span class="p">,</span> <span class="n">dir_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">file_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;lammps_input.in&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_input_lammps_ms</span><span class="p">(</span><span class="n">file_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">atom_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;e3gnn/parallel&#39;</span><span class="p">,</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;* * numb_layers /path/to/potential&#39;</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">etol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-09</span><span class="p">,</span> <span class="n">ftol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-09</span><span class="p">,</span> <span class="n">maxiter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">,</span> <span class="n">maxeval</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">,</span> <span class="n">dmax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dir_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;output_md&#39;</span><span class="p">,</span> <span class="n">file_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;lammps_input.in&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_ms" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -12696,6 +12731,61 @@ relative_v : float, default: None
     <div class="doc doc-contents ">
 
         <p>Generate lammps input file for MD simulation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>etol</code></b>
+              (<code>float</code>, default:
+                  <code>1e-09</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Energy tolerance for minimization. Default 1.0e-9</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>ftol</code></b>
+              (<code>float</code>, default:
+                  <code>1e-09</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Force tolerance for minimization. Default 1.0e-9</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>maxiter</code></b>
+              (<code>int</code>, default:
+                  <code>100000</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Maximum number of iterations. Default 100000</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>maxeval</code></b>
+              (<code>int</code>, default:
+                  <code>100000</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Maximum number of evaluations. Default 100000</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>dmax</code></b>
+              (<code>float</code>, default:
+                  <code>0.01</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>maximum distance for line search to move (distance units). Default: 0.01</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
@@ -13892,7 +13982,9 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
         <p>This function does:
 - Prepare task_paths: select only unlabeled structures to compute at clusters.
-- Prepare lammps_optimize and lammps_input files.</p>
+- Prepare lammps_optimize and lammps_input files.
+    - Convert extxyz to lmpdata.
+    - Copy potential file to work_path.</p>
 
     </div>
 
@@ -13932,7 +14024,8 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Remove unlabeled .extxyz files, just keep the labeled ones.</p>
+- Remove unlabeled .extxyz files, just keep the labeled ones.
+- Convert LAMMPS output to extxyz_labeled.</p>
 
     </div>
 
