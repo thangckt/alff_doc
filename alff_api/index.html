@@ -3178,6 +3178,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;generate_input_lammps_singlepoint
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3556,6 +3565,33 @@
   <a href="#alff.phonon.lib_phonon_lammps.postpho_lammps_optimize" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;postpho_lammps_optimize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_lammps_optimize_fixbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_lammps_singlepoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;postpho_lammps_singlepoint_suppercell_force
     </span>
   </a>
   
@@ -6228,6 +6264,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;generate_input_lammps_singlepoint
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6606,6 +6651,33 @@
   <a href="#alff.phonon.lib_phonon_lammps.postpho_lammps_optimize" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;postpho_lammps_optimize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_lammps_optimize_fixbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepho_lammps_singlepoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;postpho_lammps_singlepoint_suppercell_force
     </span>
   </a>
   
@@ -12587,6 +12659,13 @@ relative_v : float, default: None
               <p>Generate lammps input file for MD simulation.</p>
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint" href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint">generate_input_lammps_singlepoint</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Generate lammps input file for MD simulation.</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -12798,6 +12877,68 @@ relative_v : float, default: None
               (<code>float</code>, default:
                   <code>0.01</code>
 )
+          –
+          <div class="doc-md-description">
+            <p>maximum distance for line search to move (distance units). Default: 0.01</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_input_lammps_singlepoint</span><span class="p">(</span><span class="n">file_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">atom_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;e3gnn/parallel&#39;</span><span class="p">,</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;* * numb_layers /path/to/potential&#39;</span><span class="p">,</span> <span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dir_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;output_md&#39;</span><span class="p">,</span> <span class="n">file_output</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;lammps_input.in&#39;</span><span class="p">)</span></code>
+
+<a href="#alff.lib.input_lammps.lib_lammps.generate_input_lammps_singlepoint" class="headerlink" title="Permanent link">&para;</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Generate lammps input file for MD simulation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>etol</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>Energy tolerance for minimization. Default 1.0e-9</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>ftol</code></b>
+              (<code>float</code>)
+          –
+          <div class="doc-md-description">
+            <p>Force tolerance for minimization. Default 1.0e-9</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>maxiter</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>Maximum number of iterations. Default 100000</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>maxeval</code></b>
+              (<code>int</code>)
+          –
+          <div class="doc-md-description">
+            <p>Maximum number of evaluations. Default 100000</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>dmax</code></b>
+              (<code>float</code>)
           –
           <div class="doc-md-description">
             <p>maximum distance for line search to move (distance units). Default: 0.01</p>
@@ -13996,6 +14137,27 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
               <p>This function does:</p>
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox" href="#alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox">prepho_lammps_optimize_fixbox</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>This function does:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint" href="#alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint">prepho_lammps_singlepoint</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>This function does:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force" href="#alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force">postpho_lammps_singlepoint_suppercell_force</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>This function does:</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -14069,6 +14231,67 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
         <p>This function does:
 - Remove unlabeled .extxyz files, just keep the labeled ones.
 - Convert LAMMPS output to extxyz_labeled.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_optimize_fixbox</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+
+<a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_optimize_fixbox" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>This function does:
+- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare lammps_optimize and lammps_input files.
+    - Convert extxyz to lmpdata.
+    - Copy potential file to work_path.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+
+<a href="#alff.phonon.lib_phonon_lammps.prepho_lammps_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>This function does:
+- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare lammps_optimize and lammps_input files.
+    - Convert extxyz to lmpdata.
+    - Copy potential file to work_path.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_lammps_singlepoint_suppercell_force</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+
+<a href="#alff.phonon.lib_phonon_lammps.postpho_lammps_singlepoint_suppercell_force" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>This function does:
+- Clean up unlabelled extxyz files
+- Collect forces from the output files</p>
 
     </div>
 
