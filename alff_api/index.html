@@ -3313,6 +3313,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.lib.tool_conf.align_atom_to_origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;align_atom_to_origin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.lib.tool_conf.lmpdata2extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lmpdata2extxyz
@@ -6420,6 +6429,15 @@
   <a href="#alff.lib.tool_conf.extxyz2lmpdata" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extxyz2lmpdata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.tool_conf.align_atom_to_origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;align_atom_to_origin
     </span>
   </a>
   
@@ -13246,6 +13264,13 @@ relative_v : float, default: None
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.tool_conf.align_atom_to_origin" href="#alff.lib.tool_conf.align_atom_to_origin">align_atom_to_origin</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Align min atoms position to the origin.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.tool_conf.lmpdata2extxyz" href="#alff.lib.tool_conf.lmpdata2extxyz">lmpdata2extxyz</a></code></b>
             –
             <div class="doc-md-description">
@@ -13405,6 +13430,23 @@ relative_v : float, default: None
 
         <p>Convert extxyz file to LAMMPS data file.
 NOTE: need to save original_cell to able to recover the original orientation of the crystal.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.tool_conf.align_atom_to_origin" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">align_atom_to_origin</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.lib.tool_conf.align_atom_to_origin" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Align min atoms position to the origin.</p>
 
     </div>
 
