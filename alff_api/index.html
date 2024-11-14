@@ -3313,6 +3313,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.lib.tool_conf.lmpdata2extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lmpdata2extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.lib.tool_conf.lmpdump2extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lmpdump2extxyz
@@ -6411,6 +6420,15 @@
   <a href="#alff.lib.tool_conf.extxyz2lmpdata" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;extxyz2lmpdata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.tool_conf.lmpdata2extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lmpdata2extxyz
     </span>
   </a>
   
@@ -13228,6 +13246,13 @@ relative_v : float, default: None
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.tool_conf.lmpdata2extxyz" href="#alff.lib.tool_conf.lmpdata2extxyz">lmpdata2extxyz</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Convert LAMMPS data file to extxyz file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.tool_conf.lmpdump2extxyz" href="#alff.lib.tool_conf.lmpdump2extxyz">lmpdump2extxyz</a></code></b>
             –
             <div class="doc-md-description">
@@ -13378,7 +13403,25 @@ relative_v : float, default: None
 
     <div class="doc doc-contents ">
 
-        <p>Convert extxyz file to LAMMPS data file.</p>
+        <p>Convert extxyz file to LAMMPS data file.
+NOTE: need to save rot_matrix to able to recover the original orientation of the crystal.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.tool_conf.lmpdata2extxyz" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">lmpdata2extxyz</span><span class="p">(</span><span class="n">lmpdata_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rot_matrix_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#alff.lib.tool_conf.lmpdata2extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert LAMMPS data file to extxyz file.</p>
 
     </div>
 
@@ -13388,7 +13431,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.tool_conf.lmpdump2extxyz" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">lmpdump2extxyz</span><span class="p">(</span><span class="n">lmpdump_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">lmpdump2extxyz</span><span class="p">(</span><span class="n">lmpdump_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">rot_matrix_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#alff.lib.tool_conf.lmpdump2extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -13396,7 +13439,7 @@ relative_v : float, default: None
     <div class="doc doc-contents ">
 
         <p>Convert LAMMPS dump file to extxyz file.
-NOTE: whenever atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... there will be an <code>SinglePointCalculator</code> object attached to the atoms</p>
+NOTE: whenever atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... there will be an <code>SinglePointCalculator</code> object attached to the atoms, and these keys can be accessed via <code>atoms.calc.results</code>.</p>
 
     </div>
 
@@ -13482,7 +13525,12 @@ NOTE: whenever atoms object contains reversed_keys: <code>energy</code>, <code>f
 <details class="note" open>
   <summary>Note</summary>
   <ul>
-<li><code>ase.io.read</code> returns a single Atoms object or a list of Atoms object, depending on the <code>index</code> argument. <code>index=":"</code> will always return a list.</li>
+<li><code>ase.io.read</code> returns a single Atoms object or a list of Atoms object, depending on the <code>index</code> argument.<ul>
+<li><code>index=":"</code> will always return a list.</li>
+<li><code>index=0</code> or <code>index=-1</code> will return a single Atoms object.</li>
+</ul>
+</li>
+<li>this function will always return a list of Atoms object, even <code>index=0</code> or <code>index=-1</code></li>
 </ul>
 </details>
     </div>
