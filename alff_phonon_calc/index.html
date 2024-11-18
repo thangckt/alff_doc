@@ -1232,13 +1232,15 @@
 
 
 <h1 id="alff-phonon-calculation">ALFF: phonon calculation<a class="headerlink" href="#alff-phonon-calculation" title="Permanent link">&para;</a></h1>
-<p><code>alff_phonon</code> is a command-line tool designed to perform the phonon calculation. The following tasks is run automatically without needs any user intervention:
-- Build atomic structures
-- Generate DFT/MD codes to optimize atomic structures
-- Submit the optimization jobs to the clusters, monitor the job status, and get back the DFT calcualation results
-- Generate supercells with displacements
-- Generate DFT/MD codes to compute atomic forces
-- Compute the phonon band structure, phonon density of states, and other phonon-related properties.</p>
+<p><code>alff_phonon</code> is a command-line tool designed to perform the phonon calculation. The following tasks is run automatically without needs of any user intervention:</p>
+<ul>
+<li>Build atomic structures</li>
+<li>Generate DFT/MD codes to optimize atomic structures</li>
+<li>Submit the optimization jobs to the clusters, monitor the job status, and get back the DFT calcualation results</li>
+<li>Generate supercells with displacements</li>
+<li>Generate DFT/MD codes to compute atomic forces</li>
+<li>Compute the phonon band structure, phonon density of states, and other phonon-related properties.</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>alff_phonon<span class="w"> </span>PARAM.yaml<span class="w"> </span>MACHINE.yaml
 </code></pre></div>
 <ul>
@@ -1247,15 +1249,15 @@
 </ul>
 <p>The above <code>alff_phonon</code> command is all needed to obtain, for example, the phonon band structure of Silicon as following figures:</p>
 <ul>
-<li>Phonon band structure of bulk Silicon with DFT calculator</li>
+<li>Phonon band structure of bulk Silicon using DFT calculator</li>
 </ul>
 <!-- <img src="./1images/docs_image/phonon_Si.jpg"  /> -->
-<p><img alt="Lammps logo" src="../1images/docs_image/phonon_Si_dft.jpg" /></p>
+<p><img alt="Lammps logo" src="../1images/docs_image/phonon_Si_dft.png" /></p>
 <ul>
-<li>Phonon band structure of bulk Silicon with MD calculator</li>
+<li>Phonon band structure of bulk Silicon using MD calculator with classical forcefield</li>
 </ul>
-<p><img alt="Lammps logo" src="../1images/docs_image/phonon_Si_md.jpg" /></p>
-<p>The results from our calculation are strongly consistent with the phonon band structure of Silicon reported in <a href="https://mdr.nims.go.jp/concern/datasets/m039k924j?locale=en">the literature</a>.</p>
+<p><img alt="Lammps logo" src="../1images/docs_image/phonon_Si_md.png" /></p>
+<p>The results from our calculations are strongly consistent with the reference phonon band structure of Silicon reported in <a href="https://mdr.nims.go.jp/concern/datasets/m039k924j?locale=en">the literature</a>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>-------------------------------- ALFF --------------------------------
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Version:  0.1.dev409+g177de1d
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>       Path:  C:/conda/envs/py13/Lib/site-packages/alff
@@ -1374,14 +1376,18 @@
 <a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a><span class="w">    </span><span class="c1"># dmax: 0.001             # maximum distance for line search to move (distance units). Default: 0.01</span>
 </code></pre></div>
 <h3 id="context-options">Context options<a class="headerlink" href="#context-options" title="Permanent link">&para;</a></h3>
-<p>When the output directory already exists, the generator will ask for the user's choice to proceed. The options are:
-- <code>Yes</code>: overwrite the existing directory and continue.
-- <code>Backup</code>: backup the existing directory and continue.
-- <code>No</code>: skip the building process and exit.</p>
-<p><code>Yes</code>: is recommended. With this option, the generator will
-- Overwrite and continue in the existing directory
-- Automatically select the unLABELED configurations to run DFT calculations, avoi running DFT for LABELED configurations.
-- This is the best way to continue the previous uncomplishness or update some more sampling options.</p>
+<p>When the output directory already exists, the generator will ask for the user's choice to proceed. The options are:</p>
+<ul>
+<li><code>Yes</code>: overwrite the existing directory and continue.</li>
+<li><code>Backup</code>: backup the existing directory and continue.</li>
+<li><code>No</code>: skip the building process and exit.</li>
+</ul>
+<p><code>Yes</code>: is recommended. With this option, the generator will</p>
+<ul>
+<li>Overwrite and continue in the existing directory</li>
+<li>Automatically select the unLABELED configurations to run DFT calculations, avoi running DFT for LABELED configurations.</li>
+<li>This is the best way to continue the previous uncomplishness or update some more sampling options.</li>
+</ul>
 <h2 id="machines">Machines<a class="headerlink" href="#machines" title="Permanent link">&para;</a></h2>
 <p>The settings of the machines running the generator's subprocesses are stored in a YAML/JSON/JSONC file. Here is an example of the machine settings:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">dft</span><span class="p">:</span>
