@@ -2266,6 +2266,33 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_stress_strain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_stress_strain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_stress_strain_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_stress_strain_single_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_elastic" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.elastic.elastic.elastic_calc" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;elastic_calc
@@ -5518,6 +5545,33 @@
   
     <nav class="md-nav" aria-label=" elastic">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_stress_strain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_stress_strain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_stress_strain_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_stress_strain_single_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_elastic" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#alff.elastic.elastic.elastic_calc" class="md-nav__link">
@@ -10752,6 +10806,27 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.compute_stress_strain" href="#alff.elastic.elastic.compute_stress_strain">compute_stress_strain</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute stress and strain tensors for each scale-relaxed-structure by DFT/MD.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.compute_stress_strain_single_structure" href="#alff.elastic.elastic.compute_stress_strain_single_structure">compute_stress_strain_single_structure</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>The function does the following:</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.compute_elastic" href="#alff.elastic.elastic.compute_elastic">compute_elastic</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.elastic_calc" href="#alff.elastic.elastic.elastic_calc">elastic_calc</a></code></b>
             –
             <div class="doc-md-description">
@@ -10773,6 +10848,58 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.elastic.compute_stress_strain" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_stress_strain</span><span class="p">(</span><span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+
+<a href="#alff.elastic.elastic.compute_stress_strain" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute stress and strain tensors for each scale-relaxed-structure by DFT/MD.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.elastic.compute_stress_strain_single_structure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_stress_strain_single_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.elastic.elastic.compute_stress_strain_single_structure" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The function does the following:
+- generate supercells with small deformation and compute corresponding strain tensor
+- run DFT/MD minimize calculation to compute stress tensor for each suppercell.
+- collect stress and strain tensor for each supercell</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.elastic.compute_elastic" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic</span><span class="p">(</span><span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+
+<a href="#alff.elastic.elastic.compute_elastic" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -15296,7 +15423,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
             <b><code><a class="autorefs autorefs-internal" title="alff.phonon.phonon.compute_force" href="#alff.phonon.phonon.compute_force">compute_force</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Compute forces for each relaxed-structure by DFT/MD.</p>
+              <p>Compute forces for each scale-relaxed-structure by DFT/MD.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -15396,7 +15523,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Compute forces for each relaxed-structure by DFT/MD.</p>
+        <p>Compute forces for each scale-relaxed-structure by DFT/MD.</p>
 
     </div>
 
@@ -15415,7 +15542,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
         <p>Run DFT/MD single-point calculation to compute forces for a list of supercells of a <em>single structure</em>. The function does the following:
 - Initialize the <code>phonopy</code> object
-- generate supercells with displacements in each subdir
+- generate supercells with displacements
 - run DFT/MD single-point calculation to compute forces for each supercell
 - assign forces back to phonopy object
 - save the phonopy object to a file for latter post-processing</p>
