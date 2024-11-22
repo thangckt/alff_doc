@@ -10378,7 +10378,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.elastic.lib_elastic.get_lattice_type" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_lattice_type</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_lattice_type</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">symprec</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></code>
 
 <a href="#alff.elastic.lib_elastic.get_lattice_type" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10398,6 +10398,16 @@ Triclinic (1), Monoclinic (2), Orthorombic (3), Tetragonal (4), Trigonal (5), He
           –
           <div class="doc-md-description">
             <p>ASE Atoms object</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>symprec</code></b>
+              (<code>float</code>, default:
+                  <code>1e-05</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>symmetry precision to check the symmetry of the crystal</p>
           </div>
         </li>
     </ul>
@@ -10422,7 +10432,7 @@ Triclinic (1), Monoclinic (2), Orthorombic (3), Tetragonal (4), Trigonal (5), He
 
 
 <h5 id="alff.elastic.lib_elastic.get_elementary_deformations" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_elementary_deformations</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_elementary_deformations</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">symprec</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">]</span></code>
 
 <a href="#alff.elastic.lib_elastic.get_elementary_deformations" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10460,7 +10470,17 @@ The deformations are created based on the symmetry of the crystal and are limite
 )
           –
           <div class="doc-md-description">
-            <p>size of the 'maximum deformation' in percent and degrees</p>
+            <p>size of the 'maximum deformation' in percentage and degrees</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>symprec</code></b>
+              (<code>float</code>, default:
+                  <code>1e-05</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>symmetry precision to check the symmetry of the crystal</p>
           </div>
         </li>
     </ul>
@@ -10605,7 +10625,7 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
 
 
 <h5 id="alff.elastic.lib_elastic.get_cij_order" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cij_order</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cij_order</span><span class="p">(</span><span class="n">cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">symprec</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.elastic.lib_elastic.get_cij_order" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10613,9 +10633,35 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
     <div class="doc doc-contents ">
 
         <p>Return the order of elastic constants for the structure</p>
-<p>:param cryst: ASE Atoms object</p>
-<p>:returns: Order of elastic constants as a tuple of strings: C_ij</p>
 
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>cryst</code></b>
+              (<code><span title="ase.Atoms">Atoms</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Atoms object, reference structure (relaxed/optimized structure)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>symprec</code></b>
+              (<code>float</code>, default:
+                  <code>1e-05</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>symmetry precision to check the symmetry of the crystal</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="return" open>
+  <summary>Return</summary>
+  <p>tuple: tuple of strings <code>C_ij</code> the order of elastic constants</p>
+</details>
     </div>
 
 </div>
