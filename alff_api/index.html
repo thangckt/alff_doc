@@ -3085,15 +3085,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atoms_fake
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.lib.gpaw_script.cli_gpaw_optimize.output_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;output_file
@@ -3226,15 +3217,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atoms_fake
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.output_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;output_file
@@ -3245,6 +3227,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.gpaw_script.script_ase" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase
+    </span>
+  </a>
   
 </li>
         
@@ -3552,6 +3543,15 @@
   <a href="#alff.lib.structure.change_key_in_extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;change_key_in_extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.structure.remove_key_in_extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_key_in_extxyz
     </span>
   </a>
   
@@ -6384,15 +6384,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atoms_fake
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.lib.gpaw_script.cli_gpaw_optimize.output_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;output_file
@@ -6525,15 +6516,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;atoms_fake
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.output_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;output_file
@@ -6544,6 +6526,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.gpaw_script.script_ase" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase
+    </span>
+  </a>
   
 </li>
         
@@ -6851,6 +6842,15 @@
   <a href="#alff.lib.structure.change_key_in_extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;change_key_in_extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.lib.structure.remove_key_in_extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_key_in_extxyz
     </span>
   </a>
   
@@ -11843,6 +11843,13 @@ relative_v : float, default: None
             <p>Some notes</p>
           </div>
         </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw_script.script_ase" href="#alff.lib.gpaw_script.script_ase">script_ase</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
     </ul>
 
 
@@ -12108,7 +12115,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_aimd.pdict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">load_setting_file</span><span class="p">(</span><span class="n">configfile</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -12575,13 +12582,6 @@ relative_v : float, default: None
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake" href="#alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake">atoms_fake</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw_script.cli_gpaw_optimize.output_file" href="#alff.lib.gpaw_script.cli_gpaw_optimize.output_file">output_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -12662,7 +12662,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_optimize.pdict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">load_setting_file</span><span class="p">(</span><span class="n">configfile</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -12947,32 +12947,13 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_optimize.stress" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">(</span><span class="n">voigt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
 <a href="#alff.lib.gpaw_script.cli_gpaw_optimize.stress" class="headerlink" title="Permanent link">&para;</a></h6>
-
-
-    <div class="doc doc-contents ">
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_fake</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.lib.gpaw_script.cli_gpaw_optimize.atoms_fake" class="headerlink" title="Permanent link">&para;</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -13123,13 +13104,6 @@ relative_v : float, default: None
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake" href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake">atoms_fake</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.lib.gpaw_script.cli_gpaw_singlepoint.output_file" href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.output_file">output_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -13210,7 +13184,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_singlepoint.pdict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">load_setting_file</span><span class="p">(</span><span class="n">configfile</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -13362,32 +13336,13 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_singlepoint.stress" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">(</span><span class="n">voigt</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
 <a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.stress" class="headerlink" title="Permanent link">&para;</a></h6>
-
-
-    <div class="doc doc-contents ">
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_fake</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.lib.gpaw_script.cli_gpaw_singlepoint.atoms_fake" class="headerlink" title="Permanent link">&para;</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -13419,6 +13374,31 @@ relative_v : float, default: None
 
 
   </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h5 id="alff.lib.gpaw_script.script_ase" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>script_ase</code>
+
+
+<a href="#alff.lib.gpaw_script.script_ase" class="headerlink" title="Permanent link">&para;</a></h5>
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+
+
+
+
 
     </div>
 
@@ -14103,6 +14083,13 @@ relative_v : float, default: None
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.structure.remove_key_in_extxyz" href="#alff.lib.structure.remove_key_in_extxyz">remove_key_in_extxyz</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Remove unwanted keys from extxyz file to keep it clean.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.structure.select_extxyz_frames" href="#alff.lib.structure.select_extxyz_frames">select_extxyz_frames</a></code></b>
             –
             <div class="doc-md-description">
@@ -14402,6 +14389,23 @@ NOTE: need to save original_cell to able to recover the original orientation of 
 
         <p>NOTE: when Atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... it will has a <code>SinglePointCalculator</code> object attached to the Atoms, and these keys can be accessed via <code>atoms.calc.results</code>.</p>
 <p>These keys are not stored in <code>atoms.arrays</code> or <code>atoms.info</code>. So to access these properties via <code>atoms.arrays</code> or <code>atoms.info</code>, we need to change the keys that differ from the reserved keys.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.structure.remove_key_in_extxyz" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remove_key_in_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span></code>
+
+<a href="#alff.lib.structure.remove_key_in_extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Remove unwanted keys from extxyz file to keep it clean.</p>
 
     </div>
 
