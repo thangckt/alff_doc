@@ -2091,18 +2091,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.get_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.get_pressure" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_pressure
     </span>
   </a>
   
@@ -5495,18 +5495,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.get_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.get_pressure" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_pressure
     </span>
   </a>
   
@@ -10391,17 +10391,17 @@ This helps to chunk the tasks with similar supercell size together (similar supe
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_elastic_tensor" href="#alff.elastic.lib_elastic.get_elastic_tensor">get_elastic_tensor</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.compute_elastic_tensor" href="#alff.elastic.lib_elastic.compute_elastic_tensor">compute_elastic_tensor</a></code></b>
             –
             <div class="doc-md-description">
               <p>Calculate elastic tensor from the stress-strain relation by fitting this relation to the set of linear equations, strains and stresses.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.compute_elastic_tensor" href="#alff.elastic.lib_elastic.compute_elastic_tensor">compute_elastic_tensor</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_pressure" href="#alff.elastic.lib_elastic.get_pressure">get_pressure</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Return <em>external</em> isotropic (hydrostatic) pressure in ASE units.</p>
             </div>
           </li>
     </ul>
@@ -10768,10 +10768,10 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.elastic.lib_elastic.get_elastic_tensor" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
+<h5 id="alff.elastic.lib_elastic.compute_elastic_tensor" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
 
-<a href="#alff.elastic.lib_elastic.get_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -10781,13 +10781,51 @@ The number of linear equations is computed depends on the symmetry of the crysta
 <p>It is assumed that the crystal is converged (relaxed/optimized) under intended pressure/stress. The geometry and stress
 on this crystal is taken as the reference point. No additional optimization will be run.
 Then, the strain and stress tensor is computed for each of the deformed structures (exactly, the stress difference from the reference point).</p>
-<p>This function returns tuple of :math:<code>C_{ij}</code> elastic tensor,
-raw Birch coefficients :math:<code>B_{ij}</code> and fitting results: residuals,
-solution rank, singular values returned by numpy.linalg.lstsq.</p>
-<p>:param cryst: Atoms object, basic structure
-:param systems: list of Atoms object with calculated deformed structures</p>
-<p>:returns: tuple(:math:<code>C_{ij}</code> float vector,
-                tuple(:math:<code>B_{ij}</code> float vector, residuals, solution rank, singular values))</p>
+<p>This function returns tuple of Cij elastic tensor, and the fitting results returned by <code>numpy.linalg.lstsq</code>: Birch coefficients, residuals, solution rank, singular values.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>ref_cryst</code></b>
+              (<code><span title="ase.Atoms">Atoms</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Atoms object, reference structure (relaxed/optimized structure)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>deform_crysts</code></b>
+              (<code>list[<span title="ase.Atoms">Atoms</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of Atoms objects with calculated deformed structures</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>symprec</code></b>
+              (<code>float</code>, default:
+                  <code>1e-05</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>symmetry precision to check the symmetry of the crystal</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>tuple</code></b>          –
+          <div class="doc-md-description">
+            <p>tuple of Cij elastic tensor and fitting results.
+- Cij: in vector form of Voigt notation.
+- Bij: float vector, residuals, solution rank, singular values</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
@@ -10796,14 +10834,36 @@ solution rank, singular values returned by numpy.linalg.lstsq.</p>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.elastic.lib_elastic.compute_elastic_tensor" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
+<h5 id="alff.elastic.lib_elastic.get_pressure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_pressure</span><span class="p">(</span><span class="n">stress</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
 
-<a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.elastic.lib_elastic.get_pressure" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
+        <p>Return <em>external</em> isotropic (hydrostatic) pressure in ASE units.</p>
+<p>If the pressure is positive the system is under external pressure.
+This is a convenience function to convert output of get_stress function
+into external pressure.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>stress(np.array</code></b>
+          –
+          <div class="doc-md-description">
+            <p>stress tensor in Voight (vector) notation as returned by the <code>.get_stress()</code> method.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="return" open>
+  <summary>Return</summary>
+  <p>float: external hydrostatic pressure in ASE units.</p>
+</details>
     </div>
 
 </div>
