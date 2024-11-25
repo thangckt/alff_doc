@@ -2004,6 +2004,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_BMEOS_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_BMEOS_single_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.elastic.elastic.compute_elastic" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic
@@ -2103,6 +2112,33 @@
   <a href="#alff.elastic.lib_elastic.get_pressure" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_pressure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.func_BMEOS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;func_BMEOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.fit_BM_EOS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fit_BM_EOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.get_bulk_modulus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_bulk_modulus
     </span>
   </a>
   
@@ -5417,6 +5453,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.elastic.elastic.compute_BMEOS_single_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_BMEOS_single_structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.elastic.elastic.compute_elastic" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic
@@ -5516,6 +5561,33 @@
   <a href="#alff.elastic.lib_elastic.get_pressure" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_pressure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.func_BMEOS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;func_BMEOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.fit_BM_EOS" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fit_BM_EOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.get_bulk_modulus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_bulk_modulus
     </span>
   </a>
   
@@ -10217,6 +10289,13 @@ This helps to chunk the tasks with similar supercell size together (similar supe
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.compute_BMEOS_single_structure" href="#alff.elastic.elastic.compute_BMEOS_single_structure">compute_BMEOS_single_structure</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Compute Birch-Murnaghan EOS for a single structure.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.elastic.elastic.compute_elastic" href="#alff.elastic.elastic.compute_elastic">compute_elastic</a></code></b>
             –
             <div class="doc-md-description">
@@ -10297,6 +10376,23 @@ This helps to chunk the tasks with similar supercell size together (similar supe
         <p>Compute elastic tensor for a single structure.
 - Collect stress and strain tensors from calculations on deformed structures.
 - Compute elastic constants by fitting stress-strain relations.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.elastic.compute_BMEOS_single_structure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_BMEOS_single_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+
+<a href="#alff.elastic.elastic.compute_BMEOS_single_structure" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute Birch-Murnaghan EOS for a single structure.</p>
 
     </div>
 
@@ -10420,6 +10516,27 @@ This helps to chunk the tasks with similar supercell size together (similar supe
             –
             <div class="doc-md-description">
               <p>Return <em>external</em> isotropic (hydrostatic) pressure in ASE units.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.func_BMEOS" href="#alff.elastic.lib_elastic.func_BMEOS">func_BMEOS</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.fit_BM_EOS" href="#alff.elastic.lib_elastic.fit_BM_EOS">fit_BM_EOS</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Calculate Birch-Murnaghan Equation of State for the crystal.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_bulk_modulus" href="#alff.elastic.lib_elastic.get_bulk_modulus">get_bulk_modulus</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Calculate bulk modulus using the Birch-Murnaghan equation of state.</p>
             </div>
           </li>
     </ul>
@@ -10787,7 +10904,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 
 
 <h5 id="alff.elastic.lib_elastic.fit_elastic_tensor" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">fit_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">fit_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">]</span></code>
 
 <a href="#alff.elastic.lib_elastic.fit_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10836,7 +10953,8 @@ Then, the strain and stress tensor is computed for each of the deformed structur
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-<b><code>tuple</code></b>          –
+<b><code>tuple</code></b> (              <code>tuple[<span title="numpy.array">array</span>, <span title="numpy.array">array</span>]</code>
+)          –
           <div class="doc-md-description">
             <p>tuple of Cij elastic tensor and fitting results.
 - Cij: in vector form of Voigt notation.
@@ -10881,6 +10999,129 @@ This is a convenience function to convert output of get_stress function into ext
   <summary>Return</summary>
   <p>float: external hydrostatic pressure in ASE units.</p>
 </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.lib_elastic.func_BMEOS" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">func_BMEOS</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="n">b0</span><span class="p">,</span> <span class="n">b0p</span><span class="p">)</span></code>
+
+<a href="#alff.elastic.lib_elastic.func_BMEOS" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.lib_elastic.fit_BM_EOS" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">fit_BM_EOS</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">])</span></code>
+
+<a href="#alff.elastic.lib_elastic.fit_BM_EOS" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calculate Birch-Murnaghan Equation of State for the crystal.</p>
+<div class="arithmatex">\[ P(V) = \frac{B_0}{B'_0}\left[\left({\frac{V}{V_0}}\right)^{-B'_0} - 1\right] \]</div>
+<p>It's coefficients are estimated using n single-point structures ganerated from the crystal (cryst)
+by the scan_volumes function between two relative volumes. The BM EOS is fitted to the computed points by
+least squares method.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>cryst</code></b>
+              (<code><span title="ase.Atoms">Atoms</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Atoms object, reference structure (relaxed/optimized structure)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>deform_crysts</code></b>
+              (<code>list[<span title="ase.Atoms">Atoms</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of Atoms objects with calculated deformed structures</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>tuple</code></b>          –
+          <div class="doc-md-description">
+            <p>tuple of EOS parameters ([V0, B0, B0p], pv data)'.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.lib_elastic.get_bulk_modulus" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_bulk_modulus</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">])</span></code>
+
+<a href="#alff.elastic.lib_elastic.get_bulk_modulus" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calculate bulk modulus using the Birch-Murnaghan equation of state.
+The bulk modulus is the <code>B_0</code> coefficient of the B-M EOS.
+The units of the result are defined by ASE. To get the result in
+any particular units (e.g. GPa) you need to divide it by
+ase.units.<unit name>::</p>
+<div class="codehilite"><pre><span></span><code>get_bulk_modulus(cryst)/ase.units.GPa
+</code></pre></div>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>cryst</code></b>
+              (<code><span title="ase.Atoms">Atoms</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Atoms object, reference structure (relaxed/optimized structure)</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>deform_crysts</code></b>
+              (<code>list[<span title="ase.Atoms">Atoms</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of Atoms objects with calculated deformed structures</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>float</code></b>          –
+          <div class="doc-md-description">
+            <p>bulk modulus <code>B_0</code> in ASE units.</p>
+          </div>
+        </li>
+    </ul>
+
     </div>
 
 </div>
