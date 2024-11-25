@@ -12289,7 +12289,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_aimd.write_xyz" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">write_xyz</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;traj_labeled.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">write_xyz</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;traj_label.extxyz&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.lib.gpaw_script.cli_gpaw_aimd.write_xyz" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -12856,7 +12856,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_optimize.output_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_labeled.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_label.extxyz&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -13245,7 +13245,7 @@ relative_v : float, default: None
 
 
 <h6 id="alff.lib.gpaw_script.cli_gpaw_singlepoint.output_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_labeled.extxyz&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_label.extxyz&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -14112,7 +14112,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.key.FILE_FRAME_LABELED" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_LABELED</span> <span class="o">=</span> <span class="s1">&#39;conf_labeled.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_LABELED</span> <span class="o">=</span> <span class="s1">&#39;conf_label.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -14131,7 +14131,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.key.FILE_TRAJ_LABELED" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_TRAJ_LABELED</span> <span class="o">=</span> <span class="s1">&#39;traj_labeled.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_TRAJ_LABELED</span> <span class="o">=</span> <span class="s1">&#39;traj_label.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -14899,7 +14899,7 @@ relative_v : float, default: None
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.structure.change_key_in_extxyz" href="#alff.lib.structure.change_key_in_extxyz">change_key_in_extxyz</a></code></b>
             –
             <div class="doc-md-description">
-              <p>NOTE: when Atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... it will has a <code>SinglePointCalculator</code> object attached to the Atoms, and these keys can be accessed via <code>atoms.calc.results</code>.</p>
+              <p>NOTE: when Atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... it will has a <code>SinglePointCalculator</code> object attached to the Atoms, and these keys can be accessed via <code>atoms.calc.results</code> or <code>.get_()</code> methods.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -15207,8 +15207,29 @@ NOTE: need to save original_cell to able to recover the original orientation of 
 
     <div class="doc doc-contents ">
 
-        <p>NOTE: when Atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... it will has a <code>SinglePointCalculator</code> object attached to the Atoms, and these keys can be accessed via <code>atoms.calc.results</code>.</p>
+        <p>NOTE: when Atoms object contains reversed_keys: <code>energy</code>, <code>forces</code>, <code>stress</code>, <code>momenta</code>, <code>free_energy</code>,... it will has a <code>SinglePointCalculator</code> object attached to the Atoms, and these keys can be accessed via <code>atoms.calc.results</code> or <code>.get_()</code> methods.</p>
 <p>These keys are not stored in <code>atoms.arrays</code> or <code>atoms.info</code>. So to access these properties via <code>atoms.arrays</code> or <code>atoms.info</code>, we need to change the keys that differ from the reserved keys.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>extxyz_file</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>Path to the extxyz file.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>keys</code></b>
+              (<code>dict</code>)
+          –
+          <div class="doc-md-description">
+            <p>Dictionary of key pairs {"old_key": "new_key"} to change. Example: <code>{"old_key": "new_key", "forces": "ref_forces", "stress": "ref_stress"}</code></p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
