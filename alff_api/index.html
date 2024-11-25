@@ -2091,9 +2091,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.fit_elastic_tensor" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fit_elastic_tensor
     </span>
   </a>
   
@@ -3066,9 +3066,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.key.FILE_LOG_DISPATCHER" class="md-nav__link">
+  <a href="#alff.lib.key.FILE_LOG_DISPATCH" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_LOG_DISPATCHER
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_LOG_DISPATCH
     </span>
   </a>
   
@@ -5495,9 +5495,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.fit_elastic_tensor" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;compute_elastic_tensor
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;fit_elastic_tensor
     </span>
   </a>
   
@@ -6470,9 +6470,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.key.FILE_LOG_DISPATCHER" class="md-nav__link">
+  <a href="#alff.lib.key.FILE_LOG_DISPATCH" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_LOG_DISPATCHER
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_LOG_DISPATCH
     </span>
   </a>
   
@@ -10391,7 +10391,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.compute_elastic_tensor" href="#alff.elastic.lib_elastic.compute_elastic_tensor">compute_elastic_tensor</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.fit_elastic_tensor" href="#alff.elastic.lib_elastic.fit_elastic_tensor">fit_elastic_tensor</a></code></b>
             –
             <div class="doc-md-description">
               <p>Calculate elastic tensor from the stress-strain relation by fitting this relation to the set of linear equations, strains and stresses.</p>
@@ -10768,10 +10768,10 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.elastic.lib_elastic.compute_elastic_tensor" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
+<h5 id="alff.elastic.lib_elastic.fit_elastic_tensor" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">fit_elastic_tensor</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">deform_crysts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">symprec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">)</span></code>
 
-<a href="#alff.elastic.lib_elastic.compute_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.elastic.lib_elastic.fit_elastic_tensor" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -10842,10 +10842,9 @@ Then, the strain and stress tensor is computed for each of the deformed structur
 
     <div class="doc doc-contents ">
 
-        <p>Return <em>external</em> isotropic (hydrostatic) pressure in ASE units.</p>
-<p>If the pressure is positive the system is under external pressure.
-This is a convenience function to convert output of get_stress function
-into external pressure.</p>
+        <p>Return <em>external</em> isotropic (hydrostatic) pressure in ASE units.
+If the pressure is positive the system is under external pressure.
+This is a convenience function to convert output of get_stress function into external pressure.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -11581,7 +11580,7 @@ relative_v : float, default: None
 
 
 <h5 id="alff.lib.dispatcher.fh" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">FILE_LOG_DISPATCHER</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">FILE_LOG_DISPATCH</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -13348,7 +13347,7 @@ relative_v : float, default: None
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.lib.key.FILE_LOG_DISPATCHER" href="#alff.lib.key.FILE_LOG_DISPATCHER">FILE_LOG_DISPATCHER</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.lib.key.FILE_LOG_DISPATCH" href="#alff.lib.key.FILE_LOG_DISPATCH">FILE_LOG_DISPATCH</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -13637,14 +13636,14 @@ relative_v : float, default: None
 
 
 
-<h5 id="alff.lib.key.FILE_LOG_DISPATCHER" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_LOG_DISPATCHER</span> <span class="o">=</span> <span class="n">FILE_LOG_ALFF</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;alff&#39;</span><span class="p">,</span> <span class="s1">&#39;dispatcher&#39;</span><span class="p">)</span></code>
+<h5 id="alff.lib.key.FILE_LOG_DISPATCH" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_LOG_DISPATCH</span> <span class="o">=</span> <span class="n">FILE_LOG_ALFF</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;alff&#39;</span><span class="p">,</span> <span class="s1">&#39;dispatch&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.lib.key.FILE_LOG_DISPATCHER" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.lib.key.FILE_LOG_DISPATCH" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
