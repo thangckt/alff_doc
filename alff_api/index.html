@@ -2178,9 +2178,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.get_cij_order" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.get_cij_list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_order
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.get_cij_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_matrix
     </span>
   </a>
   
@@ -5732,9 +5741,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.elastic.lib_elastic.get_cij_order" class="md-nav__link">
+  <a href="#alff.elastic.lib_elastic.get_cij_list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_order
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.elastic.lib_elastic.get_cij_matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_cij_matrix
     </span>
   </a>
   
@@ -10713,10 +10731,17 @@ This helps to chunk the tasks with similar supercell size together (similar supe
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_cij_order" href="#alff.elastic.lib_elastic.get_cij_order">get_cij_order</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_cij_list" href="#alff.elastic.lib_elastic.get_cij_list">get_cij_list</a></code></b>
             –
             <div class="doc-md-description">
               <p>Return the order of elastic constants for the structure</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.elastic.lib_elastic.get_cij_matrix" href="#alff.elastic.lib_elastic.get_cij_matrix">get_cij_matrix</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the Cij matrix for the structure based on the symmetry of the crystal.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -10822,21 +10847,6 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           –
           <div class="doc-md-description">
             <p>Bravais lattice name of the crystal.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>C11,</code></b>
-              (<code>C12, ... C66 </code>)
-          –
-          <div class="doc-md-description">
-            <p>float, Individual components of Cij for a standardized representation:
-- Cubic: C11, C12, C44
-- Hexagonal: C11, C12, C13, C33, C44, C66 (2*C66=C11-C12)
-- Tetragonal: C11, C12, C13, C16, C33, C44, C66 (C16 optional)
-- Rhombohedral: C11, C12, C13, C14, C15, C33, C44, C66 (2*C66=C11-C12, C15 optional)
-- Orthorhombic: C11, C12, C13, C22, C23, C33, C44, C55, C66
-- Monoclinic: C11, C12, C13, C15, C22, C23, C25, C33, C35, C44, C46, C55, C66
-- Triclinic: all Cij where i &lt;= j</p>
           </div>
         </li>
     </ul>
@@ -11105,7 +11115,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
         <p>Identify the lattice type and the Bravais lattice of the crystal.
 The lattice type numbers are (numbering starts from 1):
-Triclinic (1), Monoclinic (2), Orthorombic (3), Tetragonal (4), Trigonal (5), Hexagonal (6), Cubic (7)</p>
+Triclinic (1), Monoclinic (2), Orthorhombic (3), Tetragonal (4), Trigonal (5), Hexagonal (6), Cubic (7)</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -11282,7 +11292,7 @@ The axis is specified as follows:</p>
 
 
 <h5 id="alff.elastic.lib_elastic.strain_voigt_to_symmetry_matrix" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_voigt_to_symmetry_matrix</span><span class="p">(</span><span class="n">u</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">lattice_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_voigt_to_symmetry_matrix</span><span class="p">(</span><span class="n">u</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">bravais_lattice</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span></code>
 
 <a href="#alff.elastic.lib_elastic.strain_voigt_to_symmetry_matrix" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -11293,7 +11303,7 @@ The axis is specified as follows:</p>
 The number of Cij constants depends on the symmetry of the crystal. This strain matrix is computed based on the symmetry to reduce the necessary number of equations to be used in the fitting procedure (also reduce the necessary calculations). Refer Landau's textbook for the details.</p>
 <div class="codehilite"><pre><span></span><code>- Triclinic: C11, C22, C33, C12, C13, C23, C44, C55, C66, C16, C26, C36, C46, C56, C14, C15, C25, C45
 - Monoclinic: C11, C22, C33, C12, C13, C23, C44, C55, C66, C16, C26, C36, C45
-- Orthorombic: C11, C22, C33, C12, C13, C23, C44, C55, C66
+- Orthorhombic: C11, C22, C33, C12, C13, C23, C44, C55, C66
 - Tetragonal: C11, C33, C12, C13, C44, C66
 - Trigonal: C11, C33, C12, C13, C44, C14
 - Hexagonal: C11, C33, C12, C13, C44
@@ -11312,7 +11322,7 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
           </div>
         </li>
         <li class="doc-section-item field-body">
-            <b><code>lattice_name</code></b>
+            <b><code>bravais_lattice</code></b>
               (<code>str</code>, default:
                   <code>&#39;Cubic&#39;</code>
 )
@@ -11342,10 +11352,10 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.elastic.lib_elastic.get_cij_order" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cij_order</span><span class="p">(</span><span class="n">ref_cryst</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">symprec</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<h5 id="alff.elastic.lib_elastic.get_cij_list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cij_list</span><span class="p">(</span><span class="n">bravais_lattice</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
-<a href="#alff.elastic.lib_elastic.get_cij_order" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.elastic.lib_elastic.get_cij_list" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -11356,21 +11366,13 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-            <b><code>cryst</code></b>
-              (<code><span title="ase.Atoms">Atoms</span></code>)
-          –
-          <div class="doc-md-description">
-            <p>Atoms object, reference structure (relaxed/optimized structure)</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>symprec</code></b>
-              (<code>float</code>, default:
-                  <code>1e-05</code>
+            <b><code>bravais_lattice</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;Cubic&#39;</code>
 )
           –
           <div class="doc-md-description">
-            <p>symmetry precision to check the symmetry of the crystal</p>
+            <p>Bravais lattice name of the lattice</p>
           </div>
         </li>
     </ul>
@@ -11378,8 +11380,58 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
 
 <details class="return" open>
   <summary>Return</summary>
-  <p>tuple: tuple of strings <code>C_ij</code> the order of elastic constants</p>
+  <p>list: list of strings <code>C_ij</code> the order of elastic constants</p>
 </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.elastic.lib_elastic.get_cij_matrix" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cij_matrix</span><span class="p">(</span><span class="n">cij_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">bravais_lattice</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span></code>
+
+<a href="#alff.elastic.lib_elastic.get_cij_matrix" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the Cij matrix for the structure based on the symmetry of the crystal.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>cij_dict</code></b>
+              (<code>dict</code>)
+          –
+          <div class="doc-md-description">
+            <p>dictionary of elastic constants <code>Cij</code>. Where C11, C12, ... C66 : float, Individual components of Cij for a standardized representation:</p>
+<ul>
+<li>Triclinic: all Cij where i &lt;= j</li>
+<li>Monoclinic: C11, C12, C13, C15, C22, C23, C25, C33, C35, C44, C46, C55, C66</li>
+<li>Orthorhombic: C11, C12, C13, C22, C23, C33, C44, C55, C66</li>
+<li>Tetragonal: C11, C12, C13, C16, C33, C44, C66 (C16 optional)</li>
+<li>Trigonal: C11, C12, C13, C14, C33, C44</li>
+<li>Hexagonal: C11, C12, C13, C33, C44, C66 (2*C66=C11-C12)</li>
+<li>Cubic: C11, C12, C44</li>
+<li>Isotropic: C11, C12, C44 (2*C44=C11-C12)</li>
+</ul>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>bravais_lattice</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;Cubic&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Bravais lattice name of the lattice</p>
+          </div>
+        </li>
+    </ul>
+
     </div>
 
 </div>
