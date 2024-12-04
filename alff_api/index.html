@@ -2739,6 +2739,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.lib.dispatcher.info_current_dispatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;info_current_dispatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.lib.dispatcher.remote_info" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remote_info
@@ -2748,9 +2757,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.dispatcher.info_current_dispatch" class="md-nav__link">
+  <a href="#alff.lib.dispatcher.check_task_paths" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;info_current_dispatch
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_paths
     </span>
   </a>
   
@@ -6437,6 +6446,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.lib.dispatcher.info_current_dispatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;info_current_dispatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.lib.dispatcher.remote_info" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remote_info
@@ -6446,9 +6464,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.lib.dispatcher.info_current_dispatch" class="md-nav__link">
+  <a href="#alff.lib.dispatcher.check_task_paths" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;info_current_dispatch
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_paths
     </span>
   </a>
   
@@ -10503,9 +10521,10 @@ jdata : dict
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare command_list
 - Read task_paths from .yaml file
-- Prepare fordward &amp; backward files
+    - Prepare the task_list
+    - Prepare fordward &amp; backward files
+    - Prepare command_list
 - Submit jobs to the cluster
 - Download the results when finished</p>
 
@@ -13191,17 +13210,24 @@ relative_v : float, default: None
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.lib.dispatcher.remote_info" href="#alff.lib.dispatcher.remote_info">remote_info</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Return the remote machine information. Job_type: 'train', 'dft', 'md'.</p>
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.lib.dispatcher.info_current_dispatch" href="#alff.lib.dispatcher.info_current_dispatch">info_current_dispatch</a></code></b>
             –
             <div class="doc-md-description">
               <p>Return the information of the current chunk of tasks.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.dispatcher.remote_info" href="#alff.lib.dispatcher.remote_info">remote_info</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Return the remote machine information.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.lib.dispatcher.check_task_paths" href="#alff.lib.dispatcher.check_task_paths">check_task_paths</a></code></b>
+            –
+            <div class="doc-md-description">
+              
             </div>
           </li>
     </ul>
@@ -13317,23 +13343,6 @@ relative_v : float, default: None
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.lib.dispatcher.remote_info" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remote_info</span><span class="p">(</span><span class="n">mdict</span><span class="p">,</span> <span class="n">job_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dft&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
-
-<a href="#alff.lib.dispatcher.remote_info" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Return the remote machine information. Job_type: 'train', 'dft', 'md'.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
 <h5 id="alff.lib.dispatcher.info_current_dispatch" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">info_current_dispatch</span><span class="p">(</span><span class="n">task_paths</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">,</span> <span class="n">chunk_count</span><span class="p">,</span> <span class="n">paths_in_chunk</span><span class="p">,</span> <span class="n">last_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">current_time</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
@@ -13343,6 +13352,40 @@ relative_v : float, default: None
     <div class="doc doc-contents ">
 
         <p>Return the information of the current chunk of tasks.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.dispatcher.remote_info" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remote_info</span><span class="p">(</span><span class="n">mdict</span><span class="p">,</span> <span class="n">job_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dft&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+<a href="#alff.lib.dispatcher.remote_info" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the remote machine information.
+Args:
+    job_type: 'train', 'dft', 'md'.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.lib.dispatcher.check_task_paths" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">check_task_paths</span><span class="p">(</span><span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">job_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+<a href="#alff.lib.dispatcher.check_task_paths" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
 
     </div>
 
@@ -17730,9 +17773,10 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare command_list
 - Read task_paths from .yaml file
-- Prepare fordward &amp; backward files
+    - Prepare the task_list
+    - Prepare fordward &amp; backward files
+    - Prepare command_list
 - Submit jobs to the cluster
 - Download the results when finished</p>
 
