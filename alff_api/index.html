@@ -2060,6 +2060,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;lib_dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" lib_dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset.split_ase_atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_ase_atoms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset.split_dataset_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_dataset_files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.data.lib_gen_gpaw" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;lib_gen_gpaw
@@ -5780,6 +5813,39 @@
   <a href="#alff.data.gendata.data_generator" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;data_generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;lib_dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" lib_dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset.split_ase_atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_ase_atoms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.data.lib_dataset.split_dataset_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_dataset_files
     </span>
   </a>
   
@@ -10307,6 +10373,13 @@ relative_v : float, default: None
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset" href="#alff.data.lib_dataset">lib_dataset</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gen_gpaw" href="#alff.data.lib_gen_gpaw">lib_gen_gpaw</a></code></b>
           –
           <div class="doc-md-description">
@@ -10791,6 +10864,206 @@ relative_v : float, default: None
     <div class="doc doc-contents ">
 
         <p>Generate initial data for training ML models</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h4 id="alff.data.lib_dataset" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>lib_dataset</code>
+
+
+<a href="#alff.data.lib_dataset" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_ase_atoms" href="#alff.data.lib_dataset.split_ase_atoms">split_ase_atoms</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Split a dataset into training, validation, and test sets.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_dataset_files" href="#alff.data.lib_dataset.split_dataset_files">split_dataset_files</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Split a dataset into training, validation, and test sets.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.data.lib_dataset.split_ase_atoms" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_ase_atoms</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#alff.data.lib_dataset.split_ase_atoms" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Split a dataset into training, validation, and test sets.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>data</code></b>
+              (<code>list[<span title="ase.Atoms">Atoms</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of ASE Atoms objects.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>train_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0.9</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of training set. Defaults to 0.9.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>valid_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0.1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of validation set. Defaults to 0.1.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>test_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of test set. Defaults to 0.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>seed</code></b>
+              (<code>int</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Seed number. If given, the produce set is unchanged, it means can be reproduced. Defaults to None.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.data.lib_dataset.split_dataset_files" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_dataset_files</span><span class="p">(</span><span class="n">extxyz_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">outfile_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">)</span></code>
+
+<a href="#alff.data.lib_dataset.split_dataset_files" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Split a dataset into training, validation, and test sets.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>extxyz_files</code></b>
+              (<code>list[str]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of file paths in EXTXYZ format.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>train_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0.9</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of training set. Defaults to 0.9.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>valid_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0.1</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of validation set. Defaults to 0.1.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>test_ratio</code></b>
+              (<code>float</code>, default:
+                  <code>0</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Ratio of test set. Defaults to 0.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>seed</code></b>
+              (<code>int</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Random seed. Defaults to None.</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
