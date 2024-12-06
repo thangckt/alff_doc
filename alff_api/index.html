@@ -1598,6 +1598,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.al.lib_uncertainty.committee_error_SevenNet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;committee_error_SevenNet
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5390,6 +5399,15 @@
   <a href="#alff.al.lib_uncertainty.committee_error_s" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;committee_error_s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.lib_uncertainty.committee_error_SevenNet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;committee_error_SevenNet
     </span>
   </a>
   
@@ -9825,6 +9843,13 @@ jdata : dict
               <p>Committee error for stress on a single configuration</p>
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.al.lib_uncertainty.committee_error_SevenNet" href="#alff.al.lib_uncertainty.committee_error_SevenNet">committee_error_SevenNet</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Committee error for energy, forces and stress on a list of configurations</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -10031,6 +10056,55 @@ jdata : dict
 )          –
           <div class="doc-md-description">
             <p>minimum of the standard deviation</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.lib_uncertainty.committee_error_SevenNet" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">committee_error_SevenNet</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">sevenn_args</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{},</span> <span class="n">rel_force</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">compute_stress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">rel_stress</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#alff.al.lib_uncertainty.committee_error_SevenNet" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Committee error for energy, forces and stress on a list of configurations</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>extxyz_files</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of extended xyz files</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>model_files</code></b>
+              (<code>list</code>)
+          –
+          <div class="doc-md-description">
+            <p>list of model files</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          –
+          <div class="doc-md-description">
+            <p>file "committee_error.txt" with the following columns:</p>
           </div>
         </li>
     </ul>
