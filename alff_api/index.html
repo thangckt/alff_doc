@@ -3351,9 +3351,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.gpaw_script.script_ase" class="md-nav__link">
+  <a href="#alff.util.gpaw_script.script_ase_md_template" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase_md_template
     </span>
   </a>
   
@@ -6857,9 +6857,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.gpaw_script.script_ase" class="md-nav__link">
+  <a href="#alff.util.gpaw_script.script_ase_md_template" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;script_ase_md_template
     </span>
   </a>
   
@@ -13888,7 +13888,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.gpaw_script.script_ase" href="#alff.util.gpaw_script.script_ase">script_ase</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.gpaw_script.script_ase_md_template" href="#alff.util.gpaw_script.script_ase_md_template">script_ase_md_template</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -13929,11 +13929,11 @@ Args:
 
         <p>Some notes:
 - Run MD in ase following this tutorial: <a href="https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html">https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html</a>
+- For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
-    - a dict <code>gpaw</code> with GPAW parameters.
-    - a dict <code>aimd</code> with ASE MD parameters.
-- For MD run, control symmetry to avoid error: <code>broken symmetry</code>.</p>
+    - a dict <code>gpaw_calc</code> with GPAW parameters.
+    - a dict <code>aimd</code> with ASE MD parameters.</p>
 
 
 
@@ -14235,7 +14235,7 @@ Args:
 
 
 <h6 id="alff.util.gpaw_script.cli_gpaw_aimd.gpaw_arg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_arg&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -14782,7 +14782,7 @@ Args:
 
 
 <h6 id="alff.util.gpaw_script.cli_gpaw_optimize.gpaw_arg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_arg&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15304,7 +15304,7 @@ Args:
 
 
 <h6 id="alff.util.gpaw_script.cli_gpaw_singlepoint.gpaw_arg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_arg&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gpaw_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15427,11 +15427,11 @@ Args:
 
 
 
-<h5 id="alff.util.gpaw_script.script_ase" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>script_ase</code>
+<h5 id="alff.util.gpaw_script.script_ase_md_template" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>script_ase_md_template</code>
 
 
-<a href="#alff.util.gpaw_script.script_ase" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.gpaw_script.script_ase_md_template" class="headerlink" title="Permanent link">&para;</a></h5>
 
     <div class="doc doc-contents ">
 
