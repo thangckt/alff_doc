@@ -1959,9 +1959,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_gen_gpaw.sort_dft_task_paths" class="md-nav__link">
+  <a href="#alff.data.lib_gen_gpaw.sort_dft_task_dirs" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_dft_task_paths
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_dft_task_dirs
     </span>
   </a>
   
@@ -2838,9 +2838,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.check_task_paths" class="md-nav__link">
+  <a href="#alff.util.dispatcher.check_task_dirs" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_paths
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_dirs
     </span>
   </a>
   
@@ -5018,9 +5018,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_gen_gpaw.sort_dft_task_paths" class="md-nav__link">
+  <a href="#alff.data.lib_gen_gpaw.sort_dft_task_dirs" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_dft_task_paths
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_dft_task_dirs
     </span>
   </a>
   
@@ -5897,9 +5897,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.check_task_paths" class="md-nav__link">
+  <a href="#alff.util.dispatcher.check_task_dirs" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_paths
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;check_task_dirs
     </span>
   </a>
   
@@ -7135,7 +7135,7 @@
             <b><code><a class="autorefs autorefs-internal" title="alff.al.active_learning.pre_md" href="#alff.al.active_learning.pre_md">pre_md</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>Prepare MD tasks</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -7355,6 +7355,10 @@
 
 
     <div class="doc doc-contents ">
+
+        <p>Prepare MD tasks
+- collect initial configurations
+- prepare MD args</p>
 
     </div>
 
@@ -8065,7 +8069,7 @@ jdata : dict
             <b><code><a class="autorefs autorefs-internal" title="alff.al.lib_md_ase.pre_md_ase_sevenn" href="#alff.al.lib_md_ase.pre_md_ase_sevenn">pre_md_ase_sevenn</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>This function does:</p>
             </div>
           </li>
     </ul>
@@ -8088,12 +8092,16 @@ jdata : dict
 
 
 <h5 id="alff.al.lib_md_ase.pre_md_ase_sevenn" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pre_md_ase_sevenn</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pre_md_ase_sevenn</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.al.lib_md_ase.pre_md_ase_sevenn" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
+
+        <p>This function does:
+- prepare MD args
+- establish MD tasks and ASE_run_file</p>
 
     </div>
 
@@ -9490,8 +9498,8 @@ jdata : dict
 
         <p>NOTE:
 - do not use <code>return</code> in the functions that run <code>dpdispatcher.submission()</code>.
-- work_path is a folder relative to the run_path
-- task_paths is folders relative to the work_path</p>
+- work_dir is a folder relative to the run_dir
+- task_dirs is folders relative to the work_dir</p>
 
 
 
@@ -9581,7 +9589,7 @@ jdata : dict
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gen_gpaw.sort_dft_task_paths" href="#alff.data.lib_gen_gpaw.sort_dft_task_paths">sort_dft_task_paths</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_gen_gpaw.sort_dft_task_dirs" href="#alff.data.lib_gen_gpaw.sort_dft_task_dirs">sort_dft_task_dirs</a></code></b>
             –
             <div class="doc-md-description">
               <p>Sort the structure paths by its supercell size.</p>
@@ -9607,7 +9615,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.pregen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.pregen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9615,8 +9623,8 @@ jdata : dict
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare task_paths: select only unlabeled structures to compute at clusters.
-- Prepare gpaw_dft and gpaw_run_file</p>
+- Prepare task_dirs: select only unlabeled structures to compute at clusters.
+- Prepare ase_args for GPAW and gpaw_run_file</p>
 
     </div>
 
@@ -9626,7 +9634,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.rungen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.rungen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9634,7 +9642,7 @@ jdata : dict
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Read task_paths from .yaml file
+- Read task_dirs from .yaml file
     - Prepare the task_list
     - Prepare fordward &amp; backward files
     - Prepare command_list
@@ -9649,7 +9657,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.postgen_gpaw_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.postgen_gpaw_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9667,7 +9675,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.pregen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.pregen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9684,7 +9692,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.rungen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.rungen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9701,7 +9709,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.postgen_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.postgen_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9718,7 +9726,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.temperature_stress_task_md_ase" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">temperature_stress_task_md_ase</span><span class="p">(</span><span class="n">struct_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">temperature_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">stress_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">ase_args</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">temperature_stress_task_md_ase</span><span class="p">(</span><span class="n">struct_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">temperature_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">stress_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">ase_args</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.temperature_stress_task_md_ase" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9731,7 +9739,7 @@ jdata : dict
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-            <b><code>struct_paths</code></b>
+            <b><code>struct_dirs</code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -9768,7 +9776,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.pregen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pregen_gpaw_aimd</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.pregen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9785,7 +9793,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.rungen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">rungen_gpaw_aimd</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.rungen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9802,7 +9810,7 @@ jdata : dict
 
 
 <h5 id="alff.data.lib_gen_gpaw.postgen_gpaw_aimd" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_aimd</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postgen_gpaw_aimd</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.postgen_gpaw_aimd" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -9835,10 +9843,10 @@ jdata : dict
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.data.lib_gen_gpaw.sort_dft_task_paths" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_dft_task_paths</span><span class="p">(</span><span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
+<h5 id="alff.data.lib_gen_gpaw.sort_dft_task_dirs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_dft_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
 
-<a href="#alff.data.lib_gen_gpaw.sort_dft_task_paths" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.data.lib_gen_gpaw.sort_dft_task_dirs" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -10074,7 +10082,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.elastic.elastic.compute_stress_single_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_stress_single_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_stress_single_structure</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.elastic.elastic.compute_stress_single_structure" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10094,7 +10102,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.elastic.elastic.compute_elastic_tensor_single_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic_tensor_single_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_elastic_tensor_single_structure</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
 
 <a href="#alff.elastic.elastic.compute_elastic_tensor_single_structure" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10207,7 +10215,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.elastic.lib_elas_lammps.postelast_lammps_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postelast_lammps_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postelast_lammps_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.elastic.lib_elas_lammps.postelast_lammps_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -10226,7 +10234,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.elastic.lib_elas_lammps.postelast_lammps_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postelast_lammps_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postelast_lammps_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.elastic.lib_elas_lammps.postelast_lammps_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -11874,7 +11882,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 
 
 <h5 id="alff.phonon.lib_pho_gpaw.prepho_gpaw_optimize_fixbox" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_gpaw_optimize_fixbox</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_gpaw_optimize_fixbox</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_gpaw.prepho_gpaw_optimize_fixbox" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -11892,7 +11900,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_gpaw.postpho_gpaw_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_gpaw_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_gpaw.postpho_gpaw_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -11999,7 +12007,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.prepho_lammps_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.prepho_lammps_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12007,10 +12015,10 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare task_dirs: select only unlabeled structures to compute at clusters.
 - Prepare lammps_optimize and lammps_input files.
     - Convert extxyz to lmpdata.
-    - Copy potential file to work_path.</p>
+    - Copy potential file to work_dir.</p>
 
     </div>
 
@@ -12020,7 +12028,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.runpho_lammps_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">runpho_lammps_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">runpho_lammps_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.runpho_lammps_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12028,7 +12036,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Read task_paths from .yaml file
+- Read task_dirs from .yaml file
     - Prepare the task_list
     - Prepare fordward &amp; backward files
     - Prepare command_list
@@ -12043,7 +12051,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.postpho_lammps_optimize" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_lammps_optimize</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_lammps_optimize</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.postpho_lammps_optimize" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12062,7 +12070,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.prepho_lammps_optimize_fixbox" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_optimize_fixbox</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_optimize_fixbox</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.prepho_lammps_optimize_fixbox" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12070,10 +12078,10 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare task_dirs: select only unlabeled structures to compute at clusters.
 - Prepare lammps_optimize and lammps_input files.
     - Convert extxyz to lmpdata.
-    - Copy potential file to work_path.</p>
+    - Copy potential file to work_dir.</p>
 
     </div>
 
@@ -12083,7 +12091,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.prepho_lammps_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepho_lammps_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.prepho_lammps_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12091,10 +12099,10 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
     <div class="doc doc-contents ">
 
         <p>This function does:
-- Prepare task_paths: select only unlabeled structures to compute at clusters.
+- Prepare task_dirs: select only unlabeled structures to compute at clusters.
 - Prepare lammps_optimize and lammps_input files.
     - Convert extxyz to lmpdata.
-    - Copy potential file to work_path.</p>
+    - Copy potential file to work_dir.</p>
 
     </div>
 
@@ -12104,7 +12112,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_pho_lammps.postpho_lammps_singlepoint" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_lammps_singlepoint</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">postpho_lammps_singlepoint</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_pho_lammps.postpho_lammps_singlepoint" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12256,7 +12264,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_phonopy.get_band_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_band_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_band_structure</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_phonopy.get_band_structure" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12271,7 +12279,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_phonopy.get_DOS_n_PDOS" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_DOS_n_PDOS</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_DOS_n_PDOS</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_phonopy.get_DOS_n_PDOS" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12286,7 +12294,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.lib_phonopy.get_thermal_properties" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_thermal_properties</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_thermal_properties</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.lib_phonopy.get_thermal_properties" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12531,7 +12539,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.phonon.phonon.compute_force_single_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_force_single_structure</span><span class="p">(</span><span class="n">work_path</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">compute_force_single_structure</span><span class="p">(</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.phonon.phonon.compute_force_single_structure" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12862,7 +12870,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
             <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.submit_junk_job" href="#alff.util.dispatcher.submit_junk_job">submit_junk_job</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Improved version of <code>submit_job</code> to split the task_paths into chunks and submit them.</p>
+              <p>Improved version of <code>submit_job</code> to split the task_dirs into chunks and submit them.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -12880,7 +12888,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.check_task_paths" href="#alff.util.dispatcher.check_task_paths">check_task_paths</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.check_task_dirs" href="#alff.util.dispatcher.check_task_dirs">check_task_dirs</a></code></b>
             –
             <div class="doc-md-description">
               
@@ -12963,7 +12971,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.util.dispatcher.submit_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
 <a href="#alff.util.dispatcher.submit_job" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -12983,14 +12991,14 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.util.dispatcher.submit_junk_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_junk_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_junk_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
 
 <a href="#alff.util.dispatcher.submit_junk_job" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>Improved version of <code>submit_job</code> to split the task_paths into chunks and submit them.</p>
+        <p>Improved version of <code>submit_job</code> to split the task_dirs into chunks and submit them.</p>
 
     </div>
 
@@ -13000,7 +13008,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
 
 <h5 id="alff.util.dispatcher.info_current_dispatch" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">info_current_dispatch</span><span class="p">(</span><span class="n">task_paths</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">,</span> <span class="n">chunk_count</span><span class="p">,</span> <span class="n">paths_in_chunk</span><span class="p">,</span> <span class="n">last_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">current_time</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">info_current_dispatch</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">,</span> <span class="n">jobs_per_dispatch</span><span class="p">,</span> <span class="n">chunk_count</span><span class="p">,</span> <span class="n">dirs_in_chunk</span><span class="p">,</span> <span class="n">last_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">current_time</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
 <a href="#alff.util.dispatcher.info_current_dispatch" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -13035,10 +13043,10 @@ Args:
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.util.dispatcher.check_task_paths" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">check_task_paths</span><span class="p">(</span><span class="n">task_paths</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">job_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+<h5 id="alff.util.dispatcher.check_task_dirs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">check_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">mdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">job_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
-<a href="#alff.util.dispatcher.check_task_paths" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.dispatcher.check_task_dirs" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -14348,6 +14356,13 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_aimd.struct_args" href="#alff.util.script.gpaw_script.cli_gpaw_aimd.struct_args">struct_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_aimd.extxyz_file" href="#alff.util.script.gpaw_script.cli_gpaw_aimd.extxyz_file">extxyz_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -14601,8 +14616,27 @@ Args:
 
 
 
+<h7 id="alff.util.script.gpaw_script.cli_gpaw_aimd.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.gpaw_script.cli_gpaw_aimd.struct_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h7 id="alff.util.script.gpaw_script.cli_gpaw_aimd.extxyz_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;input_extxyz_path&#39;</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15004,6 +15038,13 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_optimize.struct_args" href="#alff.util.script.gpaw_script.cli_gpaw_optimize.struct_args">struct_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_optimize.extxyz_file" href="#alff.util.script.gpaw_script.cli_gpaw_optimize.extxyz_file">extxyz_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -15243,8 +15284,27 @@ Args:
 
 
 
+<h7 id="alff.util.script.gpaw_script.cli_gpaw_optimize.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.gpaw_script.cli_gpaw_optimize.struct_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h7 id="alff.util.script.gpaw_script.cli_gpaw_optimize.extxyz_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;input_extxyz_path&#39;</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15575,6 +15635,13 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_singlepoint.struct_args" href="#alff.util.script.gpaw_script.cli_gpaw_singlepoint.struct_args">struct_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_singlepoint.extxyz_file" href="#alff.util.script.gpaw_script.cli_gpaw_singlepoint.extxyz_file">extxyz_file</a></code></b>
           –
           <div class="doc-md-description">
@@ -15765,8 +15832,27 @@ Args:
 
 
 
+<h7 id="alff.util.script.gpaw_script.cli_gpaw_singlepoint.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.gpaw_script.cli_gpaw_singlepoint.struct_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h7 id="alff.util.script.gpaw_script.cli_gpaw_singlepoint.extxyz_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;input_extxyz_path&#39;</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15973,6 +16059,13 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.code_lines" href="#alff.util.script.gpaw_script.script_ase_md.code_lines">code_lines</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.struct_args" href="#alff.util.script.gpaw_script.script_ase_md.struct_args">struct_args</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -16213,8 +16306,27 @@ Args:
 
 
 
+<h7 id="alff.util.script.gpaw_script.script_ase_md.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.gpaw_script.script_ase_md.struct_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h7 id="alff.util.script.gpaw_script.script_ase_md.extxyz_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;input_extxyz_path&#39;</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
