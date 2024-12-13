@@ -3540,6 +3540,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.util.structure.make_cell_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.structure.make_cell_triangular_extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular_extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.structure.poscar2lmpdata" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;poscar2lmpdata
@@ -6608,6 +6626,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.util.structure.make_cell_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.structure.make_cell_triangular_extxyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular_extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.structure.poscar2lmpdata" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;poscar2lmpdata
@@ -9042,7 +9078,7 @@ jdata : dict
             <b><code><a class="autorefs autorefs-internal" title="alff.data.gendata.sampling_space" href="#alff.data.gendata.sampling_space">sampling_space</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Scale and perturb the structures</p>
+              <p>Scale and perturb the structures.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -9162,7 +9198,8 @@ jdata : dict
 
     <div class="doc doc-contents ">
 
-        <p>Scale and perturb the structures</p>
+        <p>Scale and perturb the structures.
+- Save 2 lists of paths: original and scaled structure paths</p>
 
     </div>
 
@@ -9829,7 +9866,10 @@ jdata : dict
 
     <div class="doc doc-contents ">
 
-        <p>Refer to the <code>pregen_gpaw_optimize()</code> function.</p>
+        <p>Refer to the <code>pregen_gpaw_optimize()</code> function.
+Note:
+- structure_dirs: contains the optimized structures without scaling.
+- scale_structure_dirs: contains the scaled structures.</p>
 
     </div>
 
@@ -13080,7 +13120,7 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 
         <p>Return the remote machine information.
 Args:
-    job_type: 'train', 'dft', 'md'.</p>
+    job_type (str): 'train', 'dft', 'md'. Which are top-level keys in the mdict.</p>
 
     </div>
 
@@ -14479,7 +14519,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_aimd.external_stress" href="#alff.util.script.gpaw_script.cli_gpaw_aimd.external_stress">external_stress</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.cli_gpaw_aimd.stress" href="#alff.util.script.gpaw_script.cli_gpaw_aimd.stress">stress</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -14878,14 +14918,14 @@ Args:
 
 
 
-<h7 id="alff.util.script.gpaw_script.cli_gpaw_aimd.external_stress" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">external_stress</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;external_stress&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+<h7 id="alff.util.script.gpaw_script.cli_gpaw_aimd.stress" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;stress&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.gpaw_script.cli_gpaw_aimd.external_stress" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.gpaw_script.cli_gpaw_aimd.stress" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -14898,7 +14938,7 @@ Args:
 
 
 <h7 id="alff.util.script.gpaw_script.cli_gpaw_aimd.stress_in_ev_per_angstrom3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress_in_ev_per_angstrom3</span> <span class="o">=</span> <span class="n">external_stress</span> <span class="o">/</span> <span class="n">units</span><span class="o">.</span><span class="n">GPa</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress_in_ev_per_angstrom3</span> <span class="o">=</span> <span class="n">stress</span> <span class="o">/</span> <span class="n">units</span><span class="o">.</span><span class="n">GPa</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -16112,7 +16152,7 @@ Args:
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
-    - a dict <code>custom_lines_calc</code> define calculator.
+    - a dict <code>ase_calc</code> define calculator.
     - a dict <code>md</code> with ASE MD parameters.</p>
 
 
@@ -16175,7 +16215,14 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.custom_calc" href="#alff.util.script.gpaw_script.script_ase_md.custom_calc">custom_calc</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.ase_calc" href="#alff.util.script.gpaw_script.script_ase_md.ase_calc">ase_calc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.pyfile" href="#alff.util.script.gpaw_script.script_ase_md.pyfile">pyfile</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -16266,7 +16313,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.external_stress" href="#alff.util.script.gpaw_script.script_ase_md.external_stress">external_stress</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.gpaw_script.script_ase_md.stress" href="#alff.util.script.gpaw_script.script_ase_md.stress">stress</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -16399,14 +16446,33 @@ Args:
 
 
 
-<h7 id="alff.util.script.gpaw_script.script_ase_md.custom_calc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">custom_calc</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;custom_calc_lines&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+<h7 id="alff.util.script.gpaw_script.script_ase_md.ase_calc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ase_calc</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ase_calc&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.gpaw_script.script_ase_md.custom_calc" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.gpaw_script.script_ase_md.ase_calc" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.gpaw_script.script_ase_md.pyfile" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pyfile</span> <span class="o">=</span> <span class="n">ase_calc</span><span class="p">[</span><span class="s1">&#39;pyfile&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.gpaw_script.script_ase_md.pyfile" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -16419,7 +16485,7 @@ Args:
 
 
 <h7 id="alff.util.script.gpaw_script.script_ase_md.code_lines" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">code_lines</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">custom_calc</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">code_lines</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">pyfile</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -16646,14 +16712,14 @@ Args:
 
 
 
-<h7 id="alff.util.script.gpaw_script.script_ase_md.external_stress" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">external_stress</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;external_stress&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+<h7 id="alff.util.script.gpaw_script.script_ase_md.stress" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;stress&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.gpaw_script.script_ase_md.external_stress" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.gpaw_script.script_ase_md.stress" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -16666,7 +16732,7 @@ Args:
 
 
 <h7 id="alff.util.script.gpaw_script.script_ase_md.stress_in_ev_per_angstrom3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress_in_ev_per_angstrom3</span> <span class="o">=</span> <span class="n">external_stress</span> <span class="o">/</span> <span class="n">units</span><span class="o">.</span><span class="n">GPa</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress_in_ev_per_angstrom3</span> <span class="o">=</span> <span class="n">stress</span> <span class="o">/</span> <span class="n">units</span><span class="o">.</span><span class="n">GPa</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -17435,6 +17501,20 @@ Args:
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.structure.make_cell_triangular" href="#alff.util.structure.make_cell_triangular">make_cell_triangular</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Atoms with a box is an <em>upper triangular matrix</em> is a requirement to use <code>NPT</code> class in ASE.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.structure.make_cell_triangular_extxyz" href="#alff.util.structure.make_cell_triangular_extxyz">make_cell_triangular_extxyz</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Make the cell of atoms in extxyz file to be triangular.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="alff.util.structure.poscar2lmpdata" href="#alff.util.structure.poscar2lmpdata">poscar2lmpdata</a></code></b>
             –
             <div class="doc-md-description">
@@ -17611,6 +17691,42 @@ Args:
     <div class="doc doc-contents ">
 
         <p>Align min atoms position to the origin.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.structure.make_cell_triangular" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_triangular</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.util.structure.make_cell_triangular" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Atoms with a box is an <em>upper triangular matrix</em> is a requirement to use <code>NPT</code> class in ASE.
+This function will normalize the atoms's cell matrix to an upper triangular matrix.
+REF: <a href="https://gitlab.com/ase/ase/-/merge_requests/3277#note_2255046877">this comments</a></p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.structure.make_cell_triangular_extxyz" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_triangular_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+
+<a href="#alff.util.structure.make_cell_triangular_extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Make the cell of atoms in extxyz file to be triangular.</p>
 
     </div>
 
