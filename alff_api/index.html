@@ -2943,9 +2943,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.key.FILE_TRAIN_PARAM" class="md-nav__link">
+  <a href="#alff.util.key.FILE_TRAIN_ARG" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_TRAIN_PARAM
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_TRAIN_ARG
     </span>
   </a>
   
@@ -3114,6 +3114,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.util.key.FILE_COLLECT_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_COLLECT_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.key.DIR_SUPERCELL" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_SUPERCELL
@@ -3168,24 +3177,6 @@
   <a href="#alff.util.pathtool.mkname_structure" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;mkname_structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.pathtool.make_dir_ask_backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_dir_ask_backup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.pathtool.ask_yes_no" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ask_yes_no
     </span>
   </a>
   
@@ -5828,9 +5819,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.key.FILE_TRAIN_PARAM" class="md-nav__link">
+  <a href="#alff.util.key.FILE_TRAIN_ARG" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_TRAIN_PARAM
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_TRAIN_ARG
     </span>
   </a>
   
@@ -5999,6 +5990,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.util.key.FILE_COLLECT_DATA" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FILE_COLLECT_DATA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.key.DIR_SUPERCELL" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_SUPERCELL
@@ -6053,24 +6053,6 @@
   <a href="#alff.util.pathtool.mkname_structure" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;mkname_structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.pathtool.make_dir_ask_backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_dir_ask_backup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.pathtool.ask_yes_no" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ask_yes_no
     </span>
   </a>
   
@@ -6852,7 +6834,7 @@
 
 
 <h5 id="alff.al.active_learning._get_mlp_engine" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_mlp_engine</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_mlp_engine</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
 <a href="#alff.al.active_learning._get_mlp_engine" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -6867,7 +6849,7 @@
 
 
 <h5 id="alff.al.active_learning.get_sys_index" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_sys_index</span><span class="p">(</span><span class="n">task</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_sys_index</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
 
 <a href="#alff.al.active_learning.get_sys_index" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -7950,6 +7932,7 @@ Note: Now, do on remote machine</p>
           </div>
         </li>
     </ul>
+        <p>Note: When wanting to select candidates based on only energy/force, just set <code>f_std_lo</code>/<code>s_std_lo</code> to a very large value. By this way, the criterion for that term will never meet. E.g., <code>f_std_lo=1e6</code> for selecting candidates based on energy only.</p>
 
     </div>
 
@@ -13389,7 +13372,7 @@ Args:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.key.FILE_TRAIN_PARAM" href="#alff.util.key.FILE_TRAIN_PARAM">FILE_TRAIN_PARAM</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.key.FILE_TRAIN_ARG" href="#alff.util.key.FILE_TRAIN_ARG">FILE_TRAIN_ARG</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -13516,6 +13499,13 @@ Args:
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.key.FILE_FINAL_DATA" href="#alff.util.key.FILE_FINAL_DATA">FILE_FINAL_DATA</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.key.FILE_COLLECT_DATA" href="#alff.util.key.FILE_COLLECT_DATA">FILE_COLLECT_DATA</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -13831,14 +13821,14 @@ Args:
 
 
 
-<h5 id="alff.util.key.FILE_TRAIN_PARAM" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_TRAIN_PARAM</span> <span class="o">=</span> <span class="s1">&#39;train_params.yaml&#39;</span></code>
+<h5 id="alff.util.key.FILE_TRAIN_ARG" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_TRAIN_ARG</span> <span class="o">=</span> <span class="s1">&#39;train_args.yaml&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.key.FILE_TRAIN_PARAM" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.key.FILE_TRAIN_ARG" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -14192,6 +14182,25 @@ Args:
 
 
 
+<h5 id="alff.util.key.FILE_COLLECT_DATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_COLLECT_DATA</span> <span class="o">=</span> <span class="s1">&#39;collect_data_label.extxyz&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.key.FILE_COLLECT_DATA" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h5 id="alff.util.key.DIR_SUPERCELL" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SUPERCELL</span> <span class="o">=</span> <span class="s1">&#39;01_supercell&#39;</span></code>
 
@@ -14303,20 +14312,6 @@ Args:
               <p>Create the directory name for the structure</p>
             </div>
           </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.pathtool.make_dir_ask_backup" href="#alff.util.pathtool.make_dir_ask_backup">make_dir_ask_backup</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Make a directory and ask for backup if the directory already exists.</p>
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.pathtool.ask_yes_no" href="#alff.util.pathtool.ask_yes_no">ask_yes_no</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Asks a yes/no/backup question and returns the response.</p>
-            </div>
-          </li>
     </ul>
 
 
@@ -14345,40 +14340,6 @@ Args:
     <div class="doc doc-contents ">
 
         <p>Create the directory name for the structure</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.util.pathtool.make_dir_ask_backup" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_dir_ask_backup</span><span class="p">(</span><span class="n">dir_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
-
-<a href="#alff.util.pathtool.make_dir_ask_backup" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Make a directory and ask for backup if the directory already exists.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.util.pathtool.ask_yes_no" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">ask_yes_no</span><span class="p">(</span><span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
-
-<a href="#alff.util.pathtool.ask_yes_no" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Asks a yes/no/backup question and returns the response.</p>
 
     </div>
 
