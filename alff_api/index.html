@@ -15576,7 +15576,42 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.params" href="#alff.util.script.ase_script.cli_gpaw_aimd.params">params</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.gpaw_params" href="#alff.util.script.ase_script.cli_gpaw_aimd.gpaw_params">gpaw_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.calc1" href="#alff.util.script.ase_script.cli_gpaw_aimd.calc1">calc1</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.dftd3_args" href="#alff.util.script.ase_script.cli_gpaw_aimd.dftd3_args">dftd3_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.xc" href="#alff.util.script.ase_script.cli_gpaw_aimd.xc">xc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.damping" href="#alff.util.script.ase_script.cli_gpaw_aimd.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.calc2" href="#alff.util.script.ase_script.cli_gpaw_aimd.calc2">calc2</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -15723,6 +15758,13 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.pfactor" href="#alff.util.script.ase_script.cli_gpaw_aimd.pfactor">pfactor</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.stress_in_ev_per_angstrom3" href="#alff.util.script.ase_script.cli_gpaw_aimd.stress_in_ev_per_angstrom3">stress_in_ev_per_angstrom3</a></code></b>
           –
           <div class="doc-md-description">
@@ -15730,7 +15772,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.pfactor" href="#alff.util.script.ase_script.cli_gpaw_aimd.pfactor">pfactor</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.mask" href="#alff.util.script.ase_script.cli_gpaw_aimd.mask">mask</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -15889,14 +15931,109 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.params" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_aimd.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;symmetry&#39;</span><span class="p">:</span> <span class="s1">&#39;off&#39;</span><span class="p">}</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.gpaw_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_aimd.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;symmetry&#39;</span><span class="p">:</span> <span class="s1">&#39;off&#39;</span><span class="p">}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_aimd.params" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.gpaw_params" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.calc1" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc1</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">gpaw_params</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.calc1" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.dftd3_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.dftd3_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.xc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">gpaw_params</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.xc" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.damping" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.calc2" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc2</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.calc2" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -15909,7 +16046,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_aimd.calc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">SumCalculator</span><span class="p">([</span><span class="n">calc1</span><span class="p">,</span> <span class="n">calc2</span><span class="p">])</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -16288,6 +16425,25 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.pfactor" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pfactor</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pfactor&#39;</span><span class="p">,</span> <span class="mf">2000000.0</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.pfactor" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h7 id="alff.util.script.ase_script.cli_gpaw_aimd.stress_in_ev_per_angstrom3" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress_in_ev_per_angstrom3</span> <span class="o">=</span> <span class="n">stress</span> <span class="o">/</span> <span class="n">units</span><span class="o">.</span><span class="n">GPa</span></code>
 
@@ -16307,14 +16463,14 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.pfactor" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pfactor</span> <span class="o">=</span> <span class="n">aimd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pfactor&#39;</span><span class="p">,</span> <span class="mf">2000000.0</span><span class="p">)</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.mask" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">mask</span> <span class="o">=</span> <span class="n">thermostat</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mask&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_aimd.pfactor" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.mask" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -16545,7 +16701,42 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.params" href="#alff.util.script.ase_script.cli_gpaw_optimize.params">params</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.gpaw_params" href="#alff.util.script.ase_script.cli_gpaw_optimize.gpaw_params">gpaw_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.calc1" href="#alff.util.script.ase_script.cli_gpaw_optimize.calc1">calc1</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.dftd3_args" href="#alff.util.script.ase_script.cli_gpaw_optimize.dftd3_args">dftd3_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.xc" href="#alff.util.script.ase_script.cli_gpaw_optimize.xc">xc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.damping" href="#alff.util.script.ase_script.cli_gpaw_optimize.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.calc2" href="#alff.util.script.ase_script.cli_gpaw_optimize.calc2">calc2</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -16737,7 +16928,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_optimize.pdict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">configfile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">))</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -16774,14 +16965,109 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.params" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_optimize.txt&#39;</span><span class="p">}</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.gpaw_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_optimize.txt&#39;</span><span class="p">}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_optimize.params" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.gpaw_params" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.calc1" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc1</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">gpaw_params</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.calc1" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.dftd3_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.dftd3_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.xc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">gpaw_params</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.xc" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.damping" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.calc2" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc2</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.calc2" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -16794,7 +17080,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_optimize.calc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">SumCalculator</span><span class="p">([</span><span class="n">calc1</span><span class="p">,</span> <span class="n">calc2</span><span class="p">])</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -17168,7 +17454,42 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.params" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.params">params</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.gpaw_params" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.gpaw_params">gpaw_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.calc1" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.calc1">calc1</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.dftd3_args" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.dftd3_args">dftd3_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.xc" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.xc">xc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.damping" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_singlepoint.calc2" href="#alff.util.script.ase_script.cli_gpaw_singlepoint.calc2">calc2</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -17311,7 +17632,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.pdict" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">configfile</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">))</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -17348,14 +17669,109 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.params" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_singlepoint.txt&#39;</span><span class="p">}</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.gpaw_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">gpaw_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;pw&#39;</span><span class="p">,</span> <span class="s1">&#39;ecut&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span> <span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;PBE&#39;</span><span class="p">,</span> <span class="s1">&#39;convergence&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;energy&#39;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="s1">&#39;eigenstates&#39;</span><span class="p">:</span> <span class="mf">1e-08</span><span class="p">},</span> <span class="s1">&#39;occupations&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;fermi-dirac&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="s1">&#39;txt&#39;</span><span class="p">:</span> <span class="s1">&#39;calc_singlepoint.txt&#39;</span><span class="p">}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.params" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.gpaw_params" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.calc1" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc1</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">gpaw_params</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.calc1" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.dftd3_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3_calc&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.dftd3_args" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.xc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">gpaw_params</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.xc" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.damping" class="headerlink" title="Permanent link">&para;</a></h7>
+
+
+    <div class="doc doc-contents ">
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.calc2" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc2</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script.ase_script.cli_gpaw_singlepoint.calc2" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -17368,7 +17784,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_singlepoint.calc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">GPAW</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">SumCalculator</span><span class="p">([</span><span class="n">calc1</span><span class="p">,</span> <span class="n">calc2</span><span class="p">])</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
