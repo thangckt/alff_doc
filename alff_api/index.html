@@ -1608,18 +1608,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_dataset.split_ase_atoms" class="md-nav__link">
+  <a href="#alff.data.lib_dataset.split_atoms_list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_ase_atoms
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_atoms_list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_dataset.split_dataset_files" class="md-nav__link">
+  <a href="#alff.data.lib_dataset.split_extxyz_dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_dataset_files
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_extxyz_dataset
     </span>
   </a>
   
@@ -4502,18 +4502,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_dataset.split_ase_atoms" class="md-nav__link">
+  <a href="#alff.data.lib_dataset.split_atoms_list" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_ase_atoms
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_atoms_list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.data.lib_dataset.split_dataset_files" class="md-nav__link">
+  <a href="#alff.data.lib_dataset.split_extxyz_dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_dataset_files
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;split_extxyz_dataset
     </span>
   </a>
   
@@ -8838,14 +8838,14 @@ Polar version (note polars may difficult to install on older systems)</p>
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_ase_atoms" href="#alff.data.lib_dataset.split_ase_atoms">split_ase_atoms</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_atoms_list" href="#alff.data.lib_dataset.split_atoms_list">split_atoms_list</a></code></b>
             –
             <div class="doc-md-description">
               <p>Split a dataset into training, validation, and test sets.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_dataset_files" href="#alff.data.lib_dataset.split_dataset_files">split_dataset_files</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.data.lib_dataset.split_extxyz_dataset" href="#alff.data.lib_dataset.split_extxyz_dataset">split_extxyz_dataset</a></code></b>
             –
             <div class="doc-md-description">
               <p>Split a dataset into training, validation, and test sets.</p>
@@ -8870,22 +8870,23 @@ Polar version (note polars may difficult to install on older systems)</p>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.data.lib_dataset.split_ase_atoms" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_ase_atoms</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+<h5 id="alff.data.lib_dataset.split_atoms_list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_atoms_list</span><span class="p">(</span><span class="n">atoms_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Atoms</span><span class="p">]]</span></code>
 
-<a href="#alff.data.lib_dataset.split_ase_atoms" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.data.lib_dataset.split_atoms_list" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
         <p>Split a dataset into training, validation, and test sets.</p>
+<p>If input (train_ratio + valid_ratio) &lt; 1, the remaining data will be used as the test set.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>data</code></b>
-              (<code>list[<span title="ase.Atoms">Atoms</span>]</code>)
+              (<code><span title="typing.List">List</span>[<span title="ase.Atoms">Atoms</span>]</code>)
           –
           <div class="doc-md-description">
             <p>List of ASE Atoms objects.</p>
@@ -8912,23 +8913,25 @@ Polar version (note polars may difficult to install on older systems)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-            <b><code>test_ratio</code></b>
-              (<code>float</code>, default:
-                  <code>0</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>Ratio of test set. Defaults to 0.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
             <b><code>seed</code></b>
-              (<code>int</code>, default:
+              (<code>Optional[int]</code>, default:
                   <code>None</code>
 )
           –
           <div class="doc-md-description">
-            <p>Seed number. If given, the produce set is unchanged, it means can be reproduced. Defaults to None.</p>
+            <p>Random seed for reproducibility. Defaults to None.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="ase.Atoms">Atoms</span>], <span title="typing.List">List</span>[<span title="ase.Atoms">Atoms</span>], <span title="typing.List">List</span>[<span title="ase.Atoms">Atoms</span>]]</code>
+          –
+          <div class="doc-md-description">
+            <p>Tuple[List[Atoms], List[Atoms], List[Atoms]]: Split datasets as train, valid, and test.</p>
           </div>
         </li>
     </ul>
@@ -8940,22 +8943,23 @@ Polar version (note polars may difficult to install on older systems)</p>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.data.lib_dataset.split_dataset_files" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_dataset_files</span><span class="p">(</span><span class="n">extxyz_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">test_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">outfile_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">)</span></code>
+<h5 id="alff.data.lib_dataset.split_extxyz_dataset" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_extxyz_dataset</span><span class="p">(</span><span class="n">extxyz_files</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">outfile_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">)</span></code>
 
-<a href="#alff.data.lib_dataset.split_dataset_files" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.data.lib_dataset.split_extxyz_dataset" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
         <p>Split a dataset into training, validation, and test sets.</p>
+<p>If input (train_ratio + valid_ratio) &lt; 1, the remaining data will be used as the test set.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>extxyz_files</code></b>
-              (<code>list[str]</code>)
+              (<code><span title="typing.List">List</span>[str]</code>)
           –
           <div class="doc-md-description">
             <p>List of file paths in EXTXYZ format.</p>
@@ -8982,23 +8986,23 @@ Polar version (note polars may difficult to install on older systems)</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-            <b><code>test_ratio</code></b>
-              (<code>float</code>, default:
-                  <code>0</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>Ratio of test set. Defaults to 0.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
             <b><code>seed</code></b>
-              (<code>int</code>, default:
+              (<code>Optional[int]</code>, default:
                   <code>None</code>
 )
           –
           <div class="doc-md-description">
             <p>Random seed. Defaults to None.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>outfile_prefix</code></b>
+              (<code>str</code>, default:
+                  <code>&#39;dataset&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Prefix for output file names. Defaults to "dataset".</p>
           </div>
         </li>
     </ul>
