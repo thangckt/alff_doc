@@ -3513,9 +3513,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.util.record_iter" class="md-nav__link">
+  <a href="#alff.util.util.write_iter_log" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;record_iter
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;write_iter_log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.util.read_iter_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;read_iter_log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.util.log_text_stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;log_text_stage
     </span>
   </a>
   
@@ -6425,9 +6443,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.util.record_iter" class="md-nav__link">
+  <a href="#alff.util.util.write_iter_log" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;record_iter
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;write_iter_log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.util.read_iter_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;read_iter_log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.util.log_text_stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;log_text_stage
     </span>
   </a>
   
@@ -18769,7 +18805,21 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.util.record_iter" href="#alff.util.util.record_iter">record_iter</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.util.write_iter_log" href="#alff.util.util.write_iter_log">write_iter_log</a></code></b>
+            –
+            <div class="doc-md-description">
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.util.read_iter_log" href="#alff.util.util.read_iter_log">read_iter_log</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Read the last line of the iter log file.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.util.log_text_stage" href="#alff.util.util.log_text_stage">log_text_stage</a></code></b>
             –
             <div class="doc-md-description">
               
@@ -18866,10 +18916,42 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.util.util.record_iter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">record_iter</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">iter_idx</span><span class="p">,</span> <span class="n">stage_idx</span><span class="p">,</span> <span class="n">stage_name</span><span class="p">)</span></code>
+<h5 id="alff.util.util.write_iter_log" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">write_iter_log</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">iter_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">stage_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">stage_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
-<a href="#alff.util.util.record_iter" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.util.write_iter_log" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.util.read_iter_log" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">read_iter_log</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+
+<a href="#alff.util.util.read_iter_log" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Read the last line of the iter log file.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.util.log_text_stage" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">log_text_stage</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">stage_idx</span><span class="p">,</span> <span class="n">stage_name</span><span class="p">)</span></code>
+
+<a href="#alff.util.util.log_text_stage" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
