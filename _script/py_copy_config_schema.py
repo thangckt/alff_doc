@@ -24,7 +24,7 @@ def append_schema_text(yaml_schema_file: str, text_file: str):
 ##### ANCHOR: udpate the blog posts
 def main():
     ### Post 1
-    append_schema_text(yaml_schema_file="./alff/util/script/ase_script/schema_ARG_ASE.yaml", text_file="./_docs/schemas/schema_ase.md")
+    append_schema_text(yaml_schema_file="./alff/util/script/ase_script/schema_ARG_ASE.yaml", text_file="./_docs/schema/ase_config.md")
 
 
     return
