@@ -29,7 +29,7 @@ def main():
     ### Post 5
     append_schema_text(yaml_schema_file="./alff/elastic/schema_arg_elastic.yaml", text_file="./_docs/schema/config_elastic.md")
     ### Post 6
-    append_schema_text(yaml_schema_file="./alff/util/script/ase_script/schema_ARG_ASE.yaml", text_file="./_docs/schema/config_ase.md")
+    append_schema_text(yaml_schema_file="./alff/util/script/ase_script/schema_arg_ASE.yaml", text_file="./_docs/schema/config_ase.md")
     return
 
 
