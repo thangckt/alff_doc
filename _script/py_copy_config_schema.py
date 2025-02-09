@@ -5,7 +5,7 @@ def read_schema_text(yaml_schema_file: str) -> str:
     """Read text from a file."""
     with open(yaml_schema_file, "r") as f:
         text = f.read()
-    text = "```yaml\n" + text + "```\n"
+    text = "\n```yaml\n" + text + "\n```\n"
     return text
 
 def append_schema_text(yaml_schema_file: str, text_file: str):
