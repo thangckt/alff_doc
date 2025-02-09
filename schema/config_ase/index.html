@@ -1342,21 +1342,29 @@
 
 <h1 id="schema-for-ase-input">Schema for ASE input<a class="headerlink" href="#schema-for-ase-input" title="Permanent link">&para;</a></h1>
 <p>The schema to configure the ASE input file to perform atomistic simulations.</p>
-<p>The sections of the schema are:
-1. Define the atomic structure.
-- <code>structure</code> (dict): Define the atomic structure.</p>
+<p>The sections of the schema are:</p>
 <ol>
-<li>Define the calculator with following keys.</li>
+<li>
+<p>Define the atomic structure.</p>
+<ul>
+<li><code>structure</code> (dict): Define the atomic structure.</li>
+</ul>
+</li>
+<li>
+<p>Define the calculator with following keys.</p>
+<ul>
 <li><code>gpaw_calc</code> (dict): Define the GPAW calculator.</li>
 <li><code>dftd3_calc</code> (dict): Define the DFTD3 calculator for Van der Waals correction</li>
-<li>
-<p><code>ase_calc</code> (dict): Define a custom ASE calculator.</p>
+<li><code>ase_calc</code> (dict): Define a custom ASE calculator.</li>
+</ul>
 </li>
 <li>
 <p>Define the simulation</p>
-</li>
+<ul>
 <li><code>md</code> (dict): Define parameters for the molecular dynamics simulation.</li>
 <li><code>optimize</code> (dict): Define parameters for the optimization.</li>
+</ul>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### This is YAML file to define CLI parameters for ase_script.py</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>

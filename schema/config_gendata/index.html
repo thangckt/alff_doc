@@ -1342,9 +1342,11 @@
 
 <h1 id="schema-for-data-generation">Schema for Data Generation<a class="headerlink" href="#schema-for-data-generation" title="Permanent link">&para;</a></h1>
 <p>The schema to configure the input file for data generation.</p>
-<p>General rules:
-- The schema without field <code>allow_unknown</code> means that <code>allow_unknown: False</code>, i.e., only the fields defined in the schema are allowed.
-- The schema without field <code>required</code> means that <code>allow_unknown: False</code>.</p>
+<p>General rules:</p>
+<ul>
+<li>The schema without field <code>allow_unknown</code> means that <code>allow_unknown: False</code>, i.e., only the fields defined in the schema are allowed.</li>
+<li>The schema without field <code>required</code> means that <code>allow_unknown: False</code>.</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">stages</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
