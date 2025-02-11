@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../config_phonon/">
+        <link rel="prev" href="../../alff_elastic_calc/">
       
       
-        <link rel="next" href="../config_ase/">
+        <link rel="next" href="../config_gendata/">
       
       
       <link rel="icon" href="../../1images/one-note-128-o.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Schema for elastic stiffness tensor - alff</title>
+        <title>Schema convention - alff</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schema-for-elastic-calculation" class="md-skip">
+        <a href="#general-rules-for-yaml-configuration-files" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schema for elastic stiffness tensor
+              Schema convention
             
           </span>
         </div>
@@ -741,10 +741,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../config_rule/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Schema convention
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -753,6 +773,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fields-in-the-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fields in the schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      General rules
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -846,19 +904,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../config_elastic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -867,7 +916,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1350,6 +1398,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fields-in-the-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fields in the schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      General rules
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1363,10 +1437,16 @@
                   
 
 
-<h1 id="schema-for-elastic-calculation">Schema for Elastic Calculation<a class="headerlink" href="#schema-for-elastic-calculation" title="Permanent link">&para;</a></h1>
-<p>The schema to configure the input file for elastic tensor calculation.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
-</code></pre></div>
+<h1 id="general-rules-for-yaml-configuration-files">General rules for YAML configuration files<a class="headerlink" href="#general-rules-for-yaml-configuration-files" title="Permanent link">&para;</a></h1>
+<h2 id="fields-in-the-schema">Fields in the schema<a class="headerlink" href="#fields-in-the-schema" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The schema without field <code>allow_unknown</code> means that <code>allow_unknown: False</code>, i.e., only the fields defined in the schema are allowed.</li>
+<li>The schema without field <code>required</code> means that <code>allow_unknown: False</code>.</li>
+</ul>
+<h2 id="general-rules">General rules<a class="headerlink" href="#general-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use <code>1.0e-6</code> instead of <code>1e-6</code> for floating point numbers. The latter is not supported by YAML.</li>
+</ul>
 
 
 
@@ -1404,7 +1484,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../config_phonon/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Schema for phonon calculation">
+          <a href="../../alff_elastic_calc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: elastic stiffness tensor">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1414,20 +1494,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Schema for phonon calculation
+                elastic stiffness tensor
               </div>
             </div>
           </a>
         
         
           
-          <a href="../config_ase/" class="md-footer__link md-footer__link--next" aria-label="Next: Schema for ASE input">
+          <a href="../config_gendata/" class="md-footer__link md-footer__link--next" aria-label="Next: Schema for data generation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Schema for ASE input
+                Schema for data generation
               </div>
             </div>
             <div class="md-footer__button md-icon">

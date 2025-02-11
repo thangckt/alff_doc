@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../../alff_elastic_calc/">
+        <link rel="prev" href="../config_rule/">
       
       
         <link rel="next" href="../config_active_learning/">
@@ -704,6 +704,8 @@
       
         
       
+        
+      
     
     
       
@@ -734,6 +736,27 @@
             Schema
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_rule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schema convention
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1342,11 +1365,6 @@
 
 <h1 id="schema-for-data-generation">Schema for Data Generation<a class="headerlink" href="#schema-for-data-generation" title="Permanent link">&para;</a></h1>
 <p>The schema to configure the input file for data generation.</p>
-<p>General rules:</p>
-<ul>
-<li>The schema without field <code>allow_unknown</code> means that <code>allow_unknown: False</code>, i.e., only the fields defined in the schema are allowed.</li>
-<li>The schema without field <code>required</code> means that <code>allow_unknown: False</code>.</li>
-</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">stages</span><span class="p">:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
@@ -1478,7 +1496,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../alff_elastic_calc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: elastic stiffness tensor">
+          <a href="../config_rule/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Schema convention">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1488,7 +1506,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                elastic stiffness tensor
+                Schema convention
               </div>
             </div>
           </a>
