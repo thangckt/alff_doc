@@ -2994,9 +2994,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.submit_job" class="md-nav__link">
+  <a href="#alff.util.dispatcher.prepare_submission" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_job
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepare_submission
     </span>
   </a>
   
@@ -3024,6 +3024,15 @@
   <a href="#alff.util.dispatcher.remote_info" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remote_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.async_submit_job_chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;async_submit_job_chunk
     </span>
   </a>
   
@@ -5949,9 +5958,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.submit_job" class="md-nav__link">
+  <a href="#alff.util.dispatcher.prepare_submission" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_job
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;prepare_submission
     </span>
   </a>
   
@@ -5979,6 +5988,15 @@
   <a href="#alff.util.dispatcher.remote_info" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remote_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.async_submit_job_chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;async_submit_job_chunk
     </span>
   </a>
   
@@ -13505,7 +13523,7 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.submit_job" href="#alff.util.dispatcher.submit_job">submit_job</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.prepare_submission" href="#alff.util.dispatcher.prepare_submission">prepare_submission</a></code></b>
             –
             <div class="doc-md-description">
               <p>Function to submit a job to the cluster:</p>
@@ -13530,6 +13548,13 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
             –
             <div class="doc-md-description">
               <p>Return the remote machine information.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.async_submit_job_chunk" href="#alff.util.dispatcher.async_submit_job_chunk">async_submit_job_chunk</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Improved version of <code>submit_job</code> to split the task_dirs into chunks and submit them.</p>
             </div>
           </li>
     </ul>
@@ -13608,10 +13633,10 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.util.dispatcher.submit_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
+<h5 id="alff.util.dispatcher.prepare_submission" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">prepare_submission</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span></code>
 
-<a href="#alff.util.dispatcher.submit_job" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.dispatcher.prepare_submission" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -13673,6 +13698,27 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
         <p>Return the remote machine information.
 Args:
     mdict (dict): the machine dictionary</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.dispatcher.async_submit_job_chunk" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">async_submit_job_chunk</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">job_limit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#alff.util.dispatcher.async_submit_job_chunk" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Improved version of <code>submit_job</code> to split the task_dirs into chunks and submit them.</p>
 
     </div>
 
