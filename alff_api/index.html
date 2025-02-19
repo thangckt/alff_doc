@@ -3003,9 +3003,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.submit_chunk_job" class="md-nav__link">
+  <a href="#alff.util.dispatcher.submit_job_chunk" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_chunk_job
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_job_chunk
     </span>
   </a>
   
@@ -5958,9 +5958,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.submit_chunk_job" class="md-nav__link">
+  <a href="#alff.util.dispatcher.submit_job_chunk" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_chunk_job
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;submit_job_chunk
     </span>
   </a>
   
@@ -13512,7 +13512,7 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.submit_chunk_job" href="#alff.util.dispatcher.submit_chunk_job">submit_chunk_job</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.dispatcher.submit_job_chunk" href="#alff.util.dispatcher.submit_job_chunk">submit_job_chunk</a></code></b>
             –
             <div class="doc-md-description">
               <p>Improved version of <code>submit_job</code> to split the task_dirs into chunks and submit them.</p>
@@ -13628,10 +13628,10 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.util.dispatcher.submit_chunk_job" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_chunk_job</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">job_limit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
+<h5 id="alff.util.dispatcher.submit_job_chunk" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">submit_job_chunk</span><span class="p">(</span><span class="n">mdict_machine</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">mdict_resources</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">command_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">backward_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">forward_common_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">errlog</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">job_limit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span></code>
 
-<a href="#alff.util.dispatcher.submit_chunk_job" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.dispatcher.submit_job_chunk" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
