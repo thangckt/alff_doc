@@ -13684,8 +13684,8 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 
         <p>Convert <code>submit_job_chunk()</code> into an async function but only need to wait for the completion of the entire <code>for</code> loop (without worrying about the specifics of each operation inside the loop)
 NOTE:
-    - An async function normally contain a <code>await ...</code> statement to be awaited. But with forloop, the <code>await</code> statement is not necessary.
-    - If the 'event loop is blocked' by a synchronous function (it will not yield control to event loop), the async function will wait for the completion of the synchronous function. So, the async function will not be executed asynchronously. Try to use <code>await asyncio.to_thread()</code> to run the synchronous function in a separate thread.</p>
+    - An async function normally contain a <code>await ...</code> statement to be awaited (yield control to event loop)
+    - If the 'event loop is blocked' by a asynchronous function (it will not yield control to event loop), the async function will wait for the completion of the synchronous function. So, the async function will not be executed asynchronously. Try to use <code>await asyncio.to_thread()</code> to run the synchronous function in a separate thread, so that the event loop is not blocked.</p>
 
     </div>
 
