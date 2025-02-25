@@ -13614,7 +13614,7 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 
 
 <h5 id="alff.util.dispatcher.fmt" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmt</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(levelname)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y-%b-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmt</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(levelname)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y%b</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -14155,7 +14155,7 @@ Args:
 
 
 <h5 id="alff.util.key.FILE_LOG_DISPATCH" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_LOG_DISPATCH</span> <span class="o">=</span> <span class="n">FILE_LOG_ALFF</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;alff&#39;</span><span class="p">,</span> <span class="s1">&#39;dispatch&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_LOG_DISPATCH</span> <span class="o">=</span> <span class="n">FILE_LOG_ALFF</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -15206,7 +15206,7 @@ Args:
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_ase_md.print_dyn_prop" href="#alff.util.script.ase_script.cli_ase_md.print_dyn_prop">print_dyn_prop</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_ase_md.print_dynamic" href="#alff.util.script.ase_script.cli_ase_md.print_dynamic">print_dynamic</a></code></b>
             –
             <div class="doc-md-description">
               <p>Function to print the potential, kinetic and total energy.</p>
@@ -16066,10 +16066,10 @@ Args:
 <div class="doc doc-object doc-function">
 
 
-<h7 id="alff.util.script.ase_script.cli_ase_md.print_dyn_prop" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_dyn_prop</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;calc_dyn_properties.txt&#39;</span><span class="p">)</span></code>
+<h7 id="alff.util.script.ase_script.cli_ase_md.print_dynamic" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_dynamic</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;calc_dyn_properties.txt&#39;</span><span class="p">)</span></code>
 
-<a href="#alff.util.script.ase_script.cli_ase_md.print_dyn_prop" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_ase_md.print_dynamic" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -16142,7 +16142,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.print_dyn_prop" href="#alff.util.script.ase_script.cli_gpaw_aimd.print_dyn_prop">print_dyn_prop</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_aimd.print_dynamic" href="#alff.util.script.ase_script.cli_gpaw_aimd.print_dynamic">print_dynamic</a></code></b>
             –
             <div class="doc-md-description">
               <p>Function to print the potential, kinetic and total energy.</p>
@@ -17158,10 +17158,10 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 <div class="doc doc-object doc-function">
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.print_dyn_prop" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_dyn_prop</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;calc_dyn_properties.txt&#39;</span><span class="p">)</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_aimd.print_dynamic" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">print_dynamic</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">atoms</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;calc_dyn_properties.txt&#39;</span><span class="p">)</span></code>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_aimd.print_dyn_prop" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_aimd.print_dynamic" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
