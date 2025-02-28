@@ -17425,7 +17425,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.relax_dim" href="#alff.util.script.ase_script.cli_gpaw_optimize.relax_dim">relax_dim</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="alff.util.script.ase_script.cli_gpaw_optimize.mask" href="#alff.util.script.ase_script.cli_gpaw_optimize.mask">mask</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -17776,14 +17776,14 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.relax_dim" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">relax_dim</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;relax_dim&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+<h7 id="alff.util.script.ase_script.cli_gpaw_optimize.mask" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">mask</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mask&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script.ase_script.cli_gpaw_optimize.relax_dim" class="headerlink" title="Permanent link">&para;</a></h7>
+<a href="#alff.util.script.ase_script.cli_gpaw_optimize.mask" class="headerlink" title="Permanent link">&para;</a></h7>
 
 
     <div class="doc doc-contents ">
@@ -17853,7 +17853,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h7 id="alff.util.script.ase_script.cli_gpaw_optimize.atoms_filter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_filter</span> <span class="o">=</span> <span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">relax_dim</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_filter</span> <span class="o">=</span> <span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
