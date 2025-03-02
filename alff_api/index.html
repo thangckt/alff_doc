@@ -1431,15 +1431,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_lammps_arg_default
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.al.lib_md_lammps.pre_md_lammps_sevenn" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;pre_md_lammps_sevenn
@@ -1452,6 +1443,15 @@
   <a href="#alff.al.lib_md_lammps.run_md_lammps_sevenn" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;run_md_lammps_sevenn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_lammps_arg_default
     </span>
   </a>
   
@@ -4413,15 +4413,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_lammps_arg_default
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.al.lib_md_lammps.pre_md_lammps_sevenn" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;pre_md_lammps_sevenn
@@ -4434,6 +4425,15 @@
   <a href="#alff.al.lib_md_lammps.run_md_lammps_sevenn" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;run_md_lammps_sevenn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_lammps_arg_default
     </span>
   </a>
   
@@ -7790,7 +7790,7 @@ Note: Now, do on remote machine</p>
             <b><code><a class="autorefs autorefs-internal" title=" pre_md_lammps_sevenn (alff.al.lib_md_lammps.pre_md_lammps_sevenn)" href="#alff.al.lib_md_lammps.pre_md_lammps_sevenn">pre_md_lammps_sevenn</a></code></b>
             –
             <div class="doc-md-description">
-              
+              <p>This function does:</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -7833,21 +7833,6 @@ Note: Now, do on remote machine</p>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.lib_md_lammps._get_lammps_arg_default" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_lammps_arg_default</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
-
-<a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
 <h5 id="alff.al.lib_md_lammps.pre_md_lammps_sevenn" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">pre_md_lammps_sevenn</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
@@ -7855,6 +7840,11 @@ Note: Now, do on remote machine</p>
 
 
     <div class="doc doc-contents ">
+
+        <p>This function does:
+- prepare MD args
+    - generate task_dirs for ranges of temperature and stress
+- establish MD tasks and ASE_run_file</p>
 
     </div>
 
@@ -7867,6 +7857,21 @@ Note: Now, do on remote machine</p>
 <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">run_md_lammps_sevenn</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
 
 <a href="#alff.al.lib_md_lammps.run_md_lammps_sevenn" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.lib_md_lammps._get_lammps_arg_default" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_lammps_arg_default</span><span class="p">(</span><span class="n">iter_idx</span><span class="p">,</span> <span class="n">pdict</span><span class="p">)</span></code>
+
+<a href="#alff.al.lib_md_lammps._get_lammps_arg_default" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -9744,7 +9749,7 @@ Polar version (note polars may difficult to install on older systems)</p>
 
 
 <h5 id="alff.data.lib_gen_gpaw.temperature_stress_mdarg_ase" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">temperature_stress_mdarg_ase</span><span class="p">(</span><span class="n">struct_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">temperature_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">stress_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">ase_args</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">temperature_stress_mdarg_ase</span><span class="p">(</span><span class="n">struct_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">temperature_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">stress_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">ase_args</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
 
 <a href="#alff.data.lib_gen_gpaw.temperature_stress_mdarg_ase" class="headerlink" title="Permanent link">&para;</a></h5>
 
