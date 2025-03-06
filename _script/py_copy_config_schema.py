@@ -31,6 +31,7 @@ def main():
     append_schema_text(yaml_schema_file="./alff/phonon/schema_arg_phonon.yaml", text_file="./_docs/schema/config_phonon.md")
     append_schema_text(yaml_schema_file="./alff/elastic/schema_arg_elastic.yaml", text_file="./_docs/schema/config_elastic.md")
     append_schema_text(yaml_schema_file="./alff/util/script/ase_script/schema_arg_ase.yaml", text_file="./_docs/schema/config_ase.md")
+    append_schema_text(yaml_schema_file="./alff/util/script/schema_arg_lammps.yaml", text_file="./_docs/schema/config_lammps.md")
     append_schema_text(yaml_schema_file="./alff/util/script/schema_arg_machine.yaml", text_file="./_docs/schema/config_machine.md")
     ### Append example configuration to the .md files
     append_example_config(yaml_config_file="./alff/util/script/example_config/example_param_active_learn.yaml", text_file="./_docs/schema/config_active_learning.md")
