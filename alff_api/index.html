@@ -3804,6 +3804,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.util.script.script_lammps.process_lammps_argdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;process_lammps_argdict
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6781,6 +6790,15 @@
   <a href="#alff.util.script.script_lammps._press_string_md" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_press_string_md
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.script.script_lammps.process_lammps_argdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;process_lammps_argdict
     </span>
   </a>
   
@@ -18564,6 +18582,13 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
               
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title=" process_lammps_argdict (alff.util.script.script_lammps.process_lammps_argdict)" href="#alff.util.script.script_lammps.process_lammps_argdict">process_lammps_argdict</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Assume lammps argdict is a dictionary with 4 top-level keys: <code>structure</code>, <code>optimize</code>, <code>md</code>, <code>custom</code>. This argdict is used to validate the input arguments based on <a href="https://thangckt.github.io/alff_doc/schema/config_lammps/">LAMMPS args schema</a>.</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -18817,7 +18842,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h6 id="alff.util.script.script_lammps.generate_script_lammps_md" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_script_lammps_md</span><span class="p">(</span><span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">read_data</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;path_to_file.lmpdata&#39;</span><span class="p">,</span> <span class="n">read_restart</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eam/alloy&#39;</span><span class="p">],</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;* * Cu_Mishin2001.eam.alloy  Cu&#39;</span><span class="p">],</span> <span class="n">ensemble</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nve&#39;</span><span class="p">,</span> <span class="s1">&#39;nvt&#39;</span><span class="p">,</span> <span class="s1">&#39;npt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nve&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">num_frames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">traj_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">equil_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">plumed_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">tdamp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">thermostat</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="s1">&#39;langevin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">couple</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pdamp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">barostat</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="n">output_script</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;cli_script_lammps.in&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">generate_script_lammps_md</span><span class="p">(</span><span class="n">units</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="n">atom_style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;atomic&#39;</span><span class="p">,</span> <span class="n">dimension</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">pbc</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">read_data</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;path_to_file.lmpdata&#39;</span><span class="p">,</span> <span class="n">read_restart</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pair_style</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;eam/alloy&#39;</span><span class="p">],</span> <span class="n">pair_coeff</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;* * Cu_Mishin2001.eam.alloy  Cu&#39;</span><span class="p">],</span> <span class="n">ensemble</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;NVE&#39;</span><span class="p">,</span> <span class="s1">&#39;NVT&#39;</span><span class="p">,</span> <span class="s1">&#39;NPT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NVE&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="n">num_frames</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">traj_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">equil_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">plumed_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">thermo_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">tdamp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">thermostat</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="s1">&#39;langevin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="n">press</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">couple</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pdamp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">barostat</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nose_hoover_chain&#39;</span><span class="p">,</span> <span class="n">output_script</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;cli_script_lammps.in&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.util.script.script_lammps.generate_script_lammps_md" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -18831,12 +18856,12 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
     <ul>
         <li class="doc-section-item field-body">
             <b><code>ensemble</code></b>
-              (<code><span title="typing.Literal">Literal</span>[&#39;nve&#39;, &#39;nvt&#39;, &#39;npt&#39;]</code>, default:
-                  <code>&#39;nve&#39;</code>
+              (<code><span title="typing.Literal">Literal</span>[&#39;NVE&#39;, &#39;NVT&#39;, &#39;NPT&#39;]</code>, default:
+                  <code>&#39;NVE&#39;</code>
 )
           –
           <div class="doc-md-description">
-            <p>Ensemble for MD simulation. Default "nve"</p>
+            <p>Ensemble for MD simulation. Default "NVE"</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -19325,6 +19350,49 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 <li>[None, 0.0, 0.0] -&gt; 'y 0.0 z 0.0'</li>
 <li>[None, None, None] -&gt; error</li>
 </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="alff.util.script.script_lammps.process_lammps_argdict" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">process_lammps_argdict</span><span class="p">(</span><span class="n">argdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span></code>
+
+<a href="#alff.util.script.script_lammps.process_lammps_argdict" class="headerlink" title="Permanent link">&para;</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Assume lammps argdict is a dictionary with 4 top-level keys: <code>structure</code>, <code>optimize</code>, <code>md</code>, <code>custom</code>. This argdict is used to validate the input arguments based on <a href="https://thangckt.github.io/alff_doc/schema/config_lammps/">LAMMPS args schema</a>.</p>
+<p>This function to remove top-level keys, and return sub-level keys only to be used generate lammps script functions.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>argdict</code></b>
+              (<code><span title="dict">dict</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Dictionary of dicts of lammps arguments.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>dict</code></b> (              <code><span title="dict">dict</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>Processed lammps arguments.</p>
+          </div>
+        </li>
+    </ul>
 
     </div>
 
