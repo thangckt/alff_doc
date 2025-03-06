@@ -3009,27 +3009,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.fh" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fh
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.fmt" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.util.dispatcher.COLOR_MAP" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COLOR_MAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.change_logpath_dispatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;change_logpath_dispatcher
     </span>
   </a>
   
@@ -6000,27 +5991,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.fh" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fh
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.dispatcher.fmt" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;fmt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.util.dispatcher.COLOR_MAP" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COLOR_MAP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.change_logpath_dispatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;change_logpath_dispatcher
     </span>
   </a>
   
@@ -13613,6 +13595,13 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title=" change_logpath_dispatcher (alff.util.dispatcher.change_logpath_dispatcher)" href="#alff.util.dispatcher.change_logpath_dispatcher">change_logpath_dispatcher</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Change the path of the logfile for dpdispatcher.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title=" prepare_submission (alff.util.dispatcher.prepare_submission)" href="#alff.util.dispatcher.prepare_submission">prepare_submission</a></code></b>
             –
             <div class="doc-md-description">
@@ -13655,20 +13644,6 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title=" fh (alff.util.dispatcher.fh)" href="#alff.util.dispatcher.fh">fh</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title=" fmt (alff.util.dispatcher.fmt)" href="#alff.util.dispatcher.fmt">fmt</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title=" COLOR_MAP (alff.util.dispatcher.COLOR_MAP)" href="#alff.util.dispatcher.COLOR_MAP">COLOR_MAP</a></code></b>
           –
           <div class="doc-md-description">
@@ -13691,44 +13666,6 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 
 
 
-<h5 id="alff.util.dispatcher.fh" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">FILE_LOG_DISPATCH</span><span class="p">)</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.util.dispatcher.fh" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h5 id="alff.util.dispatcher.fmt" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmt</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> | </span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(levelname)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%Y%b</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.util.dispatcher.fmt" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h5 id="alff.util.dispatcher.COLOR_MAP" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">COLOR_MAP</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">}</span></code>
 
@@ -13745,6 +13682,23 @@ NOTE: must use <code>.get_scaled_positions()</code> to define the cell in <code>
 </div>
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.dispatcher.change_logpath_dispatcher" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">change_logpath_dispatcher</span><span class="p">(</span><span class="n">logfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">FILE_LOG_DISPATCH</span><span class="p">)</span></code>
+
+<a href="#alff.util.dispatcher.change_logpath_dispatcher" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Change the path of the logfile for dpdispatcher.</p>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
