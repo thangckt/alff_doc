@@ -2904,9 +2904,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.ase_struct.make_cell_triangular" class="md-nav__link">
+  <a href="#alff.util.ase_struct._get_upper_triangular_cell" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_upper_triangular_cell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct._rotate_ase_properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_rotate_ase_properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct.make_cell_upper_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_upper_triangular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct.make_cell_lower_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_lower_triangular
     </span>
   </a>
   
@@ -5904,9 +5931,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.ase_struct.make_cell_triangular" class="md-nav__link">
+  <a href="#alff.util.ase_struct._get_upper_triangular_cell" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_triangular
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_upper_triangular_cell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct._rotate_ase_properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_rotate_ase_properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct.make_cell_upper_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_upper_triangular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.ase_struct.make_cell_lower_triangular" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;make_cell_lower_triangular
     </span>
   </a>
   
@@ -11837,17 +11891,73 @@ Only change <code>gpaw_dft</code> for fixed cell optimization.</p>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.util.ase_struct.make_cell_triangular" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_triangular</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+<h5 id="alff.util.ase_struct._get_upper_triangular_cell" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_upper_triangular_cell</span><span class="p">(</span><span class="n">input_atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span></code>
 
-<a href="#alff.util.ase_struct.make_cell_triangular" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.ase_struct._get_upper_triangular_cell" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>REF: <a href="https://gitlab.com/ase/ase/-/merge_requests/3277#note_2255046877">this comments</a></p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.ase_struct._rotate_ase_properties" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_rotate_ase_properties</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">new_cell</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.util.ase_struct._rotate_ase_properties" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Rotate properties of atoms to match the new cell.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.ase_struct.make_cell_upper_triangular" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_upper_triangular</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">zero_tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.util.ase_struct.make_cell_upper_triangular" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
         <p>Atoms with a box is an <em>upper triangular matrix</em> is a requirement to use <code>NPT</code> class in ASE.
-This function will normalize the atoms's cell matrix to an upper triangular matrix.
-REF: <a href="https://gitlab.com/ase/ase/-/merge_requests/3277#note_2255046877">this comments</a></p>
+This function makes the atoms's cell matrix to an upper triangular matrix.
+[[ ax, ay, az ]
+ [ 0,  by, bz ]
+ [ 0,  0,  cz ]]</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.ase_struct.make_cell_lower_triangular" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_lower_triangular</span><span class="p">(</span><span class="n">atoms</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">zero_tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.util.ase_struct.make_cell_lower_triangular" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Converts the cell matrix of <code>atoms</code> into a <em>lower triangular</em>, to be used in LAMMPS:
+[[ ax,  0,  0 ]
+ [ bx, by,  0 ]
+ [ cx, cy, cz ]]</p>
 
     </div>
 
@@ -11857,14 +11967,17 @@ REF: <a href="https://gitlab.com/ase/ase/-/merge_requests/3277#note_2255046877">
 
 
 <h5 id="alff.util.ase_struct.make_cell_triangular_extxyz" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_triangular_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">make_cell_triangular_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;upper&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
 
 <a href="#alff.util.ase_struct.make_cell_triangular_extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>Make the cell of atoms in extxyz file to be triangular.</p>
+        <p>Make the cell of atoms in extxyz file to be triangular.
+Args:
+    extxyz_file (str): Path to the extxyz file.
+    type (str): 'upper' or 'lower'. Defaults to 'upper'.</p>
 
     </div>
 
