@@ -3195,6 +3195,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.machine_locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;machine_locks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.dispatcher.COLOR_MAP" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COLOR_MAP
@@ -3225,6 +3234,24 @@
   <a href="#alff.util.dispatcher.async_submit_job_chunk" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;async_submit_job_chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher._get_machine_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_machine_lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.run_submission_wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;run_submission_wrapper
     </span>
   </a>
   
@@ -6348,6 +6375,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.machine_locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;machine_locks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.util.dispatcher.COLOR_MAP" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COLOR_MAP
@@ -6378,6 +6414,24 @@
   <a href="#alff.util.dispatcher.async_submit_job_chunk" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;async_submit_job_chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher._get_machine_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_machine_lock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.util.dispatcher.run_submission_wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;run_submission_wrapper
     </span>
   </a>
   
@@ -14876,6 +14930,17 @@ The cell handedness is preserved.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            run_submission_wrapper(submission, check_interval=30, machine_index=0)
+
+  
+      async
+   (alff.util.dispatcher.run_submission_wrapper)" href="#alff.util.dispatcher.run_submission_wrapper">run_submission_wrapper</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Ensure only one instance of submission.run_submission runs at a time.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            info_current_dispatch(task_dirs, job_limit, chunk_index, task_dirs_1chunk, old_time=None, new_time=None, machine_index=0) -> str (alff.util.dispatcher.info_current_dispatch)" href="#alff.util.dispatcher.info_current_dispatch">info_current_dispatch</a></code></b>
             –
             <div class="doc-md-description">
@@ -14904,6 +14969,17 @@ The cell handedness is preserved.</p>
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            machine_locks = {}
+
+  
+      module-attribute
+   (alff.util.dispatcher.machine_locks)" href="#alff.util.dispatcher.machine_locks">machine_locks</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            COLOR_MAP = {0: 'blue', 1: 'green', 2: 'cyan', 3: 'yellow', 4: 'red', 5: 'purple'}
 
   
@@ -14925,6 +15001,26 @@ The cell handedness is preserved.</p>
 
 
 
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h5 id="alff.util.dispatcher.machine_locks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">machine_locks</span> <span class="o">=</span> <span class="p">{}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.dispatcher.machine_locks" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-attribute">
 
@@ -15006,6 +15102,46 @@ The cell handedness is preserved.</p>
 NOTE:
     - An async function normally contain a <code>await ...</code> statement to be awaited (yield control to event loop)
     - If the 'event loop is blocked' by a asynchronous function (it will not yield control to event loop), the async function will wait for the completion of the synchronous function. So, the async function will not be executed asynchronously. Try to use <code>await asyncio.to_thread()</code> to run the synchronous function in a separate thread, so that the event loop is not blocked.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.dispatcher._get_machine_lock" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_machine_lock</span><span class="p">(</span><span class="n">machine_index</span><span class="p">)</span></code>
+
+<a href="#alff.util.dispatcher._get_machine_lock" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.util.dispatcher.run_submission_wrapper" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">run_submission_wrapper</span><span class="p">(</span><span class="n">submission</span><span class="p">,</span> <span class="n">check_interval</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">machine_index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#alff.util.dispatcher.run_submission_wrapper" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Ensure only one instance of submission.run_submission runs at a time.
+- If use one global lock for all machines, it will prevent concurrent execution of submissions on different machines.
+- each machine must has its own lock, so different machines can process jobs in parallel.</p>
 
 
     </div>
