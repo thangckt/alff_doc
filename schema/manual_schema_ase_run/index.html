@@ -897,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../manual_SCHEMA_CONCURRENTing/" class="md-nav__link">
+      <a href="../manual_schema_concurrent_learning/" class="md-nav__link">
         
   
   
@@ -2033,7 +2033,7 @@
 </span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
 </span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a><span class="w">    </span><span class="nt">fmax</span><span class="p">:</span><span class="w">                   </span><span class="c1"># force convergence criteria. Default is 0.05 eV/Ang</span>
 </span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a><span class="w">    </span><span class="nt">mask</span><span class="p">:</span><span class="w">                   </span><span class="c1"># list of 6 (or 3) booleans: 1 for relax, 0 for fixed; indicating which of the six independent components of the strain are relaxed. If len(mask)==3, then mask = mask + [1,1,1]. Default is None.</span>
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a><span class="w">    </span><span class="nt">mask</span><span class="p">:</span><span class="w">                   </span><span class="c1"># list of 6 (or 3) booleans: 1 for relax, 0 for fixed; indicating which of the six independent components of the strain are relaxed. If len(mask)==3, then mask = mask + [0,0,0]. Default is None.</span>
 </span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
 </span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a><span class="w">    </span><span class="nt">max_steps</span><span class="p">:</span><span class="w">              </span><span class="c1"># maximum number of steps for optimization. Default is 10000</span>
 </span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>

@@ -81,7 +81,7 @@ def main():
         config_files=[f"{EXAMPLE_PATH}/gdata/sampleConfig_gendata.yml"],
     )
     append_example_config(
-        md_file="./_docs/schema/manual_SCHEMA_CONCURRENTing.md",
+        md_file="./_docs/schema/manual_schema_concurrent_learning.md",
         config_files=[f"{EXAMPLE_PATH}/cl/sampleConfig_concurrent_learn.yml"],
     )
     append_example_config(
