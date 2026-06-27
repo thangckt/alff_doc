@@ -5452,7 +5452,7 @@ Using <code>conditional optimization</code>: fix atoms and optimize the rest.</p
             <b><code><a class="autorefs autorefs-internal" title="            mapping_dxdydz_to_cartesian(dxdydz: np.ndarray, struct_cell: np.ndarray) (clff.pes.utilpes.mapping_dxdydz_to_cartesian)" href="../api/#clff.pes.utilpes.mapping_dxdydz_to_cartesian">mapping_dxdydz_to_cartesian</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Sampling points are in (u,v) coordinates along cell vectors that may not orthogonal.</p>
+              <p>Sampling points are in (u,v) sampling coordinates along cell vectors. Even though the cell vectors may non-orthogonal, the plotted PES is always in orthogonal grid (in sampling coordinates). When need to present force per sliding length, the sampling points need to be plotted in real Cartesian coordinates.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -5674,8 +5674,8 @@ is needed update the cell correctly.</li>
 
     <div class="doc doc-contents ">
 
-        <p>Sampling points are in (u,v) coordinates along cell vectors that may not orthogonal.</p>
-<p>This function transform sampling points to real Cartesian coordinates</p>
+        <p>Sampling points are in (u,v) sampling coordinates along cell vectors. Even though the cell vectors may non-orthogonal, the plotted PES is always in orthogonal grid (in sampling coordinates). When need to present force per sliding length, the sampling points need to be plotted in real Cartesian coordinates.</p>
+<p>This function transform sampling points to real Cartesian coordinates to plot PES surface in non-orthogonal cell.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
