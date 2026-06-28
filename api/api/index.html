@@ -22063,10 +22063,10 @@ Using <code>conditional optimization</code>: fix atoms and optimize the rest.</p
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            mapping_dxdydz_to_cartesian(dxdydz: np.ndarray, struct_cell: np.ndarray) (clff.pes.utilpes.mapping_dxdydz_to_cartesian)" href="#clff.pes.utilpes.mapping_dxdydz_to_cartesian">mapping_dxdydz_to_cartesian</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            map_dxdydz_to_cartesian(dxdydz: np.ndarray, struct_cell: np.ndarray) (clff.pes.utilpes.map_dxdydz_to_cartesian)" href="#clff.pes.utilpes.map_dxdydz_to_cartesian">map_dxdydz_to_cartesian</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Sampling points are in (u,v) sampling coordinates along cell vectors. Even though the cell vectors may non-orthogonal, the plotted PES is always in orthogonal grid (in sampling coordinates). When need to present force per sliding length, the sampling points need to be plotted in real Cartesian coordinates.</p>
+              <p>Sampling points are (u,v) grid steps uniformly along non-orthogonal crystal lattice vectors.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -22280,16 +22280,17 @@ is needed update the cell correctly.</li>
 <div class="doc doc-object doc-function">
 
 
-<h5 id="clff.pes.utilpes.mapping_dxdydz_to_cartesian" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">mapping_dxdydz_to_cartesian</span><span class="p">(</span><span class="n">dxdydz</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">struct_cell</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span></code>
+<h5 id="clff.pes.utilpes.map_dxdydz_to_cartesian" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">map_dxdydz_to_cartesian</span><span class="p">(</span><span class="n">dxdydz</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">struct_cell</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span></code>
 
-<a href="#clff.pes.utilpes.mapping_dxdydz_to_cartesian" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#clff.pes.utilpes.map_dxdydz_to_cartesian" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>Sampling points are in (u,v) sampling coordinates along cell vectors. Even though the cell vectors may non-orthogonal, the plotted PES is always in orthogonal grid (in sampling coordinates). When need to present force per sliding length, the sampling points need to be plotted in real Cartesian coordinates.</p>
-<p>This function transform sampling points to real Cartesian coordinates to plot PES surface in non-orthogonal cell.</p>
+        <p>Sampling points are (u,v) grid steps uniformly along non-orthogonal crystal lattice vectors.
+If you plot this raw grid directly into a standard 2D Cartesian <span class="arithmatex">\((X, Y)\)</span> plotter like <code>matplotlib</code>, the plotter assumes the axes are at <span class="arithmatex">\(90^\\circ\)</span>. This creates an artificial shear distortion.</p>
+<p>This function transform sampling points to Cartesian space to preserve the true physical metrics, isotropic gradients, and highly symmetric paths (like <span class="arithmatex">\(\\Gamma \rightarrow \text{M} \rightarrow \text{K} \rightarrow \\Gamma\)</span>) without squashing the hexagonal symmetry into a rectangular format.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -22461,6 +22462,11 @@ is needed update the cell correctly.</li>
         </li>
     </ul>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <p>The interpolated data is in flattened meshgrid form, therefore we need to reshape it into a 2D grid for plotting.</p>
+</details>
           
 
     </div>
