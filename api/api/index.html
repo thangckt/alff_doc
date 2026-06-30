@@ -26986,6 +26986,20 @@ The function does the following:
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            cli_ase_optimize (clff.util.script_ase.cli_ase_optimize)" href="#clff.util.script_ase.cli_ase_optimize">cli_ase_optimize</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Some notes</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            cli_ase_singlepoint (clff.util.script_ase.cli_ase_singlepoint)" href="#clff.util.script_ase.cli_ase_singlepoint">cli_ase_singlepoint</a></code></b>
+          –
+          <div class="doc-md-description">
+            <p>Some notes</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            cli_gpaw_aimd (clff.util.script_ase.cli_gpaw_aimd)" href="#clff.util.script_ase.cli_gpaw_aimd">cli_gpaw_aimd</a></code></b>
           –
           <div class="doc-md-description">
@@ -27048,7 +27062,7 @@ The function does the following:
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - Defines some print functions that can attach to ASE's dynamics object
 - param_yaml must contain
-    - a dict <code>ase_calc</code> define calculator.
+    - a dict <code>calc_args.ase={}</code> define calculator.
     - a dict <code>md</code> with ASE MD parameters.</p>
 
           
@@ -27105,7 +27119,18 @@ The function does the following:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            ase_calc_args = pdict.get('calc_args', {}).get('ase', {})
+          <b><code><a class="autorefs autorefs-internal" title="            calc_args = pdict.get('calc_args', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_md.calc_args)" href="#clff.util.script_ase.cli_ase_md.calc_args">calc_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            ase_calc_args = calc_args.get('ase', {})
 
   
       module-attribute
@@ -27127,7 +27152,18 @@ The function does the following:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            dftd3_args = ase_calc_args.get('dftd3', {})
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_params = {'xc': 'pbe', 'damping': 'zero', 'abc': False, 'cutoff': 50.2718, 'cnthr': 21.1671}
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_md.dftd3_params)" href="#clff.util.script_ase.cli_ase_md.dftd3_params">dftd3_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_args = calc_args.get('dftd3', {})
 
   
       module-attribute
@@ -27138,18 +27174,7 @@ The function does the following:
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            xc = dftd3_args.get('xc', 'pbe').lower()
-
-  
-      module-attribute
-   (clff.util.script_ase.cli_ase_md.xc)" href="#clff.util.script_ase.cli_ase_md.xc">xc</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, **dftd3_args)
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(**dftd3_params)
 
   
       module-attribute
@@ -27493,8 +27518,29 @@ The function does the following:
 
 
 
+<h6 id="clff.util.script_ase.cli_ase_md.calc_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;calc_args&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_md.calc_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="clff.util.script_ase.cli_ase_md.ase_calc_args" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ase_calc_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;calc_args&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ase_calc_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -27535,8 +27581,29 @@ The function does the following:
 
 
 
+<h6 id="clff.util.script_ase.cli_ase_md.dftd3_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;pbe&#39;</span><span class="p">,</span> <span class="s1">&#39;damping&#39;</span><span class="p">:</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;cutoff&#39;</span><span class="p">:</span> <span class="mf">50.2718</span><span class="p">,</span> <span class="s1">&#39;cnthr&#39;</span><span class="p">:</span> <span class="mf">21.1671</span><span class="p">}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_md.dftd3_params" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="clff.util.script_ase.cli_ase_md.dftd3_args" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">ase_calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -27556,29 +27623,8 @@ The function does the following:
 
 
 
-<h6 id="clff.util.script_ase.cli_ase_md.xc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;pbe&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#clff.util.script_ase.cli_ase_md.xc" class="headerlink" title="Permanent link">¤</a></h6>
-
-
-    <div class="doc doc-contents ">
-
-          
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h6 id="clff.util.script_ase.cli_ase_md.calc_d3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="o">**</span><span class="n">dftd3_params</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -28236,6 +28282,1621 @@ The function does the following:
 
 
 
+<h5 id="clff.util.script_ase.cli_ase_optimize" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cli_ase_optimize</code>
+
+
+<a href="#clff.util.script_ase.cli_ase_optimize" class="headerlink" title="Permanent link">¤</a></h5>
+
+    <div class="doc doc-contents ">
+
+        <p>Some notes
+- Must set txt='calc.txt' in GPAW calculator for backward files.
+- param_yaml must contain
+    - a dict <code>calc_args.ase={}</code> define calculator.
+    - a dict <code>optimize</code> with ASE optimization parameters.</p>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            get_cli_args() (clff.util.script_ase.cli_ase_optimize.get_cli_args)" href="#clff.util.script_ase.cli_ase_optimize.get_cli_args">get_cli_args</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Get the arguments from the command line.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            pdict = get_cli_args()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.pdict)" href="#clff.util.script_ase.cli_ase_optimize.pdict">pdict</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_args = pdict.get('calc_args', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.calc_args)" href="#clff.util.script_ase.cli_ase_optimize.calc_args">calc_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            ase_calc_args = calc_args.get('ase', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.ase_calc_args)" href="#clff.util.script_ase.cli_ase_optimize.ase_calc_args">ase_calc_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            code_lines = f.read()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.code_lines)" href="#clff.util.script_ase.cli_ase_optimize.code_lines">code_lines</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_params = {'xc': 'pbe', 'damping': 'zero', 'abc': False, 'cutoff': 50.2718, 'cnthr': 21.1671}
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.dftd3_params)" href="#clff.util.script_ase.cli_ase_optimize.dftd3_params">dftd3_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_args = calc_args.get('dftd3', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.dftd3_args)" href="#clff.util.script_ase.cli_ase_optimize.dftd3_args">dftd3_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(**dftd3_params)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.calc_d3)" href="#clff.util.script_ase.cli_ase_optimize.calc_d3">calc_d3</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc = SumCalculator([calc_ase, calc_d3])
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.calc)" href="#clff.util.script_ase.cli_ase_optimize.calc">calc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            struct_args = pdict['structure']
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.struct_args)" href="#clff.util.script_ase.cli_ase_optimize.struct_args">struct_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            extxyz_file = struct_args['from_extxyz']
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.extxyz_file)" href="#clff.util.script_ase.cli_ase_optimize.extxyz_file">extxyz_file</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            atoms = cast(Atoms, atoms)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.atoms)" href="#clff.util.script_ase.cli_ase_optimize.atoms">atoms</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            input_pbc = struct_args.get('pbc', False)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.input_pbc)" href="#clff.util.script_ase.cli_ase_optimize.input_pbc">input_pbc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            constraint_arg = pdict.get('constraint', None)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.constraint_arg)" href="#clff.util.script_ase.cli_ase_optimize.constraint_arg">constraint_arg</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            c = []
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.c)" href="#clff.util.script_ase.cli_ase_optimize.c">c</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            fix_idxs = constraint_arg['fix_atoms']['fix_idxs']
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.fix_idxs)" href="#clff.util.script_ase.cli_ase_optimize.fix_idxs">fix_idxs</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            symprec = constraint_arg['fix_symmetry'].get('symprec', 1e-05)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.symprec)" href="#clff.util.script_ase.cli_ase_optimize.symprec">symprec</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            opt_args = pdict.get('optimize', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.opt_args)" href="#clff.util.script_ase.cli_ase_optimize.opt_args">opt_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            mask = opt_args.get('mask', None)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.mask)" href="#clff.util.script_ase.cli_ase_optimize.mask">mask</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            atoms_filter = FrechetCellFilter(atoms, mask=mask)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.atoms_filter)" href="#clff.util.script_ase.cli_ase_optimize.atoms_filter">atoms_filter</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            fmax = opt_args.get('fmax', 0.05)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.fmax)" href="#clff.util.script_ase.cli_ase_optimize.fmax">fmax</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            max_steps = opt_args.get('max_steps', 10000)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.max_steps)" href="#clff.util.script_ase.cli_ase_optimize.max_steps">max_steps</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            opt_kwargs = opt_args.get('opt_kwargs', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.opt_kwargs)" href="#clff.util.script_ase.cli_ase_optimize.opt_kwargs">opt_kwargs</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            optimizer = opt_args.get('optimizer', 'LBFGS')
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.optimizer)" href="#clff.util.script_ase.cli_ase_optimize.optimizer">optimizer</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dyn = LBFGS(atoms_filter, **opt_kwargs)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.dyn)" href="#clff.util.script_ase.cli_ase_optimize.dyn">dyn</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            pot_energy = atoms.get_potential_energy()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.pot_energy)" href="#clff.util.script_ase.cli_ase_optimize.pot_energy">pot_energy</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            forces = atoms.get_forces()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.forces)" href="#clff.util.script_ase.cli_ase_optimize.forces">forces</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            stress = atoms.get_stress()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.stress)" href="#clff.util.script_ase.cli_ase_optimize.stress">stress</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            struct = atoms.copy()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.struct)" href="#clff.util.script_ase.cli_ase_optimize.struct">struct</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            output_file = extxyz_file.replace('.extxyz', '_label.extxyz')
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_optimize.output_file)" href="#clff.util.script_ase.cli_ase_optimize.output_file">output_file</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.pdict" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">get_cli_args</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.pdict" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.calc_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;calc_args&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.calc_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.ase_calc_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ase_calc_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.ase_calc_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.code_lines" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">code_lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.code_lines" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.dftd3_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;pbe&#39;</span><span class="p">,</span> <span class="s1">&#39;damping&#39;</span><span class="p">:</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;cutoff&#39;</span><span class="p">:</span> <span class="mf">50.2718</span><span class="p">,</span> <span class="s1">&#39;cnthr&#39;</span><span class="p">:</span> <span class="mf">21.1671</span><span class="p">}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.dftd3_params" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.dftd3_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.dftd3_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.calc_d3" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="o">**</span><span class="n">dftd3_params</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.calc_d3" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.calc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">SumCalculator</span><span class="p">([</span><span class="n">calc_ase</span><span class="p">,</span> <span class="n">calc_d3</span><span class="p">])</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.calc" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.struct_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.extxyz_file" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.extxyz_file" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.atoms" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Atoms</span><span class="p">,</span> <span class="n">atoms</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.atoms" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.input_pbc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">input_pbc</span> <span class="o">=</span> <span class="n">struct_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pbc&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.input_pbc" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.constraint_arg" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">constraint_arg</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;constraint&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.constraint_arg" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.c" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">c</span> <span class="o">=</span> <span class="p">[]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.c" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.fix_idxs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fix_idxs</span> <span class="o">=</span> <span class="n">constraint_arg</span><span class="p">[</span><span class="s1">&#39;fix_atoms&#39;</span><span class="p">][</span><span class="s1">&#39;fix_idxs&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.fix_idxs" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.symprec" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">symprec</span> <span class="o">=</span> <span class="n">constraint_arg</span><span class="p">[</span><span class="s1">&#39;fix_symmetry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;symprec&#39;</span><span class="p">,</span> <span class="mf">1e-05</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.symprec" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.opt_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">opt_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;optimize&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.opt_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.mask" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">mask</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mask&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.mask" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.atoms_filter" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_filter</span> <span class="o">=</span> <span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.atoms_filter" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.fmax" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmax</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fmax&#39;</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.fmax" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.max_steps" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">max_steps</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_steps&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.max_steps" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.opt_kwargs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">opt_kwargs</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;opt_kwargs&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.opt_kwargs" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.optimizer" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">optimizer</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;optimizer&#39;</span><span class="p">,</span> <span class="s1">&#39;LBFGS&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.optimizer" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.dyn" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dyn</span> <span class="o">=</span> <span class="n">LBFGS</span><span class="p">(</span><span class="n">atoms_filter</span><span class="p">,</span> <span class="o">**</span><span class="n">opt_kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.dyn" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.pot_energy" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pot_energy</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_potential_energy</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.pot_energy" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.forces" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">forces</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_forces</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.forces" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.stress" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.stress" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.struct" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.struct" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.output_file" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_label.extxyz&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.output_file" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="clff.util.script_ase.cli_ase_optimize.get_cli_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cli_args</span><span class="p">()</span></code>
+
+<a href="#clff.util.script_ase.cli_ase_optimize.get_cli_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the arguments from the command line.</p>
+
+          
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h5 id="clff.util.script_ase.cli_ase_singlepoint" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cli_ase_singlepoint</code>
+
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint" class="headerlink" title="Permanent link">¤</a></h5>
+
+    <div class="doc doc-contents ">
+
+        <p>Some notes
+- Must set txt='calc.txt' in GPAW calculator for backward files.
+- param_yaml must contain
+    - a dict <code>calc_args.ase={}</code> define calculator.</p>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+<p><span class="doc-section-title">Functions:</span></p>
+    <ul>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            get_cli_args() (clff.util.script_ase.cli_ase_singlepoint.get_cli_args)" href="#clff.util.script_ase.cli_ase_singlepoint.get_cli_args">get_cli_args</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Get the arguments from the command line.</p>
+            </div>
+          </li>
+    </ul>
+
+
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            pdict = get_cli_args()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.pdict)" href="#clff.util.script_ase.cli_ase_singlepoint.pdict">pdict</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_args = pdict.get('calc_args', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.calc_args)" href="#clff.util.script_ase.cli_ase_singlepoint.calc_args">calc_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            ase_calc_args = calc_args.get('ase', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.ase_calc_args)" href="#clff.util.script_ase.cli_ase_singlepoint.ase_calc_args">ase_calc_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            code_lines = f.read()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.code_lines)" href="#clff.util.script_ase.cli_ase_singlepoint.code_lines">code_lines</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_params = {'xc': 'pbe', 'damping': 'zero', 'abc': False, 'cutoff': 50.2718, 'cnthr': 21.1671}
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.dftd3_params)" href="#clff.util.script_ase.cli_ase_singlepoint.dftd3_params">dftd3_params</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dftd3_args = calc_args.get('dftd3', {})
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.dftd3_args)" href="#clff.util.script_ase.cli_ase_singlepoint.dftd3_args">dftd3_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(**dftd3_params)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.calc_d3)" href="#clff.util.script_ase.cli_ase_singlepoint.calc_d3">calc_d3</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc = SumCalculator([calc_ase, calc_d3])
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.calc)" href="#clff.util.script_ase.cli_ase_singlepoint.calc">calc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            struct_args = pdict['structure']
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.struct_args)" href="#clff.util.script_ase.cli_ase_singlepoint.struct_args">struct_args</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            extxyz_file = struct_args['from_extxyz']
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.extxyz_file)" href="#clff.util.script_ase.cli_ase_singlepoint.extxyz_file">extxyz_file</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            atoms = cast(Atoms, atoms)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.atoms)" href="#clff.util.script_ase.cli_ase_singlepoint.atoms">atoms</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            input_pbc = struct_args.get('pbc', False)
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.input_pbc)" href="#clff.util.script_ase.cli_ase_singlepoint.input_pbc">input_pbc</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            pot_energy = atoms.get_potential_energy()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.pot_energy)" href="#clff.util.script_ase.cli_ase_singlepoint.pot_energy">pot_energy</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            forces = atoms.get_forces()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.forces)" href="#clff.util.script_ase.cli_ase_singlepoint.forces">forces</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            stress = atoms.get_stress()
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.stress)" href="#clff.util.script_ase.cli_ase_singlepoint.stress">stress</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            output_file = extxyz_file.replace('.extxyz', '_label.extxyz')
+
+  
+      module-attribute
+   (clff.util.script_ase.cli_ase_singlepoint.output_file)" href="#clff.util.script_ase.cli_ase_singlepoint.output_file">output_file</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+    </ul>
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.pdict" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pdict</span> <span class="o">=</span> <span class="n">get_cli_args</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.pdict" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.calc_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;calc_args&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.calc_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.ase_calc_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">ase_calc_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ase&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.ase_calc_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.code_lines" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">code_lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.code_lines" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.dftd3_params" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;xc&#39;</span><span class="p">:</span> <span class="s1">&#39;pbe&#39;</span><span class="p">,</span> <span class="s1">&#39;damping&#39;</span><span class="p">:</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;cutoff&#39;</span><span class="p">:</span> <span class="mf">50.2718</span><span class="p">,</span> <span class="s1">&#39;cnthr&#39;</span><span class="p">:</span> <span class="mf">21.1671</span><span class="p">}</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.dftd3_params" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.dftd3_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dftd3_args</span> <span class="o">=</span> <span class="n">calc_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dftd3&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.dftd3_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.calc_d3" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="o">**</span><span class="n">dftd3_params</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.calc_d3" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.calc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc</span> <span class="o">=</span> <span class="n">SumCalculator</span><span class="p">([</span><span class="n">calc_ase</span><span class="p">,</span> <span class="n">calc_d3</span><span class="p">])</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.calc" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.struct_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">struct_args</span> <span class="o">=</span> <span class="n">pdict</span><span class="p">[</span><span class="s1">&#39;structure&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.struct_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.extxyz_file" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">extxyz_file</span> <span class="o">=</span> <span class="n">struct_args</span><span class="p">[</span><span class="s1">&#39;from_extxyz&#39;</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.extxyz_file" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.atoms" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Atoms</span><span class="p">,</span> <span class="n">atoms</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.atoms" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.input_pbc" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">input_pbc</span> <span class="o">=</span> <span class="n">struct_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pbc&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.input_pbc" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.pot_energy" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">pot_energy</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_potential_energy</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.pot_energy" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.forces" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">forces</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_forces</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.forces" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.stress" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">stress</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">get_stress</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.stress" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.output_file" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">output_file</span> <span class="o">=</span> <span class="n">extxyz_file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.extxyz&#39;</span><span class="p">,</span> <span class="s1">&#39;_label.extxyz&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.output_file" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="clff.util.script_ase.cli_ase_singlepoint.get_cli_args" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_cli_args</span><span class="p">()</span></code>
+
+<a href="#clff.util.script_ase.cli_ase_singlepoint.get_cli_args" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the arguments from the command line.</p>
+
+          
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
 <h5 id="clff.util.script_ase.cli_gpaw_aimd" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>cli_gpaw_aimd</code>
 
@@ -28249,7 +29910,7 @@ The function does the following:
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
-    - a dict <code>gpaw_calc</code> with GPAW parameters.
+    - a dict <code>calc_args.gpaw={}</code> with GPAW parameters.
     - a dict <code>md</code> with ASE MD parameters.
 - simple-dftd3 in ASE: <a href="https://github.com/dftd3/simple-dftd3/blob/main/python/dftd3/ase.py">https://github.com/dftd3/simple-dftd3/blob/main/python/dftd3/ase.py</a>.</p>
 
@@ -29513,7 +31174,7 @@ The function does the following:
         <p>Some notes
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
-    - a dict <code>gpaw_calc</code> with GPAW parameters.
+    - a dict <code>calc_args.gpaw={}</code> with GPAW parameters.
     - a dict <code>optimize</code> with ASE optimization parameters.</p>
 
           
@@ -30561,7 +32222,7 @@ The function does the following:
         <p>Some notes
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
-    - a dict <code>gpaw_calc</code> with GPAW parameters.</p>
+    - a dict <code>calc_args.gpaw={}</code> with GPAW parameters.</p>
 
           
 
