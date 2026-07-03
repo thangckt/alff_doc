@@ -2013,7 +2013,7 @@
 </div><hr />
 <h2 id="concurrent-learning-force-field">Concurrent Learning Force Field<a class="headerlink" href="#concurrent-learning-force-field" title="Permanent link">¤</a></h2>
 <h3 id="automating-the-lifecycle-of-machine-learning-interatomic-potentials-across-heterogeneous-hpc-infrastructures"><em>Automating the Lifecycle of Machine Learning Interatomic Potentials across Heterogeneous HPC Infrastructures.</em><a class="headerlink" href="#automating-the-lifecycle-of-machine-learning-interatomic-potentials-across-heterogeneous-hpc-infrastructures" title="Permanent link">¤</a></h3>
-<p><code>CLFF</code> is an open-source, end-to-end MLOps framework designed to eliminate the data-curation bottleneck in computational materials science. By transitioning from static, human-guided sampling to an automated, dynamic concurrent learning paradigm, <code>CLFF</code> orchestrates the entire active learning lifecycle: <strong>Model Training <span class="arithmatex">\(\rightarrow\)</span> MD Exploration <span class="arithmatex">\(\rightarrow\)</span> Uncertainty Quantification <span class="arithmatex">\(\rightarrow\)</span> DFT Labeling <span class="arithmatex">\(\rightarrow\)</span> Dataset Augmentation</strong>—requiring zero user intervention once launched.</p>
+<p><code>CLFF</code> is an open-source, end-to-end MLOps framework designed to eliminate the data-curation bottleneck in computational materials science. By transitioning from static, human-guided sampling to an automated, dynamic concurrent learning paradigm, <code>CLFF</code> orchestrates the entire concurrent learning lifecycle: <strong>Model Training &rarr; MD Exploration &rarr; Uncertainty Quantification &rarr; DFT Labeling &rarr; Dataset Augmentation</strong>, requiring zero user intervention once launched.</p>
 <hr />
 <h2 id="key-features">🚀 Key Features<a class="headerlink" href="#key-features" title="Permanent link">¤</a></h2>
 <h3 id="automated-concurrent-learning">🧠 Automated Concurrent Learning<a class="headerlink" href="#automated-concurrent-learning" title="Permanent link">¤</a></h3>
@@ -2024,15 +2024,15 @@
 </ul>
 <h3 id="asynchronous-multi-cluster-orchestration-the-clff-superpower">🌐 Asynchronous Multi-Cluster Orchestration (The CLFF Superpower)<a class="headerlink" href="#asynchronous-multi-cluster-orchestration-the-clff-superpower" title="Permanent link">¤</a></h3>
 <ul>
-<li><strong>Heterogeneous Pool Aggregation:</strong> Powered by a robust backend, <code>CLFF</code> enables completely different computing assets—such as AWS/Google Cloud, national supercomputing centers, campus clusters, and local workstations—to collaborate seamlessly within a unified environment.</li>
+<li><strong>Heterogeneous Pool Aggregation:</strong> Powered by a robust backend, <code>CLFF</code> enables completely different computing assets — such as Commercial Cloud, national supercomputing centers, campus clusters, and local workstations — to collaborate seamlessly within a unified environment.</li>
 <li><strong>Proportional Workload Distribution:</strong> Specify an exact ratio of tasks (e.g., 60% to Cluster A, 40% to Cluster B) right in your configuration file.</li>
-<li><strong>Universal Protocol Compatibility:</strong> Native support for diverse connectivity protocols (Local, SSH, Cloud APIs) and major job schedulers (SLURM, SGE, PBS, TORQUE).</li>
+<li><strong>Universal Protocol Compatibility:</strong> Native support for diverse connectivity protocols (Local, SSH, Cloud APIs, etc.) and major job schedulers (SLURM, SGE, PBS, TORQUE, etc.).</li>
 </ul>
 <h3 id="deep-physics-calculator-ecosystem">🔬 Deep Physics &amp; Calculator Ecosystem<a class="headerlink" href="#deep-physics-calculator-ecosystem" title="Permanent link">¤</a></h3>
 <ul>
-<li><strong>Modern Architectures:</strong> Native, extensible support for cutting-edge graph-based MLIP architectures including <strong>SevenNet, MACE, NequIP, and TensorNet</strong>.</li>
-<li><strong>Flexible Interfaces:</strong> Out-of-the-box integration with <strong>LAMMPS</strong>, <strong>ASE</strong>, and <strong>GPAW</strong>, alongside innate support for any electronic structure calculator featuring an ASE interface.</li>
-<li><strong>Enhanced Chemical Sampling:</strong> Full compatibility with <strong>PLUMED</strong> for complex chemical landscaping (Metadynamics, Umbrella Sampling) and built-in support for <strong>Grimme-D3 van der Waals corrections</strong> in both MD and DFT tasks.</li>
+<li><strong>Modern Architectures:</strong> Native, extensible support for cutting-edge graph-based MLIP architectures including <strong>SevenNet, MACE, NequIP, TensorNet, etc.</strong>.</li>
+<li><strong>Flexible Interfaces:</strong> Out-of-the-box integration with <strong>LAMMPS</strong>, <strong>ASE</strong>, and <strong>GPAW</strong>, alongside innate support for any DFT/MD calculator featuring an ASE interface.</li>
+<li><strong>Enhanced Chemical Sampling:</strong> Full compatibility with <strong>PLUMED</strong> for complex chemical landscaping (Metadynamics, Umbrella Sampling) and support for <strong>Grimme-D3 van der Waals corrections</strong> in both MD and DFT tasks.</li>
 </ul>
 <h3 id="batteries-included-downstream-workflows">📊 Batteries-Included Downstream Workflows<a class="headerlink" href="#batteries-included-downstream-workflows" title="Permanent link">¤</a></h3>
 <p>Beyond dataset curation, <code>CLFF</code> features modular pipelines to automatically calculate, post-process, and plot downstream material properties using your trained models:</p>
