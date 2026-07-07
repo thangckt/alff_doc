@@ -69,10 +69,14 @@ def main():
         yaml_schema_file=K.SCHEMA_LAMMPS,
     )
 
-    ### MLP schema
+    ###ANCHOR MLP schema
     append_schema_text(
         md_file="./_docs/schema/mlp_schema/mlp_schema_sevenn.md",
         yaml_schema_file=f"{CLFF_ROOT}/cl/mlp/schema_sevenn.yml",
+    )
+    append_schema_text(
+        md_file="./_docs/schema/mlp_schema/mlp_schema_graphpes.md",
+        yaml_schema_file=f"{CLFF_ROOT}/cl/mlp/schema_graphpes.yml",
     )
 
     ###ANCHOR Append example configuration to the .md files
