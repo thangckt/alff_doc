@@ -5266,13 +5266,6 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
               <p>Prepare arguments and data for GraphPES training.</p>
             </div>
           </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            build_graphdata_graphpes(files: list[str], outfile: str = 'graph_atoms.pt', outdir: str = '.', num_cores: int = 1, cutoff: float | None = None, **ase_kwargs) (clff.cl.mlp.mlp_graphpes.build_graphdata_graphpes)" href="../api/#clff.cl.mlp.mlp_graphpes.build_graphdata_graphpes">build_graphdata_graphpes</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Build GraphPES graph dataset from source files.</p>
-            </div>
-          </li>
     </ul>
 
 
@@ -5348,7 +5341,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training'
+          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training GraphPes MLIP'
 
   
       instance-attribute
@@ -5491,7 +5484,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 
 
 <h6 id="clff.cl.mlp.mlp_graphpes.OpTrainGraphpes.op_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training GraphPes MLIP&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -5818,28 +5811,6 @@ expects <code>graphpes_args</code> inside <code>pdict['train']</code>.</p>
 
 </div>
 
-<div class="doc doc-object doc-function">
-
-
-<h5 id="clff.cl.mlp.mlp_graphpes.build_graphdata_graphpes" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_graphdata_graphpes</span><span class="p">(</span><span class="n">files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;graph_atoms.pt&#39;</span><span class="p">,</span> <span class="n">outdir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">num_cores</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">ase_kwargs</span><span class="p">)</span></code>
-
-<a href="#clff.cl.mlp.mlp_graphpes.build_graphdata_graphpes" class="headerlink" title="Permanent link">¤</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Build GraphPES graph dataset from source files.</p>
-<p>This function tries to detect a suitable API in the installed <code>graph_pes</code>
-package and invoke it. If the installed version is incompatible, an
-informative ImportError is raised.</p>
-
-          
-
-    </div>
-
-</div>
-
 
 
   </div>
@@ -5977,7 +5948,7 @@ informative ImportError is raised.</p>
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training'
+          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training Sevenn MLIP'
 
   
       instance-attribute
@@ -6120,7 +6091,7 @@ informative ImportError is raised.</p>
 
 
 <h6 id="clff.cl.mlp.mlp_sevenn.OpTrainSevenn.op_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training Sevenn MLIP&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
