@@ -3946,7 +3946,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'ASE MD with SevenNet'
+          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'ASE MD with Graphpes'
 
   
       instance-attribute
@@ -4089,7 +4089,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 
 
 <h5 id="clff.cl.libcl_md_ase_graphpes.OpClmdAseGraphpes.op_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;ASE MD with SevenNet&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;ASE MD with Graphpes&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -6728,7 +6728,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            task_filter = {'has_files': [K.FILE_ARG_TRAIN], 'no_files': ['checkpoint_best.pth']}
+          <b><code><a class="autorefs autorefs-internal" title="            task_filter = {'has_files': [K.FILE_ARG_TRAIN], 'no_files': ['**/model.pt']}
 
   
       instance-attribute
@@ -6881,7 +6881,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 
 
 <h6 id="clff.cl.mlp.mlp_graphpes.OpTrainGraphpes.task_filter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;has_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">K</span><span class="o">.</span><span class="n">FILE_ARG_TRAIN</span><span class="p">],</span> <span class="s1">&#39;no_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;checkpoint_best.pth&#39;</span><span class="p">]}</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;has_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">K</span><span class="o">.</span><span class="n">FILE_ARG_TRAIN</span><span class="p">],</span> <span class="s1">&#39;no_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;**/model.pt&#39;</span><span class="p">]}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
