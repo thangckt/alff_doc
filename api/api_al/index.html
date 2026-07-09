@@ -1792,17 +1792,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;temperature_press_mdarg_lammps
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2561,17 +2550,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;premd_lammps_graphpes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;temperature_press_mdarg_lammps
       
     </span>
   </a>
@@ -5257,13 +5235,6 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
               <p>Prepare MD args.</p>
             </div>
           </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            temperature_press_mdarg_lammps(struct_dirs: list, temperature_list: list = [], press_list: list = [], lammps_argdict: dict = {}) -> list (clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps)" href="../api/#clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps">temperature_press_mdarg_lammps</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Generate the task_dirs for ranges of temperatures and stresses.</p>
-            </div>
-          </li>
     </ul>
 
 
@@ -5805,68 +5776,6 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 - collect initial configurations
 - prepare lammps args
 - generate task_dirs for ranges of temperature and press</p>
-
-          
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">temperature_press_mdarg_lammps</span><span class="p">(</span><span class="n">struct_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">temperature_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">press_list</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">lammps_argdict</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="nb">list</span></code>
-
-<a href="#clff.cl.libcl_md_lammps_graphpes.temperature_press_mdarg_lammps" class="headerlink" title="Permanent link">¤</a></h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Generate the task_dirs for ranges of temperatures and stresses.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-            <b><code>struct_dirs</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></code>)
-          –
-          <div class="doc-md-description">
-            <p>List of dirs contains configuration files.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>temperature_list</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></code>, default:
-                  <code>[]</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>List of temperatures.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>press_list</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></code>, default:
-                  <code>[]</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>List of stresses.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>lammps_argdict</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>, default:
-                  <code>{}</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>See <a href="https://thangckt.github.io/clff/schema/config_lammps/">lammps.md schema</a></p>
-          </div>
-        </li>
-    </ul>
 
           
 
@@ -6899,7 +6808,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training GraphPes MLIP'
+          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training MLIP GraphPes'
 
   
       instance-attribute
@@ -7042,7 +6951,7 @@ for more complex workflow (e.g. with iteration like Concurrent Learning), need t
 
 
 <h6 id="clff.cl.mlp.mlp_graphpes.OpTrainGraphpes.op_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training GraphPes MLIP&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training MLIP GraphPes&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -7506,7 +7415,7 @@ expects <code>graphpes_args</code> inside <code>pdict['train']</code>.</p>
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training Sevenn MLIP'
+          <b><code><a class="autorefs autorefs-internal" title="            op_name = 'Training MLIP Sevenn'
 
   
       instance-attribute
@@ -7649,7 +7558,7 @@ expects <code>graphpes_args</code> inside <code>pdict['train']</code>.</p>
 
 
 <h6 id="clff.cl.mlp.mlp_sevenn.OpTrainSevenn.op_name" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training Sevenn MLIP&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">op_name</span> <span class="o">=</span> <span class="s1">&#39;Training MLIP Sevenn&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
